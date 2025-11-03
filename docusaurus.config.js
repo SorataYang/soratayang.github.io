@@ -28,9 +28,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'SorataYang', // Usually your GitHub org/user name.
-  projectName: 'saratayang.github.io', // Usually your repo name.
-  deploymentBranch: 'main', // 根仓库 Pages 默认用 main
-  trailingSlash: false,     // 更好体验
+  projectName: 'manual', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
