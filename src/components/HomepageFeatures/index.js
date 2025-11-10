@@ -4,38 +4,38 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: '全过程通用分析',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        适用于任何桥型从设计、施工到运维的全过程受力分析。
+        支持公路、铁路、市政等多行业规范，满足多样化应用场景。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '零成本快速上手',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        由一线工程师打造，操作界面与主流商业软件无缝衔接，不改变用户习惯。
+        支持数据格式互认互导，交互建模高效便捷。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '数十年实战检验',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        继承中铁大桥院核心技术，计算内核经过数十年、数百座桥梁工程的实战检验，
+        计算性能卓越，结果准确可靠。
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
