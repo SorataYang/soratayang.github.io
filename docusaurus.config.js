@@ -111,7 +111,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/你的GitHub用户名/manual',
+            href: 'https://github.com/SorataYang/manual',
             label: 'GitHub',
             position: 'right',
           },
