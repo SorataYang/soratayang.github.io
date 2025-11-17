@@ -122,46 +122,42 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '用户手册',
                 to: '/docs/intro',
               },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: '常见问题',
+                to: '/faq',
               },
             ],
           },
           {
-            title: 'More',
+            title: '支持',
             items: [
               {
-                label: 'Blog',
+                label: '软件下载',
+                to: '/download',
+              },
+              {
+                label: '技术支持',
+                href: 'mailto:support@qiaotong.com',
+              },
+            ],
+          },
+          {
+            title: '更多',
+            items: [
+              {
+                label: '更新日志',
                 to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong User Manual, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
