@@ -157,7 +157,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong User Manual, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong Software, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
