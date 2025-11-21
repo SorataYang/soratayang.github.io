@@ -36,8 +36,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    defaultLocale: 'zh',
+    locales: ['zh', 'en'],
   },
 
   presets: [
@@ -71,6 +71,18 @@ const config = {
           customCss: './src/css/custom.css',
         },
       }),
+    ],
+  ],
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      {
+        hashed: true,
+        language: ["en", "zh"],
+        searchBarShortcutKeymap: "ctrl+k",
+      },
     ],
   ],
 
@@ -115,6 +127,11 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          {
+            type: 'search',
+            position: 'right',
+          },
+
         ],
       },
 
@@ -126,7 +143,7 @@ const config = {
             items: [
               {
                 label: '用户手册',
-                to: '/docs/intro',
+                to: 'docs/ch01_intro/',
               },
               {
                 label: '常见问题',
