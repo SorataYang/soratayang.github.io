@@ -20,7 +20,7 @@ function HomepageHeader() {
           {/* 按钮 1: 用户手册 */}
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="docs/ch01_intro/">
             📚 用户手册
           </Link>
 
