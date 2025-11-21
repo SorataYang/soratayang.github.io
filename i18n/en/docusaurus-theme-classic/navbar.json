@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "桥通软件",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "桥通软件",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.用户手册": {
+    "message": "用户手册",
+    "description": "Navbar item with label 用户手册"
+  },
+  "item.label.常见问题": {
+    "message": "常见问题",
+    "description": "Navbar item with label 常见问题"
+  },
+  "item.label.软件下载": {
+    "message": "软件下载",
+    "description": "Navbar item with label 软件下载"
+  },
+  "item.label.联系我们": {
+    "message": "联系我们",
+    "description": "Navbar item with label 联系我们"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

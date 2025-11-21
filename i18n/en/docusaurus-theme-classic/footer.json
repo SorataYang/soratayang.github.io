@@ -1,0 +1,38 @@
+{
+  "link.title.文档": {
+    "message": "文档",
+    "description": "The title of the footer links column with title=文档 in the footer"
+  },
+  "link.title.支持": {
+    "message": "支持",
+    "description": "The title of the footer links column with title=支持 in the footer"
+  },
+  "link.title.更多": {
+    "message": "更多",
+    "description": "The title of the footer links column with title=更多 in the footer"
+  },
+  "link.item.label.用户手册": {
+    "message": "用户手册",
+    "description": "The label of footer link with label=用户手册 linking to /docs/intro"
+  },
+  "link.item.label.常见问题": {
+    "message": "常见问题",
+    "description": "The label of footer link with label=常见问题 linking to /faq"
+  },
+  "link.item.label.软件下载": {
+    "message": "软件下载",
+    "description": "The label of footer link with label=软件下载 linking to /download"
+  },
+  "link.item.label.技术支持": {
+    "message": "技术支持",
+    "description": "The label of footer link with label=技术支持 linking to mailto:support@qiaotong.com"
+  },
+  "link.item.label.更新日志": {
+    "message": "更新日志",
+    "description": "The label of footer link with label=更新日志 linking to /blog"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 Qiaotong Software, Inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
