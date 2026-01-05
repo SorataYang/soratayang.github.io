@@ -29,6 +29,8 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'SorataYang', // Usually your GitHub org/user name.
   projectName: 'manual', // Usually your repo name.
+  deploymentBranch: 'pages-deploy', // build产物推送到这个分支
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
 
