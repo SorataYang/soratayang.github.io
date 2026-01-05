@@ -20,10 +20,10 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'http://qt-328a52.pages.brdi.com.cn:8090',
+  url: 'https://soratayang.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/manual/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
