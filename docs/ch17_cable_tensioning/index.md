@@ -85,4 +85,4 @@ slug: /ch17_cable_tensioning
 
 - 📺  **在线视频**
 
-  <https://www.bilibili.com/video/BV1rg4y1d75w/?spm_id_from=333.999.0.0&vd_source=32d2c05e9280ced0a7b9ff8c18bfebcc>
+  \&lt;https://www.bilibili.com/video/BV1rg4y1d75w/?spm_id_from=333.999.0.0&vd_source=32d2c05e9280ced0a7b9ff8c18bfebcc\&gt;

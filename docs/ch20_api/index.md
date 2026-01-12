@@ -38,7 +38,7 @@ slug: /ch20_api
 
 可点击工具→API设置→python安装路径右侧编辑按钮，更改python解释器，默认开启服务器如下所示，调用时可以通过mdb.set\_url函数设置调用服务器（默认调用为如下地址）。
 
-![](image/image_bPuIcZfT4i.png.mark.png)
+<!-- ![](image/image_bPuIcZfT4i.png.mark.png) -->
 
 注意：使用自定义python时请使用` pip install qtmodel` 安装第三方库并注意匹配当前桥通版本所支持的qtmodel版本号，可在API设置中查看当前版本桥通对应的版本号，第三方库安装与更新相关cmd命令如下(如未添加环境变量或环境变量中存在多个python请切换到对应python安装路径运行)：
 

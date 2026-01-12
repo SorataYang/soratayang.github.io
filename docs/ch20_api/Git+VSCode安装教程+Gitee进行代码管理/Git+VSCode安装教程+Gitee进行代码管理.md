@@ -2,7 +2,7 @@
 
 [ Git+VsCode安装教程+Gitee进行代码管理 - 哔哩哔哩  https://www.bilibili.com/opus/949974739325026307?spm\_id\_from=333.999.0.0](https://www.bilibili.com/opus/949974739325026307?spm_id_from=333.999.0.0 " Git+VsCode安装教程+Gitee进行代码管理 - 哔哩哔哩  https://www.bilibili.com/opus/949974739325026307?spm_id_from=333.999.0.0")
 
-<https://www.bilibili.com/video/BV1CYhmeyEeH/?share_source=copy_web&vd_source=c556459924185cc3d2902367720ea181>
+\&lt;https://www.bilibili.com/video/BV1CYhmeyEeH/?share_source=copy_web&vd_source=c556459924185cc3d2902367720ea181\&gt;
 
 【Git+VsCode安装教程+Gitee进行代码管理】 [https://www.bilibili.com/video/BV1CYhmeyEeH/?share\_source=copy\_web\&vd\_source=c556459924185cc3d2902367720ea181](https://www.bilibili.com/video/BV1CYhmeyEeH/?share_source=copy_web\&vd_source=c556459924185cc3d2902367720ea181 "https://www.bilibili.com/video/BV1CYhmeyEeH/?share_source=copy_web\&vd_source=c556459924185cc3d2902367720ea181")
 

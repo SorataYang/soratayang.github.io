@@ -1113,7 +1113,7 @@ mdb.remove_thickness(name="板厚1")
 > rib\_place:肋板位置 list\[tuple\[布置具体部位,参考点0-下/左,距参考点间距,肋板名，加劲肋位置0-上/左 1-下/右 2-两侧,加劲肋名]]
 > \_布置具体部位(工字钢梁) 1-上左 2-上右 3-腹板 4-下左 5-下右
 > \_布置具体部位(箱型钢梁) 1-上左 2-上中 3-上右 4-左腹板 5-右腹板 6-下左 7-下中 8-下右
-> loop\_segments:线圈坐标集合 list\[dict] dict示例:{"main":\[(x1,y1),(x2,y2)...],"sub1":\[(x1,y1),(x2,y2)...],"sub2":\[(x1,y1),(x2,y2)...]}
+> loop\_segments:线圈坐标集合 list\[dict] dict示例:\{"main":\[(x1,y1),(x2,y2)...],"sub1":\[(x1,y1),(x2,y2)...],"sub2":\[(x1,y1),(x2,y2)...]}
 > sec\_lines:线宽集合\[(x1,y1,x2,y3,thick),]
 > secondary\_loop\_segments:辅材线圈坐标集合 list\[dict] (同loop\_segments)
 > sec\_property:截面特性(参考UI界面共计29个参数)，可选参数，指定截面特性时不进行截面计算
