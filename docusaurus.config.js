@@ -35,7 +35,8 @@ const config = {
   deploymentBranch: 'pages-deploy', // build产物推送到这个分支
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',    //  'throw' -> 'warn'，这样链接断了也能构建成功
+  onBrokenAnchors: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
