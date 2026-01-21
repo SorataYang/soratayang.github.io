@@ -1,4 +1,5 @@
 ---
+sidebar_label: 04. Views
 title: 04. Views
 slug: /ch04_views
 ---

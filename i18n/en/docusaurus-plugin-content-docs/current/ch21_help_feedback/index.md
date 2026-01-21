@@ -1,4 +1,5 @@
 ---
+sidebar_label: 21. Help & Feedback
 title: 21. Help and Feedback
 slug: /ch21_help_feedback
 ---

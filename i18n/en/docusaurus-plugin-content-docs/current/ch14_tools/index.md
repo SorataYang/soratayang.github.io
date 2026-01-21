@@ -1,4 +1,5 @@
 ---
+sidebar_label: 14. Tools
 title: 14. Tools
 slug: /ch14_tools
 ---

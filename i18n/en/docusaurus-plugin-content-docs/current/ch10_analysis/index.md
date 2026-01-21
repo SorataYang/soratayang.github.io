@@ -1,4 +1,5 @@
 ---
+sidebar_label: 10. Analysis
 title: 10. Analysis
 slug: /ch10_analysis
 ---

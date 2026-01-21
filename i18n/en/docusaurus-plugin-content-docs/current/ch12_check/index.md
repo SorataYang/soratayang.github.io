@@ -1,4 +1,5 @@
 ---
+sidebar_label: 12. Checking
 title: 12. Verification
 slug: /ch12_check
 ---

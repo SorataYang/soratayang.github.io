@@ -1,4 +1,5 @@
 ---
+sidebar_label: 06. Nodes & Elements
 title: 06. Nodes and Elements
 slug: /ch06_nodes_elements
 ---

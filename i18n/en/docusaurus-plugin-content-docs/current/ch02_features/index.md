@@ -1,4 +1,5 @@
 ---
+sidebar_label: 02. Components & Functions
 title: 02. Software Components and Functions
 slug: /ch02_features
 ---

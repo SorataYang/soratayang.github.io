@@ -1,4 +1,5 @@
 ---
+sidebar_label: 09. Loads
 title: 09. Loads
 slug: /ch09_loads
 ---

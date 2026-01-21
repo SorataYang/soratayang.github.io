@@ -1,4 +1,5 @@
 ---
+sidebar_label: 15. Static Analysis
 title: 15. Structural Static Analysis
 slug: /ch15_static_analysis
 ---

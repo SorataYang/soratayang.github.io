@@ -1,4 +1,5 @@
 ---
+sidebar_label: 08. Boundaries
 title: 08. Boundaries
 slug: /ch08_boundaries
 ---

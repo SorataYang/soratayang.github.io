@@ -1,4 +1,5 @@
 ---
+sidebar_label: 13. Query
 title: 13. Query
 slug: /ch13_query
 ---

@@ -1,4 +1,5 @@
 ---
+sidebar_label: 05. Structure
 title: 05. Structure
 slug: /ch05_structure
 ---

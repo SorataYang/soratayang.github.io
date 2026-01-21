@@ -1,4 +1,5 @@
 ---
+sidebar_label: 17. Cable Tensioning
 title: 17. Stay Cable Intelligent Tensioning
 slug: /ch17_cable_tensioning
 ---

@@ -1,4 +1,5 @@
 ---
+sidebar_label: 07. Properties
 title: 07. Properties
 slug: /ch07_properties
 ---

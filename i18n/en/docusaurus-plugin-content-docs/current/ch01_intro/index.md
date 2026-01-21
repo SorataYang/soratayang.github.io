@@ -1,4 +1,5 @@
 ---
+sidebar_label: 01. Introduction
 title: 01. Introduction to QiaoTong Software
 slug: /ch01_intro
 ---

@@ -1,4 +1,5 @@
 ---
+sidebar_label: 19. Appendix
 title: 19. Appendix
 slug: /ch19_appendix
 ---

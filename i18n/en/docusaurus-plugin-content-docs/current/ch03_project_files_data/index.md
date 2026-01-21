@@ -1,4 +1,5 @@
 ---
+sidebar_label: 03. Data Management
 title: 03. Project, File and Data Management
 slug: /ch03_project_files_data
 ---

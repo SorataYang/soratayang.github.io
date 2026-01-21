@@ -1,4 +1,5 @@
 ---
+sidebar_label: 16. Dynamic Analysis
 title: 16. Structural Dynamic Analysis
 slug: /ch16_dynamic_analysis
 ---

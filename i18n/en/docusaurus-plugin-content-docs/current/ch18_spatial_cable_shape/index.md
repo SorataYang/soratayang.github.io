@@ -1,4 +1,5 @@
 ---
+sidebar_label: 18. Spatial Cable Shape
 title: 18. Spatial Cable Shape Finding
 slug: /ch18_spatial_cable_shape
 ---
