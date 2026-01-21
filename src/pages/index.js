@@ -7,21 +7,28 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+import Translate, { translate } from '@docusaurus/Translate';
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          <Translate id="homepage.title">{siteConfig.title}</Translate>
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          {translate({
+            id: 'homepage.hero.tagline',
+            message: siteConfig.tagline,
+          })}
+        </p>
         <div className={styles.buttons}>
           {/* 按钮 1: 用户手册 */}
           <Link
             className="button button--secondary button--lg"
             to="docs/ch01_intro/">
-            📚 用户手册
+            <Translate id="homepage.button.userManual">📚 用户手册</Translate>
           </Link>
 
           {/* 间距占位符 */}
@@ -31,7 +38,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="https://www.brdi.com.cn/list/91.html">
-            ⬇️ 软件下载
+            <Translate id="homepage.button.download">⬇️ 软件下载</Translate>
           </Link>
         </div>
       </div>

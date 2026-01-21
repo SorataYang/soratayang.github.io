@@ -325,5 +325,70 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Search results for \"{query}\"",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Search the documentation",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Everywhere"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "1 document found|{count} documents found",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "No documents were found",
+    "description": "The paragraph for empty search result"
+  },
+  "homepage.title": {
+    "message": "QiaoTong"
+  },
+  "homepage.hero.tagline": {
+    "message": "General Bridge Structure Analysis Software"
+  },
+  "homepage.button.userManual": {
+    "message": "📚 User Manual"
+  },
+  "homepage.button.download": {
+    "message": "⬇️ Download"
+  },
+  "homepage.features.analysis.title": {
+    "message": "General Analysis for the Whole Process"
+  },
+  "homepage.features.analysis.description": {
+    "message": "Applicable to the whole-process stress analysis of any bridge type from design and construction to operation and maintenance. Supports multiple industry standards such as highways, railways, and municipal works, meeting diversified application scenarios."
+  },
+  "homepage.features.easy.title": {
+    "message": "Quick Start at Zero Cost"
+  },
+  "homepage.features.easy.description": {
+    "message": "Built by frontline engineers, the operation interface is seamlessly connected with mainstream commercial software without changing user habits. Supports mutual recognition and derivation of data formats, making interactive modeling efficient and convenient."
+  },
+  "homepage.features.proven.title": {
+    "message": "Tested by Decades of Practice"
+  },
+  "homepage.features.proven.description": {
+    "message": "Inheriting the core technology of BRDI, the calculation kernel has undergo decades of practical testing in hundreds of bridge projects, with excellent calculation performance and accurate and reliable results."
   }
 }

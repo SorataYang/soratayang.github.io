@@ -2,5 +2,21 @@
   "version.label": {
     "message": "Next",
     "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.14. 工具": {
+    "message": "14. Tools",
+    "description": "The label for category '14. 工具' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.20. 桥通API": {
+    "message": "20. QiaoTong API",
+    "description": "The label for category '20. 桥通API' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.VS Code 中 Jupyter Notebook 使用方": {
+    "message": "Jupyter Notebook in VS Code",
+    "description": "The label for category 'VS Code 中 Jupyter Notebook 使用方' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.21. 帮助和问题反馈": {
+    "message": "21. Help and Feedback",
+    "description": "The label for category '21. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
   }
 }

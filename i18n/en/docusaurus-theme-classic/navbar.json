@@ -1,26 +1,26 @@
 {
   "title": {
-    "message": "桥通软件",
+    "message": "QiaoTong Software",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "桥通软件",
+    "message": "QiaoTong Software",
     "description": "The alt text of navbar logo"
   },
   "item.label.用户手册": {
-    "message": "用户手册",
+    "message": "User Manual",
     "description": "Navbar item with label 用户手册"
   },
   "item.label.常见问题": {
-    "message": "常见问题",
+    "message": "FAQ",
     "description": "Navbar item with label 常见问题"
   },
   "item.label.软件下载": {
-    "message": "软件下载",
+    "message": "Download",
     "description": "Navbar item with label 软件下载"
   },
   "item.label.联系我们": {
-    "message": "联系我们",
+    "message": "Contact Us",
     "description": "Navbar item with label 联系我们"
   },
   "item.label.GitHub": {
