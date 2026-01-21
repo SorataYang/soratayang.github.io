@@ -3,7 +3,7 @@ title: 10. Analysis
 slug: /ch10_analysis
 ---
 
-# 10.1 **Global Settings**
+## 10.1 **Global Settings**
 
 - Function: Set up the solver.
 - Command: From the main menu, select "Analysis" > "Analysis Settings" > "Global Settings"
@@ -16,7 +16,7 @@ slug: /ch10_analysis
 
 **Parallel Computing Settings** can be set to automatic thread count, single thread, or multi-thread. When multi-thread is selected, the number of threads during solution can be customized.
 
-# 10.2 **Construction Stage Settings**
+## 10.2 **Construction Stage Settings**
 
 - Function: Set construction stage analysis information.
 - Command:
@@ -47,7 +47,7 @@ slug: /ch10_analysis
 
       Convert the element internal forces at the last stage of construction to initial internal forces to form the initial geometric stiffness of the completed bridge stage (PostCS) structure.
 
-# 10.3 **Operation Stage Settings**
+## 10.3 **Operation Stage Settings**
 
 - Function: Set operation stage analysis information.
 - Command:
@@ -73,7 +73,7 @@ slug: /ch10_analysis
 
     Live Load Cases: Set live load cases.
 
-# 10.4 **Natural Vibration Settings**
+## 10.4 **Natural Vibration Settings**
 
 - Function: Set natural vibration analysis information.
 - Command:
@@ -97,7 +97,7 @@ slug: /ch10_analysis
   > Number of Vibration Modes: Number of vibration mode shapes to calculate and output results for.
   > 📌The order of structural natural frequency calculation cannot exceed the number of degrees of freedom in structural calculation.
 
-# 10.5 **Moving Load Settings**
+## 10.5 **Moving Load Settings**
 
 Function: Set live load analysis information
 
@@ -115,7 +115,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   Select whether to **output** displacement, internal force, reaction force, elastic connection, and constraint equation results during live load calculation. **If you want to reduce calculation amount and speed up calculation efficiency**, you can choose not to check some calculation items. "Whether to Track" can set whether to perform live load tracking for selected calculation items.
 
-# 10.6 **Buckling Analysis Settings**
+## 10.6 **Buckling Analysis Settings**
 
 - Function: Set basic information for buckling analysis
 - Command: From the main menu, select "Analysis>Buckling Analysis Settings";
@@ -145,7 +145,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
 > 📌Note: The total number of effective loads counted as variable loads (including self-weight and other cases) must be greater than 0, otherwise calculation error will occur; if the **structure has no compression members**, buckling will not theoretically occur, so no buckling calculation results will be output.
 
-# 10.7 **Nonlinear Settings**
+## 10.7 **Nonlinear Settings**
 
 - Function: Nonlinear analysis settings.
 - Command:
@@ -172,9 +172,9 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   ![](image/image_IntRIBaniZ.png)
 
-# 10.8 **Time History Analysis Settings**
+## 10.8 **Time History Analysis Settings**
 
-## 10.8.1 **Solver Settings**
+### 10.8.1 **Solver Settings**
 
 - Function: Set dynamic time history analysis solver.
 - Command:
@@ -191,7 +191,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
     Select the number of parallel computing threads.
 
-## 10.8.2 **Time History Analysis Settings**
+### 10.8.2 **Time History Analysis Settings**
 
 - Function: Set time history analysis information.
 - Command:
@@ -210,7 +210,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
     Element Internal Force/Stress: Determine the element set for outputting internal force/stress. All element results can be output, or partial element results can be output by selecting structural groups.
 
-# 10.9 **Response Spectrum Analysis Settings**
+## 10.9 **Response Spectrum Analysis Settings**
 
 - Function: Whether to perform response spectrum analysis, damping ratio settings for this analysis, etc.
 - Command: From the main menu, select "Analysis>Response Spectrum Analysis";
@@ -239,7 +239,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   Set by Vibration Mode Order: Structural damping ratio corresponds to structural natural vibration frequency. If the number of input damping ratios is less than the number of structural natural vibration frequencies to be calculated, the damping ratio corresponding to the structural natural vibration frequencies exceeding the number of damping ratios is set to the last input damping ratio internally by the software.
 
-# 10.10 **Track Geometry Analysis Settings**
+## 10.10 **Track Geometry Analysis Settings**
 
 - Function: Whether to perform track geometry analysis, analysis control parameters, etc.
 - Command: From the main menu, select "Analysis>Track Geometry Analysis";
@@ -268,9 +268,9 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   Calculation End Point Number: The **position number** of the train head position node in the node column at the end of analysis, default is the total number of node columns.
 
-# 10.11 **Calculation Analysis**
+## 10.11 **Calculation Analysis**
 
-## 10.11.1 **Run Analysis**
+### 10.11.1 **Run Analysis**
 
 - Function: Run structural analysis.
 - Command:
@@ -283,7 +283,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   Shortcut key: F5
 
-## 10.11.2 **Delete Intermediate Results**
+### 10.11.2 **Delete Intermediate Results**
 
 - Function: Delete calculation process files in structural files.
 - Command:
@@ -293,7 +293,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   After deleting intermediate results, continuous calculation cannot be performed due to missing process files;
 
-## 10.11.3 **Preprocessing**
+### 10.11.3 **Preprocessing**
 
 - Function: Switch interface to preprocessing.
 - Command:
@@ -306,7 +306,7 @@ Command: From the main menu, select "Analysis>Moving Load Analysis Settings"
 
   Switch to preprocessing;
 
-## 10.11.4 **Postprocessing**
+### 10.11.4 **Postprocessing**
 
 - Function: Switch interface to postprocessing.
 - Command:

@@ -67,7 +67,7 @@ QiaoTong software, according to user habits, defines the internal force directio
 
    ![Section Bottom (-y) Fiber in Tension](image/QQ_1752895048547_Rsl3FrFZjP.png "Section Bottom (-y) Fiber in Tension Section Bottom (-y) Fiber in Tension ")
 
-# 6.2 **Unit Settings**
+## 6.2 **Unit Settings**
 
 Except for special explanations, the basic units of the finite element structure model follow the international unit system. Users can set force and geometric basic units as needed.
 
@@ -81,7 +81,7 @@ Except for special explanations, the basic units of the finite element structure
 | Specific Weight   | $N/m_{3}$ | Temperature  | Celsius Temperature ℃   |
 | Modulus of Elasticity | Pa         | Stress  | Pa      |
 
-# 6.3 **Nodes**
+## 6.3 **Nodes**
 
 ### 6.3.1 New Node
 
@@ -449,7 +449,7 @@ Except for special explanations, the basic units of the finite element structure
   - Y: GCS Y coordinate
   - Z: GCS Z coordinate
 
-# 6.4 **Elements**
+## 6.4 **Elements**
 
 The platform includes the following four types of elements:
 
@@ -462,7 +462,7 @@ The platform includes the following four types of elements:
 - Plate elements
   4-node plate elements.
 
-## 6.4.1 New Element
+### 6.4.1 New Element
 
 - Function: Create elements.
 - Command:
@@ -503,7 +503,7 @@ The platform includes the following four types of elements:
     Select cross splitting node: If an existing node is on the generated element, the element will be split at the existing node.
     Select cross splitting element: If the generated element intersects with an existing element, a node will be automatically generated at the intersection point.
 
-## 6.4.2 Delete Elements
+### 6.4.2 Delete Elements
 
 - Function: Delete elements.
 - Command:
@@ -519,7 +519,7 @@ The platform includes the following four types of elements:
 
     After selecting this option, nodes without attributes (node loads, boundary conditions, etc.) and nodes not associated with elements will be deleted together with the elements.
 
-## 6.4.3 Copy and Move Elements
+### 6.4.3 Copy and Move Elements
 
 - Function: Move or copy elements at equal spacing or unequal spacing.
 - Command:
@@ -570,7 +570,7 @@ The platform includes the following four types of elements:
     Select cross splitting node: If an existing node is on the generated element, the element will be split at the existing node.
     Select cross splitting element: If the generated element intersects with an existing element, a node will be automatically generated at the intersection point and the element will be split.
 
-## 6.4.4 Extend Elements
+### 6.4.4 Extend Elements
 
 - Function:
 
@@ -621,13 +621,13 @@ The platform includes the following four types of elements:
     Spacing: Input copy distances in sequence in the specified direction. (For example: 5, 3, 4.5, 3\@5.0, 4 = 5, 3, 4.5, 5.0, 5.0, 4)
     Direction vector: If arbitrary direction is selected, input the direction vector components in the x, y, z directions.
 
-## 6.4.5 Quick Generate Elements
+### 6.4.5 Quick Generate Elements
 
 - Command: Select "Nodes/Elements" > "Elements" > "Quick Generate" from the main menu.
 
 ![Quick Generate Element Window Operation](image/image_bZ93R9w_TT.png "Quick Generate Element Window Operation Quick Generate Element Window Operation ")
 
-## 6.4.6 Split Elements
+### 6.4.6 Split Elements
 
 - Function: Split the selected elements and create nodes at the splitting points.
 - Command: Select "Nodes/Elements" > "Elements" > "Split" from the main menu.
@@ -655,7 +655,7 @@ The platform includes the following four types of elements:
     Unequal spacing: Split at unequal spacing.
     Unequal distance ratio: Split elements with different length ratios defined by distance ratio. (For example: 0.4, 0.6, 0.9)
 
-## 6.4.7 Merge Elements
+### 6.4.7 Merge Elements
 
 - Function: Merge two or more consecutive line elements into one element.
 - Command: Select "Nodes/Elements" > "Elements" > "Merge" from the main menu.
@@ -671,7 +671,7 @@ The platform includes the following four types of elements:
 
     Delete all nodes without attributes and nodes not associated with elements after merging.
 
-## 6.4.8 Cross Split Elements
+### 6.4.8 Cross Split Elements
 
 - Function: Automatically split elements at the intersection points of the previously input line elements (truss, beams, etc.).
 - Command: Select "Nodes/Elements" > "Elements" > "Cross Split" from the main menu.
@@ -690,7 +690,7 @@ The platform includes the following four types of elements:
 
     Input the minimum distance considered as an intersection.
 
-## 6.4.9 Rotate Elements
+### 6.4.9 Rotate Elements
 
 - Function: Rotate, move, or rotate and copy elements by rotating around a specific axis.
 - Command: Select "Nodes/Elements" > "Elements" > "Rotate" from the main menu.
@@ -725,7 +725,7 @@ The platform includes the following four types of elements:
     Nodes: If cross splitting is selected and an existing node is on the generated line element, the element will be split at the existing node.
     Elements: If cross splitting is selected and the generated line element intersects with an existing element, a node will be automatically generated at the intersection point and the element will be split.
 
-## 6.4.10 Mirror Elements
+### 6.4.10 Mirror Elements
 
 - Function: Move or copy elements symmetrically with a specific mirror plane.
 - Command: Select "Nodes/Elements" > "Elements" > "Rotate" from the main menu.
@@ -772,7 +772,7 @@ The platform includes the following four types of elements:
     Nodes: If cross splitting is selected and an existing node is on the generated line element, the element will be split at the existing node.
     Elements: If cross splitting is selected and the generated line element intersects with an existing element, a node will be automatically generated at the intersection point and the element will be split.
 
-## 6.4.11 Element Numbering
+### 6.4.11 Element Numbering
 
 - Function: Renumber existing elements (nodes) according to the priority order of the global coordinate system directions.
 - Command: Select "Nodes/Elements" > "Elements" > "Element Numbering" from the main menu.
@@ -801,7 +801,7 @@ The platform includes the following four types of elements:
     2ND: The axis with the second priority.
     3RD: The remaining axis.
 
-## 6.4.12 Compact Element Numbering
+### 6.4.12 Compact Element Numbering
 
 - Function: Eliminate unused element numbers and compact the original element numbers into consecutive element numbers.
 - Command: Select "Nodes/Elements" > "Nodes" > "Compact Element Numbering" from the main menu.
@@ -817,7 +817,7 @@ The platform includes the following four types of elements:
     All select: All nodes or elements.
     Specify selection: Select nodes or elements in the model window.
 
-## 6.4.13 Modify Element Parameters
+### 6.4.13 Modify Element Parameters
 
 - Command: Select "Nodes/Elements" > "Elements" > "Modify Element Parameters" from the main menu.
 
@@ -831,7 +831,7 @@ The platform includes the following four types of elements:
 
     Input the specific values to be modified.
 
-## 6.4.14 Element Filtering
+### 6.4.14 Element Filtering
 
 - Function: Select elements along the coordinate axis direction in the model.
 - Select "Nodes/Elements" > "Elements" > "Element Filtering" from the main menu.
@@ -851,7 +851,7 @@ The platform includes the following four types of elements:
 
     Select frame elements along each coordinate axis.
 
-## 6.4.15 Mass Coefficient
+### 6.4.15 Mass Coefficient
 
 - Function: Set the mass coefficient of elements.
 - Command:
@@ -873,7 +873,7 @@ The platform includes the following four types of elements:
 
     Lists all the set mass coefficients, which can be added, edited, and deleted.
 
-## 6.4.16 Stiffness Coefficient
+### 6.4.16 Stiffness Coefficient
 
 - Function: Set the stiffness coefficient of elements.
 - Command:
@@ -895,7 +895,7 @@ The platform includes the following four types of elements:
 
     Lists all the set stiffness coefficients, which can be added, edited, and deleted.
 
-## 6.4.17 View Element Table
+### 6.4.17 View Element Table
 
 - Command: Select "Nodes/Elements" > "Elements" > "Element Table" from the main menu.
 
@@ -909,6 +909,6 @@ The platform includes the following four types of elements:
   - Section: Element's section number
   - Beta Angle: Element Beta angle.
 
-# 6.5 **Structure Groups**
+## 6.5 **Structure Groups**
 
 A structure group consists of several nodes and elements, used to define the structure of each construction stage of the bridge. Users can define, delete, and modify multiple structure groups. Structure groups cannot have duplicate names.

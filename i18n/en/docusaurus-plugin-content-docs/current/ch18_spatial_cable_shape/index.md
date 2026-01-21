@@ -3,7 +3,7 @@ title: 18. Spatial Cable Shape Finding
 slug: /ch18_spatial_cable_shape
 ---
 
-# 18.1 Function Introduction
+## 18.1 Function Introduction
 
 This module calculates spatial ideal bridge completion cable shape, saddle positions, saddle preset amounts and free cable shape, single-span main cable spatial shape, etc. for suspension bridges based on analytical method. Main functions include:
 
@@ -19,7 +19,7 @@ This module calculates spatial ideal bridge completion cable shape, saddle posit
    - Theoretical position of cable clamps
    - Spatial saddle preset amount
 
-# 18.2 Unit System and Coordinate System
+## 18.2 Unit System and Coordinate System
 
 Except for special explanations, the unit system regulations for this module are as follows: force (kN), length (m), angle (°).
 
@@ -27,11 +27,11 @@ Overall coordinate axis settings are as shown in the figure: Bridge longitudinal
 
 ![Coordinate Axis Setting Diagram Coordinate Axis Setting Diagram ](<image/图片 295_Ll-WC7AQZL.png> "Coordinate Axis Setting Diagram Coordinate Axis Setting Diagram ")
 
-# 18.3 Basic Operations
+## 18.3 Basic Operations
 
 Click main menu bar > Suspension Bridge Spatial Cable Shape > Full Bridge Data and Calculation. Enter spatial cable shape calculation window. In "Calculation Options and Types" page, select required calculation options, currently providing "Calculate Ideal Bridge Completion Cable Shape" (default mandatory), "Calculate Saddle Position", "Calculate Ideal Free Cable Shape" three calculation items.
 
-## 18.3.1 Calculate Ideal Bridge Completion Cable Shape
+### 18.3.1 Calculate Ideal Bridge Completion Cable Shape
 
 The operation steps for calculating ideal bridge completion cable shape are as follows:
 
@@ -43,27 +43,27 @@ The operation steps for calculating ideal bridge completion cable shape are as f
 6. If calculation is successful, can view relevant results in "Calculation Results" page.
 7. In the case of existing result data, must click **Delete Results** button before performing modification parameter operations.
 
-## 18.3.2 Calculate Saddle Position Ideal Bridge Completion Cable Shape
+### 18.3.2 Calculate Saddle Position Ideal Bridge Completion Cable Shape
 
 The operation steps for calculating saddle position are as follows:
 
 Besides filling data according to steps 1~4 of 18.3.1 calculating ideal bridge completion cable shape, also need to fill in detailed information of main cable saddle and side cable saddle in "Saddle Information" page, then start calculation.
 
-## 18.3.3 Calculate Ideal Free Cable Shape
+### 18.3.3 Calculate Ideal Free Cable Shape
 
 When calculating ideal free cable shape, must first calculate saddle position. The operation steps are as follows:
 
 Fill in all data required for calculating saddle position. Besides this, also need to fill in information such as whether to change main cable properties, free cable calculation temperature difference, etc. in "Free Cable" page, then start calculation.
 
-# 18.4 Full Bridge Data and Calculation Operation Interface Introduction
+## 18.4 Full Bridge Data and Calculation Operation Interface Introduction
 
-## 18.4.1 Basic Buttons
+### 18.4.1 Basic Buttons
 
 The functions of each basic button in the upper part of the window are as follows:
 
 ![](image/image_0nMWs9sMmd_bGypTPwfqd.png)
 
-## 18.4.2 Overall Information—Bridge Span Information
+### 18.4.2 Overall Information—Bridge Span Information
 
 The bridge span information page is as shown in the figure:
 
@@ -100,7 +100,7 @@ The bridge span information page is as shown in the figure:
 
     After checking this item, the program will automatically correct control span number according to bridge spans after deleting/adding anchor spans, to achieve the goal of not changing original control span. For example, original suspension bridge has 5 spans (spans 1 and 5 are left and right anchor spans), span 3 main span is control span. If deleting left anchor span, total span count becomes 4, main span becomes span 2. If checking this item, program automatically changes control span number to 2.
 
-## 18.4.3 Sections and Materials
+### 18.4.3 Sections and Materials
 
 The sections and materials page is as shown in the figure:
 
@@ -116,7 +116,7 @@ The sections and materials page is as shown in the figure:
 
   Fill in materials and sections of main cables for each span, selecting from defined materials and section names.
 
-## 18.4.4 Stiffening Beam Hangers
+### 18.4.4 Stiffening Beam Hangers
 
 The stiffening beam hangers page is as shown in the figure:
 
@@ -152,7 +152,7 @@ The stiffening beam hangers page is as shown in the figure:
 
   ![Riding-Over Hanger Parameter Schematic Riding-Over Hanger Parameter Schematic ](<image/图片 312_dy8dlrNdPN.png> "Riding-Over Hanger Parameter Schematic Riding-Over Hanger Parameter Schematic ")
 
-## 18.4.5 Main Cable Division Points
+### 18.4.5 Main Cable Division Points
 
 The program automatically generates main cable division points and hangers at division points according to bridge span number, starting position and division point distance, in order from left to right, as shown in the figure below.
 
@@ -197,7 +197,7 @@ The program automatically generates main cable division points and hangers at di
 
   Preview main cable division points and hanger positions of that span.
 
-## 18.4.6 Saddles
+### 18.4.6 Saddles
 
 The saddle page is as shown in the figure:
 
@@ -222,7 +222,7 @@ The saddle page is as shown in the figure:
 
   After filling in saddle data, click complete to modify.
 
-## 18.4.7 Free Cable
+### 18.4.7 Free Cable
 
 The free cable page is as shown in the figure:
 
@@ -241,7 +241,7 @@ The free cable page is as shown in the figure:
 
   Set reserved displacements of both anchor fixed points and each saddle during free cable shape calculation.
 
-## 18.4.8 Calculation Settings
+### 18.4.8 Calculation Settings
 
 The calculation settings page is as shown in the figure:
 
@@ -269,7 +269,7 @@ The calculation settings page is as shown in the figure:
 
   Convergence adjustment coefficient: Default value 1.0, when calculation cannot converge or convergence is slow, can appropriately increase or decrease this value to help calculation converge.
 
-## 18.4.9 Calculation Results
+### 18.4.9 Calculation Results
 
 The calculation results page is as shown in the figure:
 

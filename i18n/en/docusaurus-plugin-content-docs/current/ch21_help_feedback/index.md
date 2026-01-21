@@ -3,7 +3,7 @@ title: 21. Help and Feedback
 slug: /ch21_help_feedback
 ---
 
-# 21.1 **Help Files**
+## 21.1 **Help Files**
 
 - chm help file: "Main Menu" > "About" > "Help File"
 - Online help file: "Main Menu" > "About" > "Online Documentation"
@@ -11,7 +11,7 @@ slug: /ch21_help_feedback
 
   ![](image/1713337329279_AVy4DYRaB3.png)
 
-# 21.2 **Problem Feedback**
+## 21.2 **Problem Feedback**
 
 ![](<image/问题反馈 1_pYRsbDAW-4.jpg>)
 

@@ -3,9 +3,9 @@ title: 11. Results
 slug: /ch11_results
 ---
 
-# 11.1 **Static Analysis Results**
+## 11.1 **Static Analysis Results**
 
-## 11.1.1 **Load Combinations**
+### 11.1.1 **Load Combinations**
 
 - Function: Input load combinations.
 - Command:
@@ -43,7 +43,7 @@ slug: /ch11_results
 
     Input the combination coefficients for the selected load cases participating in the load combination.
 
-## 11.1.2 **Reactions**
+### 11.1.2 **Reactions**
 
 - Function: View reaction results.
 - Command:
@@ -86,7 +86,7 @@ slug: /ch11_results
 
     Arrow Size Scale: Scale of reaction arrow size on the model interface.
 
-## 11.1.3 **Deformation**
+### 11.1.3 **Deformation**
 
 - Function: View deformation results.
 - Command:
@@ -126,9 +126,9 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.4 **Concurrent Reactions**
+### 11.1.4 **Concurrent Reactions**
 
-### 11.1.4.1 Self-Concurrent Reactions (Table Only)
+#### 11.1.4.1 Self-Concurrent Reactions (Table Only)
 
 - Function: View concurrent reactions of live loads or support settlement loads. That is, the extreme value results of each support reaction component and the values of other reaction components of the same support occurring simultaneously. Currently supports querying self-concurrent results of live load cases, support settlement cases, and load combinations containing the above type cases.
 - Note: Live load fatigue related cases do not output self-concurrent reactions.
@@ -151,7 +151,7 @@ slug: /ch11_results
 
     Select reaction components to view self-concurrent reaction results of each support when the extreme value of that component occurs.
 
-### 11.1.4.2 Fully Concurrent Reactions (Table Only)
+#### 11.1.4.2 Fully Concurrent Reactions (Table Only)
 
 - Function: View fully concurrent reaction results, that is, the extreme value results of each support reaction component, other reaction components of the same support occurring simultaneously, and reaction values of all other supports occurring simultaneously. Currently only supports querying fully concurrent results of **support settlement cases** and **load combinations containing settlement cases**.
 - Note: Settlement cases and live load cases (except fatigue related live load cases) output fully self-concurrent reactions, and live load calculation requires checking whether to track before calculation.
@@ -171,7 +171,7 @@ slug: /ch11_results
 
     Select live load cases, support settlement cases, and load combinations containing the above type cases for which to view results.
 
-## 11.1.5 Concurrent Internal Forces
+### 11.1.5 Concurrent Internal Forces
 
 - Function: View self-concurrent internal force results of beam elements or composite beam elements, that is, the extreme value results of each beam element's internal force component and the values of other internal force components of the same element occurring simultaneously. Currently supports querying self-concurrent results of **live load cases**, **support settlement cases**, and **load combinations containing the above type cases**.
 - Command:
@@ -196,7 +196,7 @@ slug: /ch11_results
 
     Select internal force components to view self-concurrent internal force results of each element when the extreme value of that component occurs.
 
-## 11.1.6 **Node Displacements**
+### 11.1.6 **Node Displacements**
 
 - Function: View node displacement results.
 - Command:
@@ -220,7 +220,7 @@ slug: /ch11_results
 
   RZ: Rotation component about Z axis under global coordinate system
 
-## 11.1.7 **Truss Element Internal Forces**
+### 11.1.7 **Truss Element Internal Forces**
 
 - Function: View truss internal force results.
 - Command:
@@ -247,7 +247,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.8 **Beam Element Internal Forces**
+### 11.1.8 **Beam Element Internal Forces**
 
 - Function: View beam internal force results.
 - Command:
@@ -289,7 +289,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.9 **Composite Beam Element Internal Forces**
+### 11.1.9 **Composite Beam Element Internal Forces**
 
 - Function: View composite beam internal force results.
 - Command:
@@ -334,7 +334,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.10 **Plate Element Internal Forces**
+### 11.1.10 **Plate Element Internal Forces**
 
 - Function: View plate internal force results.
 - Command:
@@ -390,7 +390,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.11 **Truss Element Stresses**
+### 11.1.11 **Truss Element Stresses**
 
 - Function: View truss stress results.
 - Command:
@@ -417,7 +417,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.12 **Beam Element Stresses**
+### 11.1.12 **Beam Element Stresses**
 
 - Function: View beam stress results.
 - Command:
@@ -457,7 +457,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.13 **Composite Beam Element Stresses**
+### 11.1.13 **Composite Beam Element Stresses**
 
 - Function: View composite beam stress results.
 - Command:
@@ -500,7 +500,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.14 **Plate Element Stresses**
+### 11.1.14 **Plate Element Stresses**
 
 - Function: View plate stress results.
 - Command:
@@ -546,7 +546,7 @@ slug: /ch11_results
 
     Before Deformation: Display shape before deformation on the model interface.
 
-## 11.1.15 **Constraint Equations (Table Only)**
+### 11.1.15 **Constraint Equations (Table Only)**
 
 - Function: View constraint equations.
 - Command:
@@ -563,7 +563,7 @@ slug: /ch11_results
 
     Can quickly add constraint equations through selection type.
 
-## 11.1.16 **Elastic Links (Table Only)**
+### 11.1.16 **Elastic Links (Table Only)**
 
 - Function: View elastic link results.
 - Command:
@@ -580,7 +580,7 @@ slug: /ch11_results
 
     Can quickly add elastic links through selection type.
 
-## 11.1.17 **Cable Element Unstressed Length**
+### 11.1.17 **Cable Element Unstressed Length**
 
 - Function: View unstressed cable length of cable elements.
 - Command:
@@ -596,11 +596,11 @@ slug: /ch11_results
 
     Can quickly add cable elements through selection type.
 
-## 11.1.18 **Prestressing Tendon Results**
+### 11.1.18 **Prestressing Tendon Results**
 
 Not yet available
 
-## 11.1.19 Construction Stage **Warning Settings**
+### 11.1.19 Construction Stage **Warning Settings**
 
 - Function: Whether to perform construction stage warning, set warning items.
 - Command: Select "Results > Construction Stage Warning > Warning Settings" from the main menu;
@@ -674,7 +674,7 @@ Not yet available
 
     You can batch add warning items for specified structure groups or boundary groups, delete all or specified warning items, and directly edit warning items in the warning item table. After warning settings are completed, click OK to start warning analysis.
 
-## 11.1.20 **Warning Results**
+### 11.1.20 **Warning Results**
 
 - Function: View warning result table.
 - Command: Select "Results > Construction Stage Warning > Warning Results" from the main menu, click OK.
@@ -692,7 +692,7 @@ Not yet available
 
     Select construction stage to display warning results.
 
-## 11.1.21 **Warning Display**
+### 11.1.21 **Warning Display**
 
 - Function: View warning result graphics.
 - Command: Select "Results > Construction Stage Warning > Warning Display" from the main menu.
@@ -729,7 +729,7 @@ Not yet available
 
     Values: Whether to display specific over-limit values.
 
-## 11.1.22 **Generate Verification Cases**
+### 11.1.22 **Generate Verification Cases**
 
 - Function: Perform further verification on over-limit reinforced concrete and prestressed concrete members, and generate verification reports.
 - Command: Select "Results > Construction Stage Warning > Generate Verification Cases" from the main menu.
@@ -746,9 +746,9 @@ Structure Type: Includes reinforced concrete members, fully prestressed members,
 
 After determining the above input items, click "Generate Verification Cases" to enter the concrete structure verification case page, see [12. Verification](../ch12_check/index.md "12. Verification").
 
-# 11.2 **Dynamic Analysis Results**
+## 11.2 **Dynamic Analysis Results**
 
-## 11.2.1 **Table Result Output**
+### 11.2.1 **Table Result Output**
 
 ### **11.2.1.1 Time History Tables**
 
@@ -930,7 +930,7 @@ After determining the above input items, click "Generate Verification Cases" to 
 
 ![Element Stress Maximum Value Table Result Schematic Element Stress Maximum Value Table Result Schematic ](<image/图片 256_eppnK0Lgkw.png> "Element Stress Maximum Value Table Result Schematic Element Stress Maximum Value Table Result Schematic ")
 
-## 11.2.2 **Graphic Result Output**
+### 11.2.2 **Graphic Result Output**
 
 ### **11.2.2.1 Graphic Output**
 
@@ -1123,9 +1123,9 @@ After determining the above input items, click "Generate Verification Cases" to 
 
     Select time history load case for the result time history function to be output.
 
-# 11.3 **Free Vibration and Buckling Analysis Results**
+## 11.3 **Free Vibration and Buckling Analysis Results**
 
-## 11.3.1 **Table Result Output**
+### 11.3.1 **Table Result Output**
 
 - Function: Table output of mode angular frequency, engineering frequency, period, modal participation mass, participation coefficient results.
 - Command:
@@ -1136,7 +1136,7 @@ After determining the above input items, click "Generate Verification Cases" to 
 
   ![](image/image_C_Sm9nsSgj.png)
 
-## 11.3.2 **Graphic Result Output**
+### 11.3.2 **Graphic Result Output**
 
 - Function: Display modal displacements of specified modes.
 - Command:

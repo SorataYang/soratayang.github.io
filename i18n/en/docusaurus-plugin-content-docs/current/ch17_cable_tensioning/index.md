@@ -3,13 +3,13 @@ title: 17. Stay Cable Intelligent Tensioning
 slug: /ch17_cable_tensioning
 ---
 
-# 17.1 Function Introduction
+## 17.1 Function Introduction
 
 This module is based on intelligent optimization algorithms, using cable tension forces of each cable as design variables, and establishing an optimization model with constraints such as node displacements and element internal forces, performing optimization calculations to obtain ideal bridge completion cable forces (or cable lengths).
 
-# 17.2 Basic Operations
+## 17.2 Basic Operations
 
-## 17.2.1 Influence Matrix Generation
+### 17.2.1 Influence Matrix Generation
 
 The influence matrix interface is as follows:
 
@@ -54,7 +54,7 @@ The influence matrix interface is as follows:
 
    ![View Influence Matrix View Influence Matrix ](<image/图片 292_yDq3U62OUM.png> "View Influence Matrix View Influence Matrix ")
 
-## 17.2.2 Set Optimization Initial Values
+### 17.2.2 Set Optimization Initial Values
 
 ![Set Optimization Initial Values Interface Set Optimization Initial Values Interface ](<image/图片 293_Ehp0Prt6ok.png> "Set Optimization Initial Values Interface Set Optimization Initial Values Interface ")
 
@@ -72,7 +72,7 @@ The influence matrix interface is as follows:
 
    Users can directly modify data in the table
 
-## 17.2.3 Optimization Calculation and Results
+### 17.2.3 Optimization Calculation and Results
 
 ![](<image/图片 294_o6L1_6RCKc.png>)
 
@@ -80,7 +80,7 @@ Results can view optimization variable values and final result values
 
 Tensioning cable case optimization values can directly generate corresponding loads. If cable element cable forces (or cable length tensioning) already exist in load cases and load groups, newly generated loads will replace existing load values.
 
-# 17.3 Operation Videos
+## 17.3 Operation Videos
 
 - 📺 **Online Videos**
 

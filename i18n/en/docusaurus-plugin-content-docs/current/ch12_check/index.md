@@ -3,9 +3,9 @@ title: 12. Verification
 slug: /ch12_check
 ---
 
-# 12.1 Function Introduction
+## 12.1 Function Introduction
 
-## 12.1.1 Concrete Verification
+### 12.1.1 Concrete Verification
 
 This module is used for strength verification of concrete beam elements.
 
@@ -50,7 +50,7 @@ This module is used for strength verification of concrete beam elements.
 
   Determined by General Settings > Parallel Computing Settings for the number of calculation threads.
 
-## 12.1.2 Steel Truss Beam Verification
+### 12.1.2 Steel Truss Beam Verification
 
 This module is used for strength verification of concrete beam elements.
 
@@ -68,9 +68,9 @@ This module is used for strength verification of concrete beam elements.
 
   ③ Fatigue calculation
 
-# 12.2 **Reinforcement**
+## 12.2 **Reinforcement**
 
-## 12.2.1 **Longitudinal Reinforcement**
+### 12.2.1 **Longitudinal Reinforcement**
 
 ### Reinforcement Section List
 
@@ -263,7 +263,7 @@ This module is used for strength verification of concrete beam elements.
 
     Click column header then paste to batch paste copied content to that column.
 
-## 12.2.2 Stirrups
+### 12.2.2 Stirrups
 
 - Function: Set stirrups.
 - Command: "Main Menu" > "Verification" > "Stirrups".
@@ -325,7 +325,7 @@ This module is used for strength verification of concrete beam elements.
 
     Clear all element stirrup configuration information.
 
-## 12.2.3 Vertical Tendons
+### 12.2.3 Vertical Tendons
 
 - Function: Set vertical tendons.
 - Command: "Main Menu" > "Verification" > "Vertical Tendons".
@@ -349,9 +349,9 @@ This module is used for strength verification of concrete beam elements.
 
     Set the strength design value $f_{pd}$ of vertical prestressing tendon.
 
-# 12.3 Concrete Verification
+## 12.3 Concrete Verification
 
-## 12.3.1 Verification Materials
+### 12.3.1 Verification Materials
 
 - Function: Set material parameters required for concrete verification. Can adjust material parameters specifically for verification needs without affecting original material definitions in the properties module, achieving independent management of verification parameters and basic material properties.
 - Command: Select "Verification" > "Verification Materials" from the main menu;
@@ -369,7 +369,7 @@ This module is used for strength verification of concrete beam elements.
 
     Save currently modified parameter settings.
 
-## 12.3.2 Verification Load Combinations
+### 12.3.2 Verification Load Combinations
 
 ### Verification Load Combinations
 
@@ -497,7 +497,7 @@ This module is used for strength verification of concrete beam elements.
 
   Replace: Auto-generated verification load combinations replace original verification load combinations.
 
-## 12.3.3 Concrete Verification Cases
+### 12.3.3 Concrete Verification Cases
 
 - Function: Set concrete verification cases (subsequent 12.6 Generate Calculation Report will also use this type of case).
 - Command: Select "Verification" > "Concrete Verification" from the main menu;
@@ -544,7 +544,7 @@ This module is used for strength verification of concrete beam elements.
 
     Verify this case, see 12.3.4 Concrete Verification Parameter Settings.
 
-## 12.3.4 Concrete Verification Parameter Settings
+### 12.3.4 Concrete Verification Parameter Settings
 
 ### 1 Concrete Verification Introduction
 
@@ -770,7 +770,7 @@ Combine element calculation results according to verification load combinations 
 
 ![Load Component Schematic Load Component Schematic ](image/WXWorkLocal_17290614248637_bOntXlQLWY.png "Load Component Schematic Load Component Schematic ")
 
-## 12.3.5 Verification Item Description
+### 12.3.5 Verification Item Description
 
 ### 1 Normal Section Flexural Bearing Capacity
 
@@ -1064,9 +1064,9 @@ Combine element calculation results according to verification load combinations 
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text.
 
-# 12.4 Steel Truss Beam Verification
+## 12.4 Steel Truss Beam Verification
 
-## 12.4.1 Plate Hole Deduction
+### 12.4.1 Plate Hole Deduction
 
 - Description:
 
@@ -1080,7 +1080,7 @@ Combine element calculation results according to verification load combinations 
 > - Default hole diameter and hole spacing: Hole diameter: Software default bolt hole diameter is 33 mm. Hole spacing: Hole spacing is set to 100 mm by default.
 > - Batch hole deduction: Sections with consistent rules: For multiple sections with same hole deduction rules, software supports batch processing. Users only need to set hole deduction rules once, software can automatically apply this rule to multiple sections, greatly reducing repetitive operations and improving work efficiency.
 
-## 12.4.2 Define Members
+### 12.4.2 Define Members
 
 ![                 Define Member Interface                  Define Member Interface ](image/image_KrQLbH9ISn.png "                 Define Member Interface                  Define Member Interface ")
 
@@ -1101,7 +1101,7 @@ Combine element calculation results according to verification load combinations 
 > - Automatic node position finding: Click "Intelligent Member Generation" button, software can automatically identify and determine member node positions based on upper chord and lower chord structure group information.
 > - Automatic division and member generation: Upper chord and lower chord: Software will automatically divide and generate all upper chords, lower chords and web members, determining specific position and dimensions of each member based on node positions.
 
-## 12.4.3 Define Verification Cases
+### 12.4.3 Define Verification Cases
 
 ![Generate Steel Truss Beam Verification Case Interface Generate Steel Truss Beam Verification Case Interface ](image/image_0e--3yVvJG.png "Generate Steel Truss Beam Verification Case Interface Generate Steel Truss Beam Verification Case Interface ")
 
@@ -1157,7 +1157,7 @@ Software section table lists all section information of selected members, includ
 
 > 📌Each element will extract 6 internal force items: axial force maximum, axial force minimum, My maximum, My minimum, Mz maximum, Mz minimum. Taking axial force maximum item as example: In this row, I-end and J-end axial forces are both maximum: when I-end axial force is maximum, its corresponding concurrent My, Mz values, when J-end axial force is maximum, its corresponding concurrent My, Mz values. I-end and J-end axial force maximum do not necessarily occur simultaneously, but are placed in same row to reduce table rows.
 
-## 12.4.4 **Verification Calculation**
+### 12.4.4 **Verification Calculation**
 
 #### 12.4.4.1**Strength Calculation**
 
@@ -1211,7 +1211,7 @@ $\sigma_{d f}=\frac{\gamma_{\mathrm{d}} \gamma_{\mathrm{n}}^{\prime}\left(\sigma
 
 $σ_{min}$$σ_{max}$ are maximum and minimum stresses, tension is positive; $[σ_{0}]$ is allowable stress amplitude; $ \gamma_{d}$ is multi-line coefficient; $ \gamma_{n}$ is damage correction coefficient mainly in tension; $ \gamma_{n}^{,}$ is damage correction coefficient mainly in compression; $ \gamma_{t}$ is plate thickness correction coefficient; $ \gamma_{ρ}$ is stress ratio correction coefficient.
 
-## 12.4.5  **Query Results**
+### 12.4.5 **Query Results**
 
 #### 12.4.5.1 **Strength Calculation Results**
 
@@ -1243,11 +1243,11 @@ Main force + additional force + in-plane secondary stress + out-of-plane seconda
 
 $σ_{min}$$σ_{max}$ are maximum and minimum stresses, tension is positive; $[σ_{0}]$ is allowable stress amplitude; $ \gamma_{d}$ is multi-line coefficient; $ \gamma_{n}$ is damage correction coefficient mainly in tension; $ \gamma_{n}^{,}$ is damage correction coefficient mainly in compression; $ \gamma_{t}$ is plate thickness correction coefficient; $ \gamma_{ρ}$ is stress ratio correction coefficient.
 
-# 12.5 Anti-Overturning Verification
+## 12.5 Anti-Overturning Verification
 
 According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete and Prestressed Concrete Bridges and Culverts" (JTG 3362-2018), perform anti-overturning stability calculation for **integral section simply supported beams and continuous beam bridges**. Note that anti-overturning verification can only be performed when post-processing results exist.
 
-## 12.5.1 Anti-Overturning Cases
+### 12.5.1 Anti-Overturning Cases
 
 - Function: Generate, edit or delete anti-overturning cases.
 - Command:
@@ -1261,7 +1261,7 @@ According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete an
 - Delete: Delete selected anti-overturning case
 - Clear: Clear all anti-overturning cases
 
-## 12.5.2 Anti-Overturning Case Definition, Result Viewing and Export
+### 12.5.2 Anti-Overturning Case Definition, Result Viewing and Export
 
 #### Anti-Overturning Case Definition
 
@@ -1337,7 +1337,7 @@ According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete an
 
   ![](image/1731294259676_4C-9SVs2CX.png)
 
-# 12.6 Generate Calculation Report
+## 12.6 Generate Calculation Report
 
 - Function: Software can automatically generate *.DOCX format calculation reports for concrete beam structures. Calculation report includes two major parts: basic information and verification results. Users can customize output content.
 - Command:
@@ -1354,13 +1354,13 @@ User modeling needs to use Z as vertical direction, X as longitudinal direction 
 
 It is recommended that users ensure main beam element numbers are continuous before using this function, so that result graphics can be output correctly. Can apply command: Main menu bar > Nodes/Elements > Element Numbering, to sort elements and node numbers.
 
-## 12.6.1 Verification Cases
+### 12.6.1 Verification Cases
 
 Users select verification cases created in verification function, software will determine output verification content based on this 12.3.3 Concrete Verification Cases. Divided into highway code reinforced concrete, highway code prestressed concrete (fully prestressed, Class A, Class B), railway code reinforced concrete, railway code prestressed concrete (fully prestressed, Class A, Class B).
 
 > 🧐Note: For unified expression, according to railway code description of prestressed concrete structure members without tensile stress, members allowing tensile stress but no cracking, members allowing cracking, compared to highway code expression, correspondingly called fully prestressed members, Class A members, Class B members.
 
-## 12.6.2 Basic Information
+### 12.6.2 Basic Information
 
 Basic information catalog is as follows:
 
@@ -1422,12 +1422,12 @@ Basic information catalog is as follows:
 - Stiffness Indicators: Supplemented by users.
 - Static Stability: Supplemented by users.
 
-## 12.6.3 Other Definitions
+### 12.6.3 Other Definitions
 
 - Most Unfavorable Construction Stage: Users can select most unfavorable construction stage, default value is last construction stage. Software will give internal force diagrams and stress diagrams of most unfavorable construction stage in calculation results.
 - Output Elements: This is used to select element groups for outputting internal force diagrams and stress diagrams. Note that elements for outputting verification items cannot be selected in calculation report tool. Software will output verification results of element groups defined in corresponding verification cases in verification function.
 
-## 12.6.4 Verification Items
+### 12.6.4 Verification Items
 
 Verification items performed in selected "Verification Cases" will be selected by default. Grayed out verification items indicate that verification has not been performed in verification function.
 

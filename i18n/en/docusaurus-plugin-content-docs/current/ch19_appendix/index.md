@@ -3,9 +3,9 @@ title: 19. Appendix
 slug: /ch19_appendix
 ---
 
-# 19.1 Stay Cable Related Calculations
+## 19.1 Stay Cable Related Calculations
 
-## 19.1.1 Simulation Elements
+### 19.1.1 Simulation Elements
 
 There are two types of elements in Qiaotong software that can simulate stay cables, which are truss elements and cable elements.
 
@@ -16,15 +16,15 @@ There are two types of elements in Qiaotong software that can simulate stay cabl
 
   When using linear calculation, cable elements are tension-only rod elements with elastic modulus modified by Ernst formula, only in tension, self-weight is included in element internal forces; when using nonlinear calculation, cable elements are catenary line elements, can only be in tension, cannot be in compression, resist bending and resist torsion. Cable elements need initial parameters (unstressed cable length, horizontal tension force or J-end tension force). If initial parameters are not given, cable elements are not included in structure before tensioning. Whether cable elements use linear calculation or nonlinear calculation, cable force directions at both ends are along tangent direction.
 
-## 19.1.2 Cable Force Tensioning
+### 19.1.2 Cable Force Tensioning
 
 There are two stay cable force tensioning methods. One is to apply initial tension force load (external force) in construction stage, cable force tensioning value is element J-end tension force. The other is to set horizontal tension force or J-end tension force (internal force) in cable element initial parameters.
 
-## 19.1.3 Cable Length Tensioning
+### 19.1.3 Cable Length Tensioning
 
 There are two stay cable length tensioning methods. One is to apply cable length load in construction stage. The other is to set unstressed cable length in cable element initial parameters.
 
-# 19.2 Construction Stage Related Calculations
+## 19.2 Construction Stage Related Calculations
 
 The software calculates step by step in a fixed order:
 

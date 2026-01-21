@@ -3,7 +3,7 @@ title: 16. Structural Dynamic Analysis
 slug: /ch16_dynamic_analysis
 ---
 
-# 16.1 Free Vibration Characteristics **Analysis**
+## 16.1 Free Vibration Characteristics **Analysis**
 
 - Qiaotong software supports free vibration characteristics analysis using lumped mass matrix or consistent mass matrix, outputting structure frequency, period, modal participation mass, participation coefficients, and specified mode shapes. Before free vibration characteristics analysis, necessary steps such as establishing overall structural model, defining node masses or converting loads to masses should be completed. The main operation process for free vibration characteristics analysis is:
 
@@ -14,7 +14,7 @@ slug: /ch16_dynamic_analysis
   3\) After successful analysis, view table results of all modes related to specified settings analysis through "Results > Period and Modes", view modal displacement graphic results of specified modes through "Modes > Mode Shapes".
 - For free vibration characteristics analysis settings, see: 10.4 **Free Vibration Settings**, for result output details, see: 11.3 **Free Vibration and Buckling Analysis Results**.
 
-# 16.2 **Response Spectrum Analysis**
+## 16.2 **Response Spectrum Analysis**
 
 The steps for performing response spectrum analysis using Qiaotong software are as follows:
 
@@ -26,7 +26,7 @@ The steps for performing response spectrum analysis using Qiaotong software are 
 
 - Click calculate, after completion can view table and graphic results of reactions, deformations, beam/truss/cable and composite beam element internal forces and stresses, plate element internal forces and stresses, etc. in "Results > Response Spectrum Analysis", see \*\*.
 
-# 16.3 **Dynamic Time History Analysis**
+## 16.3 **Dynamic Time History Analysis**
 
 - Qiaotong software supports linear and boundary nonlinear dynamic time history analysis, outputting dynamic responses such as structural deformations, internal forces and stresses. The time history analysis setting process is:
 

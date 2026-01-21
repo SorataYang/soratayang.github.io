@@ -3,15 +3,15 @@ title: 15. Structural Static Analysis
 slug: /ch15_static_analysis
 ---
 
-# 15.1 **Construction Stage Analysis**
+## 15.1 **Construction Stage Analysis**
 
 See 9.8 Construction Stages, 10.2 **Construction Stage Settings**.
 
-# 15.2 **Operation Stage Analysis**
+## 15.2 **Operation Stage Analysis**
 
 See 10.3 **Operation Stage Settings**.
 
-# 15.3 **Settlement Case Analysis**
+## 15.3 **Settlement Case Analysis**
 
 The steps for Qiaotong software to perform support settlement analysis are as follows:
 
@@ -27,7 +27,7 @@ The steps for Qiaotong software to perform support settlement analysis are as fo
 
 6. See 9.9 Support Settlement.
 
-# 15.4 Moving Load **Case Analysis**
+## 15.4 Moving Load **Case Analysis**
 
 Qiaotong software can analyze the most unfavorable node displacements, element internal forces and stresses, support reactions, elastic link forces, and constraint equation forces of structures under the action of moving loads such as trains, vehicles, light rails, crowds, transverse live loads, etc.
 
@@ -71,7 +71,7 @@ Qiaotong software can analyze the most unfavorable node displacements, element i
   6\) After successful analysis, view extreme value result graphics or tables of each case through "Results > Graphics" or "Results > Tables". In "Beam Element Internal Force Result Table" and "Support Reaction Result Table", right-click and select "Show Maximum Values" to view self-concurrent results of beam element internal forces and support reactions (results of same element/support occurring simultaneously).
 > 🧐Note: For moving load content, see 9.5 Moving Loads.
 
-## 15.4.1 **Moving Load Specifications**
+### 15.4.1 **Moving Load Specifications**
 
 Before defining moving loads, first select corresponding specification from moving load analysis data > moving load specifications. For longitudinal moving loads, the program currently provides Chinese bridge general specifications. For transverse moving loads, the software provides transverse moving loads not restricted by specifications, mainly used to analyze local effects when vehicle loads are loaded at different transverse positions of bridge structures.
 
@@ -81,7 +81,7 @@ When selecting different specifications, all functions related to moving loads w
 
 ![Moving Load Specification Selection Moving Load Specification Selection ](<image/图片 273_Ta8yYEZWkF.png> "Moving Load Specification Selection Moving Load Specification Selection ")
 
-## 15.4.2 **Load Distribution Width Tool**
+### 15.4.2 **Load Distribution Width Tool**
 
 This tool is used to calculate one-way plate load distribution width. Users need to first establish transverse calculation model.
 
@@ -124,7 +124,7 @@ This tool is used to calculate one-way plate load distribution width. Users need
     - When wheel is located at cantilever position: when $lc ≤ 2.5m$, reference AASHTO specification formula for cantilever plate load distribution width calculation, considering wheel distribution overlap; when $lc ≤ 2.5m$, specification recommends adopting appendix formula, which directly calculates moment value, so the load distribution width displayed by software is back-calculated from moment value, not involving whether to consider wheel distribution width overlap.
     - Load proportion coefficient = $\frac{\text{load value}}{\text{maximum single wheel weight}P_{1}}$. This value is used to fill in "Transverse Moving Loads > Lane Lines" in structural calculation definition, load proportion coefficient table. Meanwhile in "Transverse Moving Loads > Vehicle Definition", wheel load needs to input the maximum single wheel weight P1 here, so that transverse influence line loading can be performed correctly.
 
-## 15.4.3 **Result Output**
+### 15.4.3 **Result Output**
 
 - The software supports output:
   - Most unfavorable extreme values of node displacements, beam element internal forces/stresses, truss element internal forces/stresses, cable element internal forces/stresses, shell element internal forces/stresses, support reactions, constraint equation forces, and elastic link forces for live loads;
@@ -134,7 +134,7 @@ This tool is used to calculate one-way plate load distribution width. Users need
   - The program only calculates relevant results of nodes, elements, elastic links, and constraint equations selected in "Moving Load Analysis Settings - Calculation Options".
   - Output result cases are related to "Moving Load Analysis Cases - Whether to Save Sub-case Results". If not checked, only outputs total results of that live load case (discrimination superposition of each sub-case), including three result items: maximum, minimum, and envelope; if checked, besides total results, also outputs maximum, minimum, and envelope three result items of each sub-case separately.
 
-## 15.4.4 **Live Load Calculation Notes**
+### 15.4.4 **Live Load Calculation Notes**
 
 - Influence surface consists of one node longitudinal array, using beam element shape function refinement, all lanes on that influence surface cannot exceed the minimum value of section widths of beam elements on that node longitudinal array;
 - Influence surface consists of multiple node longitudinal arrays, using shell element shape function refinement (structure may not have shell elements), when refining influence surface, finds the four points closest to the calculation point on the node longitudinal array, performs linear interpolation to obtain results at calculation point position, so to ensure calculation result accuracy, need to define all longitudinal points on influence surface as node longitudinal arrays to form influence surface;
@@ -147,7 +147,7 @@ This tool is used to calculate one-way plate load distribution width. Users need
 - For the same influence surface, centerline spacing between different highway lanes must be greater than or equal to 3.1m, if less than that, it will be ignored.
 - In highway specifications, when calculating shear force effects, concentrated load is multiplied by 1.2 coefficient, support reactions and displacements do not consider 1.2 coefficient, element internal forces consider 1.2 coefficient.
 
-# 15.5 Elastic Buckling (Stability) Analysis
+## 15.5 Elastic Buckling (Stability) Analysis
 
 The steps for Qiaotong software to perform elastic buckling (stability) analysis are as follows:
 
@@ -158,7 +158,7 @@ The steps for Qiaotong software to perform elastic buckling (stability) analysis
 
 &#x20;       Note that the total effective load count (including self-weight and other cases) for variable loads must be greater than 0, otherwise calculation will error; if structure has no compression members, theoretically buckling will not occur, therefore buckling calculation results will not be output.
 
-# 15.6 **Linear/Nonlinear Analysis**
+## 15.6 **Linear/Nonlinear Analysis**
 
 In Qiaotong software, when performing construction stage analysis and operation additional load analysis, both linear or geometric nonlinearity can be considered, **moving load analysis can only consider linearity**.
 
@@ -214,7 +214,7 @@ In Qiaotong software, when performing construction stage analysis and operation 
 >   ![](<image/图片 285_WhO2F5X6Io.png>)
 > - Boundary nonlinearity: If structure has one-way elastic links (tension only or compression only), one-way elastic supports (tension only or compression only), Qiaotong automatically adopts boundary nonlinear calculation.
 
-# 15.7 **Continued Analysis**
+## 15.7 **Continued Analysis**
 
 - Function: After model calculation is successful and results are obtained, if certain construction stage parameters are modified, continued analysis function can be used to recalculate starting from that construction stage, avoiding repeated calculation of unmodified construction stages. Can also perform continued analysis for operation stage.
 - Command:
@@ -234,7 +234,7 @@ In Qiaotong software, when performing construction stage analysis and operation 
 
   Recalculate live loads and track shape.
 
-# 15.8 Construction Stage Result Warning Analysis
+## 15.8 Construction Stage Result Warning Analysis
 
 &#x20;       Qiaotong software's construction stage result warning analysis module can, for specified multiple construction stages and specified members (nodes, elements, supports, elastic links, etc.), with user setting reasonable stress ranges for members, once member internal forces, stresses, reactions, etc. exceed ranges, the program will immediately alarm. To help users improve monitoring efficiency and ensure construction safety. Specific process is as follows:
 

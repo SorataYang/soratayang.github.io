@@ -3,7 +3,7 @@ title: 14. Tools
 slug: /ch14_tools
 ---
 
-# 14.1 **Command Window**
+## 14.1 **Command Window**
 
 - Function: Supports mct text modeling and python modeling, python modeling.
 - Commands:
@@ -36,11 +36,11 @@ slug: /ch14_tools
 
   Click on the icon as shown above to clear the current text window.
 
-# 14.2 **Cable Force Optimization**
+## 14.2 **Cable Force Optimization**
 
 See: Intelligent Cable Force Adjustment for Cable-Stayed Bridges
 
-# 14.3 **Midpoint Chord Measurement Method**
+## 14.3 **Midpoint Chord Measurement Method**
 
 - Function: Calculate midpoint chord measurement values.
 - Command:
@@ -80,7 +80,7 @@ See: Intelligent Cable Force Adjustment for Cable-Stayed Bridges
 
   Supports viewing 10m chord measurement values, unfiltered calculated chord measurement values, filtered calculated chord measurement values, and filtered chord measurement values in two ways: tables and charts.
 
-# 14.4 General Optimization Tool
+## 14.4 General Optimization Tool
 
 - Function: Nonlinear constrained optimization calculation.
 - Command
@@ -112,7 +112,7 @@ Based on the influence matrix provided by the user, set the adjustment upper and
 
   Obtain the results of optimization variables and constraint targets. The software also presents the intermediate variables including the change values of optimization variables and constraint targets.
 
-# 14.5 **Automatic Wind Load Calculation**
+## 14.5 **Automatic Wind Load Calculation**
 
 - Function: Automatically calculate wind loads according to codes and add them to the model. Supports main beams, piers, towers, stay cables, main cables, hangers, and other results.
 - Command: Tools > Automatic Wind Load Calculation
@@ -127,9 +127,9 @@ Based on the influence matrix provided by the user, set the adjustment upper and
 
     Supports "Code for Wind-Resistant Design of Highway Bridges JTG/T3360-01-2018".
 
-## 14.5.1 **Basic Data**
+### 14.5.1 **Basic Data**
 
-### 14.5.1.1 Basic Data
+#### 14.5.1.1 Basic Data
 
 - **Longitudinal Bridge Coordinate Axis**
 
@@ -178,7 +178,7 @@ Based on the influence matrix provided by the user, set the adjustment upper and
 
   Click "Auto-obtain Horizontal Loading Length" to automatically obtain the total length of the model along the selected bridge longitudinal direction.
 
-### 14.5.1.2 Structure Data
+#### 14.5.1.2 Structure Data
 
 #### 1, Main Beam
 
@@ -317,7 +317,7 @@ This value is used to calculate the diameter of the stay cable.
   - **Design Reference Wind Speed (With Vehicle)**: If the user does not customize, the program calculates according to the formula $U_{d}=k_{f}(\frac{\text{基准高度}}{\text{车离水面高}})^{α_{0}}U_{z} $.
   - **Design Reference Wind Speed (Ultimate)**: If the user does not customize, the program calculates according to the formula $U_{d}=k_{f}(\frac{\text{基准高度}}{10m})^{α_{0}}U_{s10} $.
 
-## 13.5.2 **Wind Load Calculation Results**
+### 13.5.2 **Wind Load Calculation Results**
 
 After completing the filling of basic data, click "Generate Wind Load Calculation Results" to perform the calculation.
 
