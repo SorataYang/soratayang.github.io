@@ -132,11 +132,11 @@
     "description": "The label for item '16. 结构动力分析' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.17. 智能调索系统": {
-    "message": "17. Cable Tensioning",
+    "message": "Cable Tensioning System",
     "description": "The label for category '17. 智能调索系统' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.item.label.17. 智能调索系统": {
-    "message": "17. Cable Tensioning",
+    "message": "Cable Tensioning System",
     "description": "The label for item '17. 智能调索系统' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.18. 空间缆索找形系统": {
@@ -180,11 +180,11 @@
     "description": "The label for item 'VS Code 中 Jupyter Notebook 使用方' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.17. 斜拉索智能调索": {
-    "message": "17. 斜拉索智能调索",
+    "message": "17. Cable Tensioning",
     "description": "The label for category '17. 斜拉索智能调索' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.18. 空间缆索找形": {
-    "message": "18. 空间缆索找形",
+    "message": "18. Spatial Cable Shape",
     "description": "The label for category '18. 空间缆索找形' in sidebar 'tutorialSidebar'"
   }
 }
