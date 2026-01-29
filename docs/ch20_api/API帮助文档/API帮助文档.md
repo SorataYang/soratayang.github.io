@@ -1,3 +1,9 @@
+---
+title: API 帮助文档
+sidebar_label: API 帮助文档
+sidebar_position: 1
+---
+
 > 最新qtmodel版本 V2.2.1 - 2026-01-08 
 > 最新qdat数据版本 V1.2.4 
 > pip install --upgrade qtmodel -i https://pypi.org/simple
