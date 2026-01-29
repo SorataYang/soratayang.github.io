@@ -545,7 +545,7 @@ mdb.remove_thickness(name="板厚1")
 > rib_place:肋板位置 list[tuple[布置具体部位,参考点0-下/左,距参考点间距,肋板名，加劲肋位置0-上/左 1-下/右 2-两侧,加劲肋名]]  
 > _布置具体部位(工字钢梁) 1-上左 2-上右 3-腹板 4-下左 5-下右  
 > _布置具体部位(箱型钢梁) 1-上左 2-上中 3-上右 4-左腹板 5-右腹板 6-下左 7-下中 8-下右  
-> loop_segments:线圈坐标集合 list[dict] dict示例:{"main":[[x1,y1],[x2,y2]...],"sub1":[[x1,y1],[x2,y2]...],"sub2":[[x1,y1],[x2,y2]...]}  
+> loop_segments:线圈坐标集合 list[dict] dict示例:`{"main":[[x1,y1],[x2,y2]...],"sub1":[[x1,y1],[x2,y2]...],"sub2":[[x1,y1],[x2,y2]...]}`  
 > sec_lines:线宽集合[[x1,y1,x2,y3,thick],]  
 > secondary_loop_segments:辅材线圈坐标集合 list[dict] (同loop_segments)，建议以左下角为组合截面原点建立截面  
 > sec_property:截面特性(参考UI界面共计29个参数)，可选参数，指定截面特性时不进行截面计算  
@@ -563,7 +563,7 @@ sec_info=[0.2,0.4,0.1,0.13,3,1,2,1,0.02,0,12,5,6,0.28,0.3,0.5,0.5,0.5,0.2],
 chamfer_info=["1*0.2,0.1*0.2","0.5*0.15,0.3*0.2","0.4*0.2","0.5*0.2"])
 mdb.add_section(name="钢梁截面1",sec_type="工字钢梁",sec_info=[0,0,0.5,0.5,0.5,0.5,0.7,0.02,0.02,0.02])
 mdb.add_section(name="钢梁截面2",sec_type="箱型钢梁",sec_info=[0,0.15,0.25,0.5,0.25,0.15,0.4,0.15,0.7,0.02,0.02,0.02,0.02],
-rib_info = {"板肋1": [0.1,0.02],"T形肋1":[0.1,0.02,0.02,0.02]},
+rib_info = `{"板肋1": [0.1,0.02],"T形肋1":[0.1,0.02,0.02,0.02]}`,
 rib_place = [(1, 0, 0.1, "板肋1", 2, "默认名称1"),(1, 0, 0.2, "板肋1", 2, "默认名称1")])
 #Returns: 无
 ```  
@@ -578,7 +578,7 @@ rib_place = [(1, 0, 0.1, "板肋1", 2, "默认名称1"),(1, 0, 0.2, "板肋1", 2
 # 示例代码
 from qtmodel import *
 mdb.add_single_section(index=1,name="变截面1",sec_type="矩形",
-sec_data={"sec_info":[1,2],"bias_type":"中心"})
+sec_data=`{"sec_info":[1,2],"bias_type":"中心"}`)
 #Returns: 无
 ```  
 #### add_tapper_section
@@ -595,8 +595,8 @@ sec_data={"sec_info":[1,2],"bias_type":"中心"})
 # 示例代码
 from qtmodel import *
 mdb.add_tapper_section(index=1,name="变截面1",sec_type="矩形",
-sec_begin={"sec_info":[1,2],"bias_type":"中心"},
-sec_end={"sec_info":[2,2],"bias_type":"中心"})
+sec_begin=`{"sec_info":[1,2],"bias_type":"中心"}`,
+sec_end=`{"sec_info":[2,2],"bias_type":"中心"}`)
 #Returns: 无
 ```  
 #### calculate_section_property
@@ -702,7 +702,7 @@ mdb.remove_section("1to100")
 # 示例代码
 from qtmodel import *
 mdb.add_tapper_section_group(ids=[1,2,3,4],name="变截面组1")
-mdb.add_tapper_section_group(ids=[1,2,3,4],name="参数化变截面组",parameter_info={"梁高(H)":"1,2,I,0"})
+mdb.add_tapper_section_group(ids=[1,2,3,4],name="参数化变截面组",parameter_info=`{"梁高(H)":"1,2,I,0"}`)
 #Returns: 无
 ```  
 #### add_elements_to_tapper_section_group
@@ -927,7 +927,7 @@ mdb.add_constraint_equation(name="1",sec_dof=1,sec_node=4,master_info=[(6,1,1)],
 > 参数:  
 > node_id:节点号  
 > input_type:输入方式 1-角度 2-三点  3-向量  
-> coord_info:局部坐标信息  -List<List<float>>(三点 or 向量)  
+> coord_info:局部坐标信息  `-List<List<float>`>(三点 or 向量)  
 > angle_info:角度信息  
 ```Python
 # 示例代码
@@ -2970,10 +2970,10 @@ odb.get_section_names()
 ```Python
 # 示例代码
 from qtmodel import *
-dict_item1 = {"main": [[9.25, 0.0], [18.4, 0.0], [18.5, 0.0], [18.5, 2.5], [9.25, 2.5], [0.0, 2.5], [0.0, 0.0], [0.1, 0.0]],
+dict_item1 = `{"main": [[9.25, 0.0], [18.4, 0.0], [18.5, 0.0], [18.5, 2.5], [9.25, 2.5], [0.0, 2.5], [0.0, 0.0], [0.1, 0.0]],
 "sub1": [[6.35, 0.5], [2.55, 0.5], [2.55, 1.0], [2.55, 2.0], [6.35, 2.0]],
 "sub2": [[9.25, 0.5], [11.55, 0.5], [11.55, 2.0], [9.25, 2.0], [6.95, 2.0], [6.95, 0.5]],
-"sub3": [[12.15, 0.5], [15.95, 0.5], [15.95, 1.0], [15.95, 2.0], [12.15, 2.0]]}
+"sub3": [[12.15, 0.5], [15.95, 0.5], [15.95, 1.0], [15.95, 2.0], [12.15, 2.0]]}`
 odb.get_section_property_by_loops([dict_item1])
 #Returns: dict
 ```  
