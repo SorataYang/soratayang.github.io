@@ -3,14 +3,14 @@ title: API 帮助文档
 sidebar_label: API 帮助文档
 sidebar_position: 1
 ---
-
+# API 帮助文档
 > 最新qtmodel版本 V2.2.1 - 2026-01-08 
 > 最新qdat数据版本 V1.2.4 
 > pip install --upgrade qtmodel -i https://pypi.org/simple
 - 新增检算荷载组合，检算材料，检算钢筋信息 
-# 建模操作 
-##  节点操作
-### add_nodes
+## 建模操作 
+###  节点操作
+#### add_nodes
 根据坐标信息和节点编号添加一组节点，可指定节点号，或不指定节点号
 > 参数:  
 > node_data: [[id,x,y,z]...]  或[[x,y,z]...]  指定节点编号时不进行交叉分割、合并、编号等操作  
@@ -25,7 +25,7 @@ from qtmodel import *
 mdb.add_nodes(node_data=[[1,1,2,3],[2,1,2,3]])
 #Returns: 无
 ```  
-### update_node
+#### update_node
 根据节点号修改节点坐标
 > 参数:  
 > node_id: 旧节点编号  
@@ -39,7 +39,7 @@ from qtmodel import *
 mdb.update_node(node_id=1,new_id=2,x=2,y=2,z=2)
 #Returns: 无
 ```  
-### update_node_id
+#### update_node_id
 修改节点Id
 > 参数:  
 > node_id: 节点编号  
@@ -50,7 +50,7 @@ from qtmodel import *
 mdb.update_node_id(node_id=1,new_id=2)
 #Returns: 无
 ```  
-### merge_nodes
+#### merge_nodes
 根据坐标信息和节点编号添加节点，默认自动识别编号
 > 参数:  
 > ids: 合并节点集合,默认全部节点,支持列表和XtoYbyN形式字符串  
@@ -61,7 +61,7 @@ from qtmodel import *
 mdb.merge_nodes()
 #Returns: 无
 ```  
-### move_nodes
+#### move_nodes
 移动节点坐标，默认移动所有节点
 > 参数:  
 > ids:节点号  
@@ -74,7 +74,7 @@ from qtmodel import *
 mdb.move_nodes(ids=1,offset_x=1.5,offset_y=1.5,offset_z=1.5)
 #Returns: 无
 ```  
-### remove_nodes
+#### remove_nodes
 删除指定节点,默认删除所有节点
 > 参数:  
 > ids:节点编号,支持多种类型  
@@ -86,7 +86,7 @@ mdb.remove_nodes(ids=1)
 mdb.remove_nodes(ids=[1,2,3])
 #Returns: 无
 ```  
-### renumber_nodes
+#### renumber_nodes
 节点编号重排序，默认按1升序重排所有节点
 > 参数:  
 > ids:原修改节点号  
@@ -98,8 +98,8 @@ mdb.renumber_nodes()
 mdb.renumber_nodes([7,9,22],[1,2,3])
 #Returns: 无
 ```  
-##  单元操作
-### add_element
+###  单元操作
+#### add_element
 根据单元编号和单元类型添加单元
 > 参数:  
 > index:单元编号  
@@ -117,7 +117,7 @@ from qtmodel import *
 mdb.add_element(index=1,ele_type=1,node_ids=[1,2],beta_angle=1,mat_id=1,sec_id=1)
 #Returns: 无
 ```  
-### add_elements
+#### add_elements
 根据单元编号和单元类型添加单元
 > 参数:  
 > ele_data:单元信息  
@@ -134,7 +134,7 @@ mdb.add_elements(ele_data=[
 [4,4,1,1,0,1,2,3,4,0]])
 #Returns: 无
 ```  
-### revert_local_orientation
+#### revert_local_orientation
 反转杆系单元局部方向
 > 参数:  
 > ids: 杆系单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -144,7 +144,7 @@ from qtmodel import *
 mdb.revert_local_orientation(1)
 #Returns: 无
 ```  
-### update_element_id
+#### update_element_id
 更改单元编号
 > 参数:  
 > old_id: 单元编号  
@@ -155,7 +155,7 @@ from qtmodel import *
 mdb.update_element_id(1,2)
 #Returns: 无
 ```  
-### update_element
+#### update_element
 根据单元编号和单元类型添加单元
 > 参数:  
 > old_id:原单元编号  
@@ -174,7 +174,7 @@ from qtmodel import *
 mdb.update_element(old_id=1,ele_type=1,node_ids=[1,2],beta_angle=1,mat_id=1,sec_id=1)
 #Returns: 无
 ```  
-### update_element_material
+#### update_element_material
 更新指定单元的材料号
 > 参数:  
 > ids: 单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -185,7 +185,7 @@ from qtmodel import *
 mdb.update_element_material(ids=1,mat_id=2)
 #Returns: 无
 ```  
-### update_element_beta
+#### update_element_beta
 更新指定单元的贝塔角
 > 参数:  
 > ids: 单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -196,7 +196,7 @@ from qtmodel import *
 mdb.update_element_beta(ids=1,beta=90)
 #Returns: 无
 ```  
-### update_frame_section
+#### update_frame_section
 更新杆系单元截面
 > 参数:  
 > ids: 单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -207,7 +207,7 @@ from qtmodel import *
 mdb.update_frame_section(ids=1,sec_id=2)
 #Returns: 无
 ```  
-### update_plate_thick
+#### update_plate_thick
 更新杆系单元截面
 > 参数:  
 > ids: 单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -218,7 +218,7 @@ from qtmodel import *
 mdb.update_plate_thick(ids=1,thick_id=2)
 #Returns: 无
 ```  
-### update_element_node
+#### update_element_node
 更新单元节点
 > 参数:  
 > element_id: 单元编号  
@@ -230,7 +230,7 @@ mdb.update_element_node(1,[1,2])
 mdb.update_element_node(2,[1,2,3,4])
 #Returns: 无
 ```  
-### remove_elements
+#### remove_elements
 删除指定编号的单元,默认则删除所有单元
 > 参数:  
 > ids: 单元编号,支持整形、列表、XtoYbyZ形式字符串  
@@ -242,7 +242,7 @@ mdb.remove_elements()
 mdb.remove_elements(ids=1)
 #Returns: 无
 ```  
-### renumber_elements
+#### renumber_elements
 单元编号重排序，默认按1升序重排所有节点
 > 参数:  
 > element_ids:被修改单元号  
@@ -254,8 +254,8 @@ mdb.renumber_elements()
 mdb.renumber_elements([7,9,22],[1,2,3])
 #Returns: 无
 ```  
-##  结构组操作
-### add_structure_group
+###  结构组操作
+#### add_structure_group
 添加结构组
 > 参数:  
 > name: 结构组名  
@@ -269,7 +269,7 @@ mdb.add_structure_group(name="新建结构组2",node_ids=[1,2,3,4],element_ids=[
 mdb.add_structure_group(name="新建结构组2",node_ids="1to10 11to21by2",element_ids=[1,2])
 #Returns: 无
 ```  
-### update_structure_group_name
+#### update_structure_group_name
 更新结构组名
 > 参数:  
 > name: 结构组名  
@@ -280,7 +280,7 @@ from qtmodel import *
 mdb.update_structure_group_name(name="结构组1",new_name="新结构组")
 #Returns: 无
 ```  
-### update_structure_group
+#### update_structure_group
 更新结构组信息
 > 参数:  
 > name: 结构组名  
@@ -293,7 +293,7 @@ from qtmodel import *
 mdb.update_structure_group(name="结构组",new_name="新建结构组",node_ids=[1,2,3,4],element_ids=[1,2])
 #Returns: 无
 ```  
-### remove_structure_group
+#### remove_structure_group
 可根据结构与组名删除结构组，当组名为默认则删除所有结构组
 > 参数:  
 > name:结构组名称  
@@ -304,7 +304,7 @@ mdb.remove_structure_group(name="新建结构组1")
 mdb.remove_structure_group()
 #Returns: 无
 ```  
-### add_structure_to_group
+#### add_structure_to_group
 为结构组添加节点和/或单元
 > 参数:  
 > name: 结构组名  
@@ -316,7 +316,7 @@ from qtmodel import *
 mdb.add_structure_to_group(name="现有结构组1",node_ids=[1,2,3,4],element_ids=[1,2])
 #Returns: 无
 ```  
-### remove_structure_from_group
+#### remove_structure_from_group
 为结构组删除节点、单元
 > 参数:  
 > name: 结构组名  
@@ -328,8 +328,8 @@ from qtmodel import *
 mdb.remove_structure_from_group(name="现有结构组1",node_ids=[1,2,3,4],element_ids=[1,2])
 #Returns: 无
 ```  
-##  材料
-### add_material
+###  材料
+#### add_material
 添加材料
 > 参数:  
 > index:材料编号,默认为最大Id+1  
@@ -350,7 +350,7 @@ mdb.add_material(index=1,name="混凝土材料1",mat_type=1,standard=1,database=
 mdb.add_material(index=1,name="自定义材料1",mat_type=5,data_info=[3.5e10,2.5e4,0.2,1.5e-5])
 #Returns: 无
 ```  
-### add_time_parameter
+#### add_time_parameter
 添加收缩徐变材料
 > 参数:  
 > index:材料编号,默认为最大Id+1  
@@ -366,7 +366,7 @@ from qtmodel import *
 mdb.add_time_parameter(name="收缩徐变材料1",code_index=1)
 #Returns: 无
 ```  
-### add_creep_function
+#### add_creep_function
 添加徐变函数
 > 参数:  
 > name:徐变函数名  
@@ -378,7 +378,7 @@ from qtmodel import *
 mdb.add_creep_function(name="徐变函数名",creep_data=[(5,0.5),(100,0.75)])
 #Returns: 无
 ```  
-### add_shrink_function
+#### add_shrink_function
 添加收缩函数
 > 参数:  
 > name:收缩函数名  
@@ -391,7 +391,7 @@ mdb.add_shrink_function(name="收缩函数名",shrink_data=[(5,0.5),(100,0.75)])
 mdb.add_shrink_function(name="收缩函数名",scale_factor=1.2)
 #Returns: 无
 ```  
-### remove_shrink_function
+#### remove_shrink_function
 删除收缩函数
 > 参数:  
 > name:收缩函数名  
@@ -401,7 +401,7 @@ from qtmodel import *
 mdb.remove_shrink_function(name="收缩函数名")
 #Returns: 无
 ```  
-### remove_creep_function
+#### remove_creep_function
 删除徐变函数
 > 参数:  
 > name:徐变函数名  
@@ -411,7 +411,7 @@ from qtmodel import *
 mdb.remove_creep_function(name="徐变函数名")
 #Returns: 无
 ```  
-### update_material_time_parameter
+#### update_material_time_parameter
 将收缩徐变参数连接到材料
 > 参数:  
 > name: 材料名  
@@ -423,7 +423,7 @@ from qtmodel import *
 mdb.update_material_time_parameter(name="C60",time_parameter_name="收缩徐变1",f_cuk=5e7)
 #Returns: 无
 ```  
-### update_material_id
+#### update_material_id
 更新材料编号
 > 参数:  
 > name:材料名称  
@@ -434,7 +434,7 @@ from qtmodel import *
 mdb.update_material_id(name="材料1",new_id=2)
 #Returns: 无
 ```  
-### update_time_parameter_id
+#### update_time_parameter_id
 更新时间依存材料编号
 > 参数:  
 > name:时间依存材名称  
@@ -445,7 +445,7 @@ from qtmodel import *
 mdb.update_time_parameter_id(name="时间依存材料1",new_id=2)
 #Returns: 无
 ```  
-### remove_material
+#### remove_material
 删除指定材料
 > 参数:  
 > index:指定材料编号，默认则删除所有材料  
@@ -457,7 +457,7 @@ mdb.remove_material()
 mdb.remove_material(index=1)
 #Returns: 无
 ```  
-### update_material_construction_factor
+#### update_material_construction_factor
 更新材料构造系数
 > 参数:  
 > name:指定材料编号，默认则删除所有材料  
@@ -468,7 +468,7 @@ from qtmodel import *
 mdb.update_material_construction_factor(name="材料1",factor=1.0)
 #Returns: 无
 ```  
-### remove_time_parameter
+#### remove_time_parameter
 删除指定时间依存材料
 > 参数:  
 > name: 指定收缩徐变材料名  
@@ -478,8 +478,8 @@ from qtmodel import *
 mdb.remove_time_parameter("收缩徐变材料1")
 #Returns: 无
 ```  
-##  板厚
-### add_thickness
+###  板厚
+#### add_thickness
 添加板厚
 > 参数:  
 > index: 板厚id  
@@ -500,7 +500,7 @@ mdb.add_thickness(name="厚度1", t=0.2,thick_type=0,bias_info=(0,0.8))
 mdb.add_thickness(name="厚度2", t=0.2,thick_type=1,rib_pos=0,dist_v=0.1,rib_v=[1,1,0.02,0.02])
 #Returns: 无
 ```  
-### update_thickness_id
+#### update_thickness_id
 更新板厚编号
 > 参数:  
 > index: 板厚id  
@@ -511,7 +511,7 @@ from qtmodel import *
 mdb.update_thickness_id(1,2)
 #Returns: 无
 ```  
-### remove_thickness
+#### remove_thickness
 删除板厚
 > 参数:  
 > index:板厚编号,默认时删除所有板厚信息  
@@ -524,8 +524,8 @@ mdb.remove_thickness(index=1)
 mdb.remove_thickness(name="板厚1")
 #Returns: 无
 ```  
-##  截面
-### add_section
+###  截面
+#### add_section
 添加单一截面信息,如果截面号存在则自动覆盖添加
 > 参数:  
 > index: 截面编号,默认自动识别  
@@ -567,7 +567,7 @@ rib_info = {"板肋1": [0.1,0.02],"T形肋1":[0.1,0.02,0.02,0.02]},
 rib_place = [(1, 0, 0.1, "板肋1", 2, "默认名称1"),(1, 0, 0.2, "板肋1", 2, "默认名称1")])
 #Returns: 无
 ```  
-### add_single_section
+#### add_single_section
 以字典形式添加单一截面,如果截面号存在则自动覆盖添加
 > 参数:  
 > index:截面编号  
@@ -581,7 +581,7 @@ mdb.add_single_section(index=1,name="变截面1",sec_type="矩形",
 sec_data={"sec_info":[1,2],"bias_type":"中心"})
 #Returns: 无
 ```  
-### add_tapper_section
+#### add_tapper_section
 添加变截面,字典参数参考单一截面,如果截面号存在则自动覆盖添加
 > 参数:  
 > index:截面编号  
@@ -599,7 +599,7 @@ sec_begin={"sec_info":[1,2],"bias_type":"中心"},
 sec_end={"sec_info":[2,2],"bias_type":"中心"})
 #Returns: 无
 ```  
-### calculate_section_property
+#### calculate_section_property
 重新计算所有截面特性
 > 参数:  
 ```Python
@@ -608,7 +608,7 @@ from qtmodel import *
 mdb.calculate_section_property()
 #Returns: 无
 ```  
-### remove_unused_sections
+#### remove_unused_sections
 删除未使用截面
 > 参数:  
 ```Python
@@ -617,7 +617,7 @@ from qtmodel import *
 mdb.remove_unused_sections()
 #Returns: 无
 ```  
-### add_tapper_section_by_id
+#### add_tapper_section_by_id
 添加变截面,需先建立单一截面
 > 参数:  
 > index:截面编号  
@@ -632,7 +632,7 @@ from qtmodel import *
 mdb.add_tapper_section_by_id(name="变截面1",begin_id=1,end_id=2)
 #Returns: 无
 ```  
-### update_section_bias
+#### update_section_bias
 更新截面偏心
 > 参数:  
 > index:截面编号  
@@ -648,7 +648,7 @@ mdb.update_section_bias(index=1,bias_type="中上",center_type="几何中心")
 mdb.update_section_bias(index=1,bias_type="自定义",bias_point=[0.1,0.2])
 #Returns: 无
 ```  
-### update_section_property
+#### update_section_property
 更新截面特性
 > 参数:  
 > index:截面号  
@@ -660,7 +660,7 @@ from qtmodel import *
 mdb.update_section_property(index=1,sec_property=[i for i in range(1,27)])
 #Returns: 无
 ```  
-### update_section_id
+#### update_section_id
 更新截面编号
 > 参数:  
 > index: 原编号  
@@ -671,7 +671,7 @@ from qtmodel import *
 mdb.update_section_id(index=1,new_id=2)
 #Returns:无
 ```  
-### remove_section
+#### remove_section
 删除截面信息,默认则删除所有截面
 > 参数:  
 > ids: 截面编号  
@@ -682,8 +682,8 @@ mdb.remove_section(1)
 mdb.remove_section("1to100")
 #Returns: 无
 ```  
-##  变截面组
-### add_tapper_section_group
+###  变截面组
+#### add_tapper_section_group
 添加变截面组
 > 参数:  
 > ids:变截面组单元号,支持XtoYbyN类型字符串  
@@ -705,7 +705,7 @@ mdb.add_tapper_section_group(ids=[1,2,3,4],name="变截面组1")
 mdb.add_tapper_section_group(ids=[1,2,3,4],name="参数化变截面组",parameter_info={"梁高(H)":"1,2,I,0"})
 #Returns: 无
 ```  
-### add_elements_to_tapper_section_group
+#### add_elements_to_tapper_section_group
 添加单元到变截面组
 > 参数:  
 > name:变截面组名称  
@@ -717,7 +717,7 @@ mdb.add_elements_to_tapper_section_group("变截面组1",ids=[1,2,3,4,5,6])
 mdb.add_elements_to_tapper_section_group("变截面组1",ids="1to6")
 #Returns:无
 ```  
-### add_tapper_section_from_group
+#### add_tapper_section_from_group
 将变截面组转为变截面
 > 参数:  
 > name: 变截面组名，默认则转化全部变截面组  
@@ -728,7 +728,7 @@ mdb.add_tapper_section_from_group()
 mdb.add_tapper_section_from_group("变截面组1")
 #Returns: 无
 ```  
-### update_tapper_section_group
+#### update_tapper_section_group
 更新变截面组
 > 参数:  
 > name:变截面组组名  
@@ -751,7 +751,7 @@ mdb.update_tapper_section_group(name="变截面组1",ids=[1,2,3,4])
 mdb.update_tapper_section_group(name="变截面组2",ids="1t0100")
 #Returns: 无
 ```  
-### remove_tapper_section_group
+#### remove_tapper_section_group
 删除变截面组，默认删除所有变截面组
 > 参数:  
 > name:变截面组名称  
@@ -762,8 +762,8 @@ mdb.remove_tapper_section_group()
 mdb.remove_tapper_section_group("变截面组1")
 #Returns:无
 ```  
-##  边界操作
-### add_effective_width
+###  边界操作
+#### add_effective_width
 添加有效宽度系数
 > 参数:  
 > element_ids:边界单元号支持整形和整形列表且支持XtoYbyN形式  
@@ -785,7 +785,7 @@ mdb.add_effective_width(element_ids=[1,2,3,4],factor_i=0.1,factor_j=0.1,dz_i=0.1
 mdb.add_effective_width(element_ids="1to4",factor_i=0.1,factor_j=0.1,dz_i=0.1,dz_j=0.1)
 #Returns: 无
 ```  
-### add_boundary_group
+#### add_boundary_group
 新建边界组
 > 参数:  
 > name:边界组名  
@@ -795,7 +795,7 @@ from qtmodel import *
 mdb.add_boundary_group(name="边界组1")
 #Returns: 无
 ```  
-### add_general_elastic_support_property
+#### add_general_elastic_support_property
 添加一般弹性支承特性，默认单位为N,m
 > 参数:  
 > name:一般弹性支承特性名称，支持覆盖添加  
@@ -806,7 +806,7 @@ from qtmodel import *
 mdb.add_general_elastic_support_property(name = "特性1", data_matrix=[i for i in range(1,22)])
 #Returns: 无
 ```  
-### add_general_elastic_support
+#### add_general_elastic_support
 添加一般弹性支承特性
 > 参数:  
 > node_id:节点号,支持整数或整数型列表且支持XtoYbyN形式字符串  
@@ -818,7 +818,7 @@ from qtmodel import *
 mdb.add_general_elastic_support(node_id=1, property_name = "特性1",group_name="边界组1")
 #Returns: 无
 ```  
-### add_general_support
+#### add_general_support
 添加一般支承
 > 参数:  
 > node_id:节点编号,支持整数或整数型列表且支持XtoYbyN形式字符串  
@@ -832,7 +832,7 @@ mdb.add_general_support(node_id="1to100", boundary_info=[True,True,True,False,Fa
 mdb.add_general_support(node_id="1to100", boundary_info=[1,1,1,0,0,0])
 #Returns: 无
 ```  
-### add_elastic_support
+#### add_elastic_support
 添加弹性支承
 > 参数:  
 > node_id:节点编号,支持数或列表且支持XtoYbyN形式字符串  
@@ -847,7 +847,7 @@ mdb.add_elastic_support(node_id=1,support_type=2,boundary_info=[1,1e6])
 mdb.add_elastic_support(node_id=1,support_type=3,boundary_info=[1,1e6])
 #Returns: 无
 ```  
-### add_elastic_link
+#### add_elastic_link
 添加弹性连接，建议指定index(弹性连接编号)
 > 参数:  
 > index:弹性连接编号,默认自动识别  
@@ -869,7 +869,7 @@ mdb.add_elastic_link(link_type=2,start_id=1,end_id=2)
 mdb.add_elastic_link(link_type=3,start_id=1,end_id=2,kx=1e6)
 #Returns: 无
 ```  
-### add_master_slave_links
+#### add_master_slave_links
 添加多个主节点对应的主从约束
 > 参数:  
 > node_ids: [(masterNodeId, slaveNodeId), ...]  
@@ -881,7 +881,7 @@ from qtmodel import *
 mdb.add_master_slave_links(node_ids=[(1,2),(3,4)], boundary_info=[True,True,True,False,False,False])
 #Returns: 无
 ```  
-### add_master_slave_link
+#### add_master_slave_link
 添加单个主节点对应的主从约束
 > 参数:  
 > master_id:主节点号  
@@ -895,7 +895,7 @@ mdb.add_master_slave_link(master_id=1,slave_id=[2,3],boundary_info=[True,True,Tr
 mdb.add_master_slave_link(master_id=1,slave_id="2to3",boundary_info=[True,True,True,False,False,False])
 #Returns: 无
 ```  
-### add_beam_constraint
+#### add_beam_constraint
 添加梁端约束
 > 参数:  
 > beam_id:梁号  
@@ -908,7 +908,7 @@ from qtmodel import *
 mdb.add_beam_constraint(beam_id=2,info_i=[True,True,True,False,False,False],info_j=[True,True,True,False,False,False])
 #Returns: 无
 ```  
-### add_constraint_equation
+#### add_constraint_equation
 添加约束方程
 > 参数:  
 > name:约束方程名  
@@ -922,7 +922,7 @@ from qtmodel import *
 mdb.add_constraint_equation(name="1",sec_dof=1,sec_node=4,master_info=[(6,1,1)],group_name="默认边界组")
 #Returns: 无
 ```  
-### add_node_axis
+#### add_node_axis
 添加节点坐标
 > 参数:  
 > node_id:节点号  
@@ -937,7 +937,7 @@ mdb.add_node_axis(input_type=2,node_id=1,coord_info=[[0,0,1],[0,1,0],[1,0,0]])
 mdb.add_node_axis(input_type=3,node_id=1,coord_info=[[0,0,1],[0,1,0]])
 #Returns: 无
 ```  
-### update_boundary_group
+#### update_boundary_group
 更改边界组名
 > 参数:  
 > name:边界组名  
@@ -948,7 +948,7 @@ from qtmodel import *
 mdb.update_boundary_group("旧边界组","新边界组")
 #Returns: 无
 ```  
-### update_node_axis_id
+#### update_node_axis_id
 更新节点局部坐标系编号（仅改编号，不改坐标系内容）
 > 参数:  
 > node_id: 原节点号（被更新的节点）  
@@ -959,7 +959,7 @@ from qtmodel import *
 mdb.update_node_axis_id(node_id=10, new_id=20)
 #Returns: 无
 ```  
-### update_general_elastic_support_property_name
+#### update_general_elastic_support_property_name
 更新一般弹性支承特性名称（仅改名）
 > 参数:  
 > name: 原特性名  
@@ -970,7 +970,7 @@ from qtmodel import *
 mdb.update_general_elastic_support_property_name(name="特性1", new_name="特性2")
 #Returns: 无
 ```  
-### remove_effective_width
+#### remove_effective_width
 删除有效宽度系数
 > 参数:  
 > element_ids:边界单元号支持整形和整形列表且支持XtoYbyN形式  
@@ -982,7 +982,7 @@ mdb.remove_effective_width(element_ids=[1,2,3,4],group_name="边界组1")
 mdb.remove_effective_width(element_ids="1to4",group_name="边界组1")
 #Returns: 无
 ```  
-### remove_boundary_group
+#### remove_boundary_group
 按照名称删除边界组
 > 参数:  
 > name: 边界组名称，默认删除所有边界组 (非必须参数)  
@@ -993,7 +993,7 @@ mdb.remove_boundary_group()
 mdb.remove_boundary_group(name="边界组1")
 #Returns: 无
 ```  
-### remove_all_boundary
+#### remove_all_boundary
 根据边界组名称、边界的类型和编号删除边界信息,默认时删除所有边界信息
 > 参数:  
 ```Python
@@ -1002,7 +1002,7 @@ from qtmodel import *
 mdb.remove_all_boundary()
 #Returns: 无
 ```  
-### remove_boundary
+#### remove_boundary
 根据节点号删除一般支撑、弹性支承/根据弹性连接I或J端(需指定)节点号删除弹性连接/根据单元号删除梁端约束/根据从节点号和约束方程名删除约束方程/根据从节点号删除主从约束
 > 参数:  
 > remove_id:节点号 or 单元号  or 从节点号  
@@ -1016,7 +1016,7 @@ mdb.remove_boundary(remove_id=11, kind="一般弹性连接",group_name="边界�
 mdb.remove_boundary(remove_id=12, kind="约束方程",group_name="边界组1", extra_name="约束方程名")
 #Returns: 无
 ```  
-### remove_general_elastic_support_property
+#### remove_general_elastic_support_property
 添加一般弹性支承特性
 > 参数:  
 > name:一般弹性支承特性名称  
@@ -1026,7 +1026,7 @@ from qtmodel import *
 mdb.remove_general_elastic_support_property(name = "特性1")
 #Returns: 无
 ```  
-### remove_node_axis
+#### remove_node_axis
 删除节点局部坐标
 > 参数:  
 > node_id:节点号，不为正数时则删除所有节点局部坐标  
@@ -1036,8 +1036,8 @@ from qtmodel import *
 mdb.remove_node_axis(node_id=1)
 #Returns: 无
 ```  
-##  钢束操作
-### add_tendon_group
+###  钢束操作
+#### add_tendon_group
 按照名称添加钢束组，添加时可指定钢束组id
 > 参数:  
 > name: 钢束组名称  
@@ -1047,7 +1047,7 @@ from qtmodel import *
 mdb.add_tendon_group(name="钢束组1")
 #Returns: 无
 ```  
-### add_tendon_property
+#### add_tendon_property
 添加钢束特性
 > 参数:  
 > name:钢束特性名  
@@ -1070,7 +1070,7 @@ mdb.add_tendon_property(name="钢束1",tendon_type=0,material_name="预应力材
 steel_detail=[0.00014,0.10,0.25,0.0015],loos_detail=[1,1,1])
 #Returns: 无
 ```  
-### add_tendon_3d
+#### add_tendon_3d
 添加三维钢束，支持覆盖添加
 > 参数:  
 > name:钢束名称  
@@ -1095,7 +1095,7 @@ mdb.add_tendon_3d("BB1",property_name="22-15",num=2,position_type=2,
 control_points=[(0,0,-1,0),(10,0,-1,0)],point_insert=(1,1,1),track_group="轨迹线结构组1")
 #Returns: 无
 ```  
-### add_tendon_2d
+#### add_tendon_2d
 添加三维钢束，支持覆盖添加
 > 参数:  
 > name:钢束名称  
@@ -1122,7 +1122,7 @@ mdb.add_tendon_2d(name="BB1",property_name="22-15",num=2,position_type=2,
 control_points=[(0,-1,0),(10,-1,0)],point_insert=(1,1,1),track_group="轨迹线结构组1")
 #Returns: 无
 ```  
-### add_tendon_elements
+#### add_tendon_elements
 添加预应力单元
 > 参数:  
 > ids:单元编号支持数或列表且支持XtoYbyN形式字符串  
@@ -1132,7 +1132,7 @@ from qtmodel import *
 mdb.add_tendon_elements(ids=[1,2,4,6])
 #Returns: 无
 ```  
-### add_pre_stress
+#### add_pre_stress
 添加预应力
 > 参数:  
 > case_name:荷载工况名  
@@ -1146,7 +1146,7 @@ from qtmodel import *
 mdb.add_pre_stress(case_name="荷载工况名",tendon_name="钢束1",force=1390000)
 #Returns: 无
 ```  
-### update_tendon_property_material
+#### update_tendon_property_material
 更新钢束特性材料
 > 参数:  
 > name:钢束特性名  
@@ -1157,7 +1157,7 @@ from qtmodel import *
 mdb.update_tendon_property_material("特性1",material_name="材料1")
 #Returns:无
 ```  
-### update_tendon_property
+#### update_tendon_property
 更新钢束特性
 > 参数:  
 > name:钢束特性名  
@@ -1178,7 +1178,7 @@ mdb.update_tendon_property(name="钢束1",tendon_type=0,material_name="材料1",
 steel_detail=[0.00014,0.10,0.25,0.0015],loos_detail=(1,1,1))
 #Returns:无
 ```  
-### update_tendon_name
+#### update_tendon_name
 更新钢束名称
 > 参数:  
 > name:原钢束名  
@@ -1189,7 +1189,7 @@ from qtmodel import *
 mdb.update_tendon_name("钢束1","钢束2")
 #Returns: 无
 ```  
-### update_element_component_type
+#### update_element_component_type
 赋予单元构件类型
 > 参数:  
 > ids: 钢束构件所在单元编号集合且支持XtoYbyN形式字符串  
@@ -1200,7 +1200,7 @@ from qtmodel import *
 mdb.update_element_component_type(ids=[1,2,3,4],component_type=2)
 #Returns: 无
 ```  
-### update_tendon_group
+#### update_tendon_group
 更新钢束组名
 > 参数:  
 > name:原钢束组名  
@@ -1211,7 +1211,7 @@ from qtmodel import *
 mdb.update_tendon_group("钢束组1","钢束组2")
 #Returns: 无
 ```  
-### remove_tendon
+#### remove_tendon
 按照名称或编号删除钢束,默认时删除所有钢束
 > 参数:  
 > name:钢束名称  
@@ -1224,7 +1224,7 @@ mdb.remove_tendon(index=1)
 mdb.remove_tendon()
 #Returns: 无
 ```  
-### remove_tendon_property
+#### remove_tendon_property
 按照名称或编号删除钢束组,默认时删除所有钢束组
 > 参数:  
 > name:钢束组名称  
@@ -1237,7 +1237,7 @@ mdb.remove_tendon_property(index=1)
 mdb.remove_tendon_property()
 #Returns: 无
 ```  
-### remove_pre_stress
+#### remove_pre_stress
 删除预应力
 > 参数:  
 > tendon_name:钢束组,默认则删除所有预应力荷载  
@@ -1248,7 +1248,7 @@ mdb.remove_pre_stress(tendon_name="钢束1")
 mdb.remove_pre_stress()
 #Returns: 无
 ```  
-### remove_tendon_group
+#### remove_tendon_group
 按照钢束组名称或钢束组编号删除钢束组，两参数均为默认时删除所有钢束组
 > 参数:  
 > name:钢束组名称,默认自动识别 (可选参数)  
@@ -1258,8 +1258,8 @@ from qtmodel import *
 mdb.remove_tendon_group(name="钢束组1")
 #Returns: 无
 ```  
-##  静力荷载操作
-### add_nodal_force
+###  静力荷载操作
+#### add_nodal_force
 添加节点荷载
 > 参数:  
 > node_id:节点编号且支持XtoYbyN形式字符串  
@@ -1273,7 +1273,7 @@ mdb.add_nodal_force(node_id=1,case_name="荷载工况1",load_info=[1,1,1,1,1,1],
 mdb.add_nodal_force(node_id="1to100",case_name="荷载工况1",load_info=[1,1,1,1,1,1],group_name="默认结构组")
 #Returns: 无
 ```  
-### add_node_displacement
+#### add_node_displacement
 添加节点位移
 > 参数:  
 > node_id:节点编号,支持整型或整数型列表且支持XtoYbyN形式字符串  
@@ -1287,7 +1287,7 @@ mdb.add_node_displacement(case_name="荷载工况1",node_id=1,load_info=(1,0,0,0
 mdb.add_node_displacement(case_name="荷载工况1",node_id=[1,2,3],load_info=(1,0,0,0,0,0),group_name="默认荷载组")
 #Returns: 无
 ```  
-### add_beam_element_load
+#### add_beam_element_load
 添加梁单元荷载
 > 参数:  
 > element_id:单元编号,支持数或列表且支持XtoYbyN形式字符串  
@@ -1307,7 +1307,7 @@ mdb.add_beam_element_load(element_id=1,case_name="荷载工况1",load_type=1,lis
 mdb.add_beam_element_load(element_id="1to100",case_name="荷载工况1",load_type=3,list_x=[0.4,0.8],list_load=[100,200])
 #Returns: 无
 ```  
-### add_initial_tension_load
+#### add_initial_tension_load
 添加初始拉力
 > 参数:  
 > element_id:单元编号支持数或列表且支持XtoYbyN形式字符串  
@@ -1323,7 +1323,7 @@ from qtmodel import *
 mdb.add_initial_tension_load(element_id=1,case_name="工况1",tension=100,tension_type=1)
 #Returns: 无
 ```  
-### add_cable_length_load
+#### add_cable_length_load
 添加索长张拉
 > 参数:  
 > element_id:单元编号支持数或列表且支持XtoYbyN形式字符串  
@@ -1337,7 +1337,7 @@ from qtmodel import *
 mdb.add_cable_length_load(element_id=1,case_name="工况1",length=1,tension_type=1)
 #Returns: 无
 ```  
-### add_plate_element_load
+#### add_plate_element_load
 添加版单元荷载
 > 参数:  
 > element_id:单元编号支持数或列表  
@@ -1354,7 +1354,7 @@ from qtmodel import *
 mdb.add_plate_element_load(element_id=1,case_name="工况1",load_type=1,group_name="默认荷载组",list_load=[1000],list_xy=(0.2,0.5))
 #Returns: 无
 ```  
-### add_distribute_plane_load_type
+#### add_distribute_plane_load_type
 添加分配面荷载类型
 > 参数:  
 > name:荷载类型名称  
@@ -1371,7 +1371,7 @@ mdb.add_distribute_plane_load_type(name="荷载类型1",load_type=1,point_list=[
 mdb.add_distribute_plane_load_type(name="荷载类型2",load_type=2,point_list=[[1,0],[1,1]],load=10)
 #Returns: 无
 ```  
-### add_distribute_plane_load
+#### add_distribute_plane_load
 添加分配面荷载类型
 > 参数:  
 > index:荷载编号,默认自动识别  
@@ -1390,7 +1390,7 @@ mdb.add_distribute_plane_load(index=1,case_name="工况1",type_name="荷载类�
 point2=(1,0,0),point3=(0,1,0),group_name="默认荷载组")
 #Returns: 无
 ```  
-### update_distribute_plane_load_type
+#### update_distribute_plane_load_type
 更新板单元面荷载类型
 > 参数:  
 > name:荷载类型名称  
@@ -1408,7 +1408,7 @@ mdb.update_distribute_plane_load_type(name="荷载类型1",load_type=1,point_lis
 mdb.update_distribute_plane_load_type(name="荷载类型2",load_type=2,point_list=[[1,0],[1,1]],load=10)
 #Returns: 无
 ```  
-### remove_nodal_force
+#### remove_nodal_force
 删除节点荷载
 > 参数:  
 > node_id:节点编号且支持XtoYbyN形式字符串  
@@ -1420,7 +1420,7 @@ from qtmodel import *
 mdb.remove_nodal_force(case_name="荷载工况1",node_id=1,group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_nodal_displacement
+#### remove_nodal_displacement
 删除节点位移荷载
 > 参数:  
 > node_id:节点编号,支持数或列表且支持XtoYbyN形式字符串  
@@ -1432,7 +1432,7 @@ from qtmodel import *
 mdb.remove_nodal_displacement(case_name="荷载工况1",node_id=1,group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_initial_tension_load
+#### remove_initial_tension_load
 删除初始拉力
 > 参数:  
 > element_id:单元编号支持数或列表且支持XtoYbyN形式字符串  
@@ -1444,7 +1444,7 @@ from qtmodel import *
 mdb.remove_initial_tension_load(element_id=1,case_name="工况1",group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_beam_element_load
+#### remove_beam_element_load
 删除梁单元荷载
 > 参数:  
 > element_id:单元号支持数或列表且支持XtoYbyN形式字符串  
@@ -1457,7 +1457,7 @@ from qtmodel import *
 mdb.remove_beam_element_load(case_name="工况1",element_id=1,load_type=1,group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_plate_element_load
+#### remove_plate_element_load
 删除指定荷载工况下指定单元的板单元荷载
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -1470,7 +1470,7 @@ from qtmodel import *
 mdb.remove_plate_element_load(case_name="工况1",element_id=1,load_type=1,group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_cable_length_load
+#### remove_cable_length_load
 删除索长张拉
 > 参数:  
 > element_id:单元号支持数或列表且支持XtoYbyN形式字符串  
@@ -1482,7 +1482,7 @@ from qtmodel import *
 mdb.remove_cable_length_load(case_name="工况1",element_id=1, group_name= "默认荷载组")
 #Returns: 无
 ```  
-### remove_distribute_plane_load
+#### remove_distribute_plane_load
 根据荷载编号删除分配面荷载
 > 参数:  
 > index: 指定荷载编号，默认则删除所有分配面荷载  
@@ -1493,7 +1493,7 @@ mdb.remove_distribute_plane_load()
 mdb.remove_distribute_plane_load(index=1)
 #Returns: 无
 ```  
-### remove_distribute_plane_load_type
+#### remove_distribute_plane_load_type
 删除分配面荷载类型
 > 参数:  
 > name: 指定荷载类型，默认则删除所有分配面荷载  
@@ -1503,8 +1503,8 @@ from qtmodel import *
 mdb.remove_distribute_plane_load_type("类型1")
 #Returns: 无
 ```  
-##  移动荷载操作
-### add_standard_vehicle
+###  移动荷载操作
+#### add_standard_vehicle
 添加标准车辆
 > 参数:  
 > name: 车辆荷载名称  
@@ -1527,7 +1527,7 @@ from qtmodel import *
 mdb.add_standard_vehicle("高速铁路",standard_code=1,load_type="高速铁路")
 #Returns: 无
 ```  
-### add_user_vehicle
+#### add_user_vehicle
 添加用户定义车辆
 > 参数:  
 > name: 车辆荷载名称  
@@ -1547,7 +1547,7 @@ from qtmodel import *
 mdb.add_user_vehicle(name="车道荷载",load_type="车道荷载",p=270000,q=10500)
 #Returns: 无
 ```  
-### add_node_tandem
+#### add_node_tandem
 添加节点纵列,默认以最小X对应节点作为纵列起点
 > 参数:  
 > name:节点纵列名  
@@ -1560,7 +1560,7 @@ mdb.add_node_tandem(name="节点纵列1",node_ids=[1,2,3,4,5,6,7])
 mdb.add_node_tandem(name="节点纵列1",node_ids="1to7")
 #Returns: 无
 ```  
-### add_influence_plane
+#### add_influence_plane
 添加影响面
 > 参数:  
 > name:影响面名称  
@@ -1571,7 +1571,7 @@ from qtmodel import *
 mdb.add_influence_plane(name="影响面1",tandem_names=["节点纵列1","节点纵列2"])
 #Returns: 无
 ```  
-### add_lane_line
+#### add_lane_line
 添加车道线
 > 参数:  
 > name:车道线名称  
@@ -1587,7 +1587,7 @@ from qtmodel import *
 mdb.add_lane_line(name="车道1",influence_name="影响面1",tandem_name="节点纵列1",offset=0,lane_width=3.1)
 #Returns: 无
 ```  
-### add_live_load_case
+#### add_live_load_case
 添加移动荷载工况
 > 参数:  
 > name:活载工况名  
@@ -1603,7 +1603,7 @@ from qtmodel import *
 mdb.add_live_load_case(name="活载工况1",influence_plane="影响面1",span=100,sub_case=[("车辆名称",1.0,["车道1","车道2"]),])
 #Returns: 无
 ```  
-### add_car_relative_factor
+#### add_car_relative_factor
 添加移动荷载工况汽车折减
 > 参数:  
 > name:活载工况名  
@@ -1618,7 +1618,7 @@ from qtmodel import *
 mdb.add_car_relative_factor(name="活载工况1",code_index=1,cross_factors=[1.2,1,0.78,0.67,0.6,0.55,0.52,0.5])
 #Returns: 无
 ```  
-### add_train_relative_factor
+#### add_train_relative_factor
 添加移动荷载工况汽车折减
 > 参数:  
 > name:活载工况名  
@@ -1639,7 +1639,7 @@ from qtmodel import *
 mdb.add_train_relative_factor(name="活载工况1",code_index=1,cross_factors=[1.2,1,0.78,0.67,0.6,0.55,0.52,0.5],calc_length=50)
 #Returns: 无
 ```  
-### add_metro_relative_factor
+#### add_metro_relative_factor
 添加移动荷载工况汽车折减
 > 参数:  
 > name:活载工况名  
@@ -1653,7 +1653,7 @@ mdb.add_metro_relative_factor(name="活载工况1",cross_factors=[1.2,1,0.78,0.6
 longitude_factor=1,impact_factor=1)
 #Returns: 无
 ```  
-### update_vehicle_name
+#### update_vehicle_name
 更新标准车辆
 > 参数:  
 > name: 车辆荷载名称  
@@ -1664,7 +1664,7 @@ from qtmodel import *
 mdb.update_vehicle_name(name ="高速铁路1",new_name = "高速铁路2")
 #Returns: 无
 ```  
-### update_influence_plane_name
+#### update_influence_plane_name
 更新影响面
 > 参数:  
 > name:影响面名称  
@@ -1675,7 +1675,7 @@ from qtmodel import *
 mdb.update_influence_plane_name(name="影响面1",new_name="影响面2")
 #Returns: 无
 ```  
-### update_lane_line_name
+#### update_lane_line_name
 更新车道线
 > 参数:  
 > name:车道线名称  
@@ -1686,7 +1686,7 @@ from qtmodel import *
 mdb.update_lane_line_name(name="车道1",new_name="车道2")
 #Returns: 无
 ```  
-### update_node_tandem_name
+#### update_node_tandem_name
 更新节点纵列,默认以最小X对应节点作为纵列起点
 > 参数:  
 > name:节点纵列名  
@@ -1697,7 +1697,7 @@ from qtmodel import *
 mdb.update_node_tandem_name(name="节点纵列1",new_name="节点纵列2")
 #Returns: 无
 ```  
-### update_live_load_case_name
+#### update_live_load_case_name
 更新移动荷载工况
 > 参数:  
 > name:活载工况名  
@@ -1708,7 +1708,7 @@ from qtmodel import *
 mdb.update_live_load_case_name(name="活载工况1",new_name="活载工况2")
 #Returns: 无
 ```  
-### remove_vehicle
+#### remove_vehicle
 删除车辆信息
 > 参数:  
 > index:车辆编号  
@@ -1720,7 +1720,7 @@ mdb.remove_vehicle(name="车辆名称")
 mdb.remove_vehicle(index=1)
 #Returns: 无
 ```  
-### remove_node_tandem
+#### remove_node_tandem
 按照节点纵列编号/节点纵列名 删除节点纵列
 > 参数:  
 > index:节点纵列编号  
@@ -1732,7 +1732,7 @@ mdb.remove_node_tandem(index=1)
 mdb.remove_node_tandem(name="节点纵列1")
 #Returns: 无
 ```  
-### remove_influence_plane
+#### remove_influence_plane
 按照影响面编号/影响面名称 删除影响面
 > 参数:  
 > index:影响面编号  
@@ -1744,7 +1744,7 @@ mdb.remove_influence_plane(index=1)
 mdb.remove_influence_plane(name="影响面1")
 #Returns: 无
 ```  
-### remove_lane_line
+#### remove_lane_line
 按照车道线编号或车道线名称 删除车道线
 > 参数:  
 > index:车道线编号，默认时则按照名称删除车道线  
@@ -1756,7 +1756,7 @@ mdb.remove_lane_line(index=1)
 mdb.remove_lane_line(name="车道线1")
 #Returns: 无
 ```  
-### remove_live_load_case
+#### remove_live_load_case
 删除移动荷载工况，默认值时则按照工况名删除
 > 参数:  
 > index:移动荷载工况编号  
@@ -1768,8 +1768,8 @@ mdb.remove_live_load_case(name="活载工况1")
 mdb.remove_live_load_case(index=1)
 #Returns: 无
 ```  
-##  动力荷载操作
-### add_load_to_mass
+###  动力荷载操作
+#### add_load_to_mass
 添加荷载转为质量
 > 参数:  
 > name: 荷载工况名称  
@@ -1780,7 +1780,7 @@ from qtmodel import *
 mdb.add_load_to_mass(name="荷载工况",factor=1)
 #Returns: 无
 ```  
-### add_nodal_mass
+#### add_nodal_mass
 添加节点质量
 > 参数:  
 > node_id: 节点号（支持 int / list[int] / "1to100" 这类字符串，按你现有 QtDataHelper 解析）  
@@ -1792,7 +1792,7 @@ mdb.add_nodal_mass(node_id=1, mass_info=(1.0, 2.0, 3.0, 0.0))
 mdb.add_nodal_mass(node_id="1to10", mass_info=(1.0, 1.0, 1.0, 0.0))
 #Returns: 无
 ```  
-### add_boundary_element_property
+#### add_boundary_element_property
 添加边界单元特性
 > 参数:  
 > index: 边界单元特性编号,默认自动识别  
@@ -1811,7 +1811,7 @@ from qtmodel import *
 mdb.add_boundary_element_property(name="边界单元特性",kind="粘滞阻尼器",info_x=[0.05,1])
 #Returns: 无
 ```  
-### add_boundary_element_link
+#### add_boundary_element_link
 添加边界单元连接
 > 参数:  
 > index: 边界单元连接号  
@@ -1827,7 +1827,7 @@ from qtmodel import *
 mdb.add_boundary_element_link(property_name="边界单元特性",node_i=1,node_j=2,group_name="边界组1")
 #Returns: 无
 ```  
-### add_nodal_dynamic_load
+#### add_nodal_dynamic_load
 添加节点动力荷载
 > 参数:  
 > index: 节点动力荷载编号,默认自动识别  
@@ -1843,7 +1843,7 @@ from qtmodel import *
 mdb.add_nodal_dynamic_load(node_id=1,case_name="时程工况1",function_name="函数1",time=10)
 #Returns: 无
 ```  
-### add_ground_motion
+#### add_ground_motion
 添加地面加速度
 > 参数:  
 > case_name: 工况名称  
@@ -1856,7 +1856,7 @@ from qtmodel import *
 mdb.add_ground_motion(case_name="时程工况1",info_x=("函数名",1,10))
 #Returns: 无
 ```  
-### add_time_history_case
+#### add_time_history_case
 添加时程工况
 > 参数:  
 > index: 时程工况编号,默认自动识别  
@@ -1878,7 +1878,7 @@ mdb.add_time_history_case(name="时程工况1",analysis_kind=0,duration=10,time_
 group_damping=[("材料1",8,1,0.05),("材料2",8,1,0.05),("材料3",8,1,0.02)])
 #Returns: 无
 ```  
-### add_time_history_function
+#### add_time_history_function
 添加时程函数
 > 参数:  
 > name: 名称  
@@ -1891,7 +1891,7 @@ from qtmodel import *
 mdb.add_time_history_function(name="时程函数1",factor=1,function_info=[(0,0),(0.02,0.1),[0.04,0.3]])
 #Returns: 无
 ```  
-### add_vehicle_dynamic_load
+#### add_vehicle_dynamic_load
 添加列车动力荷载
 > 参数:  
 > node_ids: 节点纵列节点编号集合，支持XtoYbyN形式字符串  
@@ -1916,7 +1916,7 @@ mdb.add_vehicle_dynamic_load("1to100",function_name="时程函数名",case_name=
 mdb.add_vehicle_dynamic_load([1,2,3,4,5,6,7],function_name="时程函数名",case_name="时程工况名",kind=1,speed_kmh=120,time=10)
 #Returns:无
 ```  
-### update_load_to_mass
+#### update_load_to_mass
 更新荷载转为质量
 > 参数:  
 > name:荷载工况名称  
@@ -1927,7 +1927,7 @@ from qtmodel import *
 mdb.update_load_to_mass(name="工况1",factor=1)
 #Returns: 无
 ```  
-### update_nodal_mass
+#### update_nodal_mass
 更新节点质量
 > 参数:  
 > node_id:节点编号  
@@ -1939,7 +1939,7 @@ from qtmodel import *
 mdb.add_nodal_mass(node_id=1,mass_info=(100,0,0,0))
 #Returns: 无
 ```  
-### update_boundary_element_property_name
+#### update_boundary_element_property_name
 更新边界单元特性名
 > 参数:  
 > name: 原边界单元特性名称  
@@ -1950,7 +1950,7 @@ from qtmodel import *
 mdb.update_boundary_element_property_name(name="边界特性1",new_name="边界特性2")
 #Returns: 无
 ```  
-### update_boundary_element_link
+#### update_boundary_element_link
 更新边界单元连接
 > 参数:  
 > index: 根据边界单元连接id选择待更新对象  
@@ -1966,7 +1966,7 @@ from qtmodel import *
 mdb.update_boundary_element_link(index=1,property_name="边界单元特性名",node_i=101,node_j=102,beta=30.0)
 #Returns: 无
 ```  
-### update_time_history_case_name
+#### update_time_history_case_name
 更新时程工况
 > 参数:  
 > name: 时程工况号  
@@ -1977,7 +1977,7 @@ from qtmodel import *
 mdb.update_time_history_case_name(name="TH1",new_name="TH2")
 #Returns: 无
 ```  
-### update_time_history_function_name
+#### update_time_history_function_name
 更新时程函数
 > 参数:  
 > name: 更新前函数名  
@@ -1988,7 +1988,7 @@ from qtmodel import *
 mdb.update_time_history_function_name(name="函数名1",new_name="函数名2")
 #Returns: 无
 ```  
-### update_nodal_dynamic_load
+#### update_nodal_dynamic_load
 更新节点动力荷载
 > 参数:  
 > index: 待修改荷载编号  
@@ -2004,7 +2004,7 @@ from qtmodel import *
 mdb.update_nodal_dynamic_load(index=1,node_id=101,case_name="Earthquake_X",function_name="EQ_function",direction=1,factor=1.2,time=0.0 )
 #Returns: 无
 ```  
-### update_ground_motion
+#### update_ground_motion
 更新地面加速度
 > 参数:  
 > index: 地面加速度编号  
@@ -2019,7 +2019,7 @@ mdb.update_ground_motion(index=1,case_name="Earthquake_X",
 info_x=("EQ_X_func", 1.0, 0.0),info_y=("EQ_Y_func", 0.8, 0.0),info_z=("EQ_Z_func", 0.6, 0.0) )
 #Returns: 无
 ```  
-### remove_time_history_load_case
+#### remove_time_history_load_case
 通过时程工况名删除时程工况
 > 参数:  
 > name: 时程工况名  
@@ -2029,7 +2029,7 @@ from qtmodel import *
 mdb.remove_time_history_load_case("工况名")
 #Returns: 无
 ```  
-### remove_time_history_function
+#### remove_time_history_function
 通过函数编号删除时程函数
 > 参数:  
 > ids: 删除时程函数编号集合支持XtoYbyN形式，默认为空时则按照名称删除  
@@ -2042,7 +2042,7 @@ mdb.remove_time_history_function(ids="1to3")
 mdb.remove_time_history_function(name="函数名")
 #Returns: 无
 ```  
-### remove_load_to_mass
+#### remove_load_to_mass
 删除荷载转为质量,默认删除所有荷载转质量
 > 参数:  
 > name:荷载工况名  
@@ -2052,7 +2052,7 @@ from qtmodel import *
 mdb.remove_load_to_mass(name="荷载工况")
 #Returns: 无
 ```  
-### remove_nodal_mass
+#### remove_nodal_mass
 删除节点质量
 > 参数:  
 > node_id:节点号,自动忽略不存在的节点质量  
@@ -2064,7 +2064,7 @@ mdb.remove_nodal_mass(node_id=[1,2,3,4])
 mdb.remove_nodal_mass(node_id="1to5")
 #Returns: 无
 ```  
-### remove_boundary_element_property
+#### remove_boundary_element_property
 删除边界单元特性
 > 参数:  
 ```Python
@@ -2073,7 +2073,7 @@ from qtmodel import *
 mdb.remove_boundary_element_property(name="特性名")
 #Returns: 无
 ```  
-### remove_boundary_element_link
+#### remove_boundary_element_link
 删除边界单元连接
 > 参数:  
 > ids:所删除的边界单元连接号且支持XtoYbyN形式字符串  
@@ -2084,7 +2084,7 @@ mdb.remove_boundary_element_link(ids=1)
 mdb.remove_boundary_element_link(ids=[1,2,3,4])
 #Returns: 无
 ```  
-### remove_ground_motion
+#### remove_ground_motion
 删除地面加速度
 > 参数:  
 > name: 工况名称  
@@ -2094,7 +2094,7 @@ from qtmodel import *
 mdb.remove_ground_motion("时程工况名")
 #Returns: 无
 ```  
-### remove_nodal_dynamic_load
+#### remove_nodal_dynamic_load
 删除节点动力荷载
 > 参数:  
 > ids:所删除的节点动力荷载编号且支持XtoYbyN形式字符串  
@@ -2105,8 +2105,8 @@ mdb.remove_nodal_dynamic_load(ids=1)
 mdb.remove_nodal_dynamic_load(ids=[1,2,3,4])
 #Returns: 无
 ```  
-##  反应谱分析
-### add_spectrum_function
+###  反应谱分析
+#### add_spectrum_function
 添加反应谱函数
 > 参数:  
 > name:反应谱函数名  
@@ -2119,7 +2119,7 @@ from qtmodel import *
 mdb.add_spectrum_function(name="反应谱函数1",factor=1.0,function_info=[(0,0.02),(1,0.03)])
 #Returns: 无
 ```  
-### add_spectrum_case
+#### add_spectrum_case
 添加反应谱工况
 > 参数:  
 > name:荷载工况名  
@@ -2134,7 +2134,7 @@ from qtmodel import *
 mdb.add_spectrum_case(name="反应谱工况",info_x=("函数1",1.0))
 #Returns: 无
 ```  
-### update_spectrum_function_name
+#### update_spectrum_function_name
 更新反应谱函数
 > 参数:  
 > name: 函数名称  
@@ -2145,7 +2145,7 @@ from qtmodel import *
 mdb.update_spectrum_function_name(name="函数名1",new_name="函数名2")
 #Returns: 无
 ```  
-### update_spectrum_case_name
+#### update_spectrum_case_name
 更新反应谱工况
 > 参数:  
 > name: 工况名称  
@@ -2156,7 +2156,7 @@ from qtmodel import *
 mdb.update_spectrum_case_name(name="工况名1",new_name="工况名2")
 #Returns: 无
 ```  
-### remove_spectrum_case
+#### remove_spectrum_case
 删除反应谱工况
 > 参数:  
 > name: 工况名称  
@@ -2166,7 +2166,7 @@ from qtmodel import *
 mdb.remove_spectrum_case("工况名")
 #Returns: 无
 ```  
-### remove_spectrum_function
+#### remove_spectrum_function
 删除反应谱函数
 > 参数:  
 > ids: 删除反应谱工况函数编号集合支持XtoYbyN形式，默认为空时则按照名称删除  
@@ -2177,8 +2177,8 @@ from qtmodel import *
 mdb.remove_spectrum_function(name="工况名")
 #Returns: 无
 ```  
-##  温度与制造
-### add_custom_temperature
+###  温度与制造
+#### add_custom_temperature
 添加梁自定义温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2192,7 +2192,7 @@ from qtmodel import *
 mdb.add_custom_temperature(case_name="荷载工况1",element_id=1,orientation=1,temperature_data=[(1,1,20),(1,2,10)])
 #Returns: 无
 ```  
-### add_element_temperature
+#### add_element_temperature
 添加单元温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2205,7 +2205,7 @@ from qtmodel import *
 mdb.add_element_temperature(element_id=1,case_name="自重",temperature=1,group_name="默认荷载组")
 #Returns: 无
 ```  
-### add_system_temperature
+#### add_system_temperature
 添加系统温度
 > 参数:  
 > case_name:荷载工况名  
@@ -2217,7 +2217,7 @@ from qtmodel import *
 mdb.add_system_temperature(case_name="荷载工况",temperature=20,group_name="默认荷载组")
 #Returns: 无
 ```  
-### add_gradient_temperature
+#### add_gradient_temperature
 添加梯度温度
 ```Python
 # 示例代码
@@ -2226,7 +2226,7 @@ mdb.add_gradient_temperature(element_id=1,case_name="荷载工况1",group_name="
 mdb.add_gradient_temperature(element_id=2,case_name="荷载工况2",group_name="荷载组名2",temperature=10,element_type=2)
 #Returns: 无
 ```  
-### add_beam_section_temperature
+#### add_beam_section_temperature
 添加梁截面温度
 > 参数:  
 > element_id:单元编号，支持整数或整数型列表且支持XtoYbyN形式字符串  
@@ -2245,7 +2245,7 @@ from qtmodel import *
 mdb.add_beam_section_temperature(element_id=1,case_name="工况1",code_index=1,sec_type=1,t1=-4.2,t2=-1)
 #Returns: 无
 ```  
-### add_index_temperature
+#### add_index_temperature
 添加指数温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2259,7 +2259,7 @@ from qtmodel import *
 mdb.add_index_temperature(element_id=1,case_name="工况1",temperature=20,index=2)
 #Returns: 无
 ```  
-### add_top_plate_temperature
+#### add_top_plate_temperature
 添加顶板温度
 > 参数:  
 > element_id:单元编号  
@@ -2272,7 +2272,7 @@ from qtmodel import *
 mdb.add_top_plate_temperature(element_id=1,case_name="工况1",temperature=40,group_name="默认荷载组")
 #Returns: 无
 ```  
-### remove_element_temperature
+#### remove_element_temperature
 删除指定单元温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2283,7 +2283,7 @@ from qtmodel import *
 mdb.remove_element_temperature(case_name="荷载工况1",element_id=1)
 #Returns: 无
 ```  
-### remove_top_plate_temperature
+#### remove_top_plate_temperature
 删除梁单元顶板温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2294,7 +2294,7 @@ from qtmodel import *
 mdb.remove_top_plate_temperature(case_name="荷载工况1",element_id=1)
 #Returns: 无
 ```  
-### remove_beam_section_temperature
+#### remove_beam_section_temperature
 删除指定梁或板单元梁截面温度
 > 参数:  
 > case_name:荷载工况名  
@@ -2305,7 +2305,7 @@ from qtmodel import *
 mdb.remove_beam_section_temperature(case_name="工况1",element_id=1)
 #Returns: 无
 ```  
-### remove_gradient_temperature
+#### remove_gradient_temperature
 删除梁或板单元梯度温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2316,7 +2316,7 @@ from qtmodel import *
 mdb.remove_gradient_temperature(case_name="工况1",element_id=1)
 #Returns: 无
 ```  
-### remove_custom_temperature
+#### remove_custom_temperature
 删除梁单元自定义温度
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2327,7 +2327,7 @@ from qtmodel import *
 mdb.remove_custom_temperature(case_name="工况1",element_id=1)
 #Returns: 无
 ```  
-### remove_index_temperature
+#### remove_index_temperature
 删除梁单元指数温度且支持XtoYbyN形式字符串
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2338,8 +2338,8 @@ from qtmodel import *
 mdb.remove_index_temperature(case_name="工况1",element_id=1)
 #Returns: 无
 ```  
-##  偏差荷载
-### add_deviation_parameter
+###  偏差荷载
+#### add_deviation_parameter
 添加制造误差
 > 参数:  
 > name:名称  
@@ -2353,7 +2353,7 @@ mdb.add_deviation_parameter(name="梁端制造误差",parameters=[1,0,0,0,0,0,0]
 mdb.add_deviation_parameter(name="板端制造误差",parameters=[1,0,0,0,0])
 #Returns: 无
 ```  
-### add_deviation_load
+#### add_deviation_load
 添加制造误差荷载
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2369,7 +2369,7 @@ mdb.add_deviation_load(element_id=1,case_name="工况1",parameters="梁端误差
 mdb.add_deviation_load(element_id=2,case_name="工况1",parameters=["板端误差1","板端误差2","板端误差3","板端误差4"])
 #Returns: 无
 ```  
-### update_deviation_parameter
+#### update_deviation_parameter
 更新制造误差参数
 > 参数:  
 > name:名称  
@@ -2385,7 +2385,7 @@ mdb.update_deviation_parameter(name="梁端制造误差",element_type=1,paramete
 mdb.update_deviation_parameter(name="板端制造误差",element_type=1,parameters=[1,0,0,0,0])
 #Returns: 无
 ```  
-### remove_deviation_parameter
+#### remove_deviation_parameter
 删除指定制造偏差参数
 > 参数:  
 > name:制造偏差参数名  
@@ -2396,7 +2396,7 @@ from qtmodel import *
 mdb.remove_deviation_parameter(name="参数1",para_type=1)
 #Returns: 无
 ```  
-### remove_deviation_load
+#### remove_deviation_load
 删除指定制造偏差荷载
 > 参数:  
 > element_id:单元编号，支持数或列表且支持XtoYbyN形式字符串  
@@ -2408,8 +2408,8 @@ from qtmodel import *
 mdb.remove_deviation_load(case_name="工况1",element_id=1,group_name="荷载组1")
 #Returns: 无
 ```  
-##  施工阶段操作
-### add_construction_stage
+###  施工阶段操作
+#### add_construction_stage
 添加施工阶段信息
 > 参数:  
 > name:施工阶段信息  
@@ -2436,7 +2436,7 @@ mdb.add_construction_stage(name="施工阶段1",duration=5,active_structures=[("
 active_boundaries=[("默认边界组",1)],active_loads=[("默认荷载组1",0)])
 #Returns: 无
 ```  
-### update_weight_stage
+#### update_weight_stage
 更新施工阶段自重
 > 参数:  
 > name:施工阶段信息  
@@ -2448,7 +2448,7 @@ from qtmodel import *
 mdb.update_weight_stage(name="施工阶段1",structure_group_name="默认结构组",weight_stage_id=1)
 #Returns: 无
 ```  
-### update_construction_stage
+#### update_construction_stage
 更新施工阶段信息
 > 参数:  
 > name:施工阶段信息  
@@ -2475,7 +2475,7 @@ mdb.update_construction_stage(name="施工阶段1",duration=5,active_structures=
 active_boundaries=[("默认边界组",1)],active_loads=[("默认荷载组1",0)])
 #Returns: 无
 ```  
-### update_construction_stage_id
+#### update_construction_stage_id
 更新部分施工阶段到指定编号位置之前，例如将1号施工阶段插入到3号之前即为1号与2号施工阶段互换
 > 参数:  
 > stage_id:修改施工阶段编号且支持XtoYbyN形式字符串  
@@ -2487,7 +2487,7 @@ mdb.update_construction_stage_id(1,3)
 mdb.update_construction_stage_id([1,2,3],9)
 #Returns:无
 ```  
-### update_all_stage_setting_type
+#### update_all_stage_setting_type
 更新施工阶段安装方式
 > 参数:  
 > setting_type:安装方式 (1-接线法 2-无应力法 3-变形法 4-切线法)  
@@ -2497,7 +2497,7 @@ from qtmodel import *
 mdb.update_all_stage_setting_type(setting_type=1)
 #Returns: 无
 ```  
-### update_section_connection_stage
+#### update_section_connection_stage
 更新施工阶段联合截面
 > 参数:  
 > name:名称  
@@ -2514,7 +2514,7 @@ mdb.update_section_connection_stage(name="联合阶段",sec_id=1,element_id=[2,3
 mdb.update_section_connection_stage(name="联合阶段",sec_id=1,element_id="2to5",stage_name="施工阶段1")
 #Returns:无
 ```  
-### remove_construction_stage
+#### remove_construction_stage
 按照施工阶段名删除施工阶段,默认删除所有施工阶段
 > 参数:  
 > name:所删除施工阶段名称  
@@ -2524,7 +2524,7 @@ from qtmodel import *
 mdb.remove_construction_stage(name="施工阶段1")
 #Returns: 无
 ```  
-### merge_all_stages
+#### merge_all_stages
 合并当前所有施工阶段
 > 参数:  
 > name: 阶段名称  
@@ -2541,8 +2541,8 @@ from qtmodel import *
 mdb.merge_all_stages(name="合并阶段", setting_type=1, weight_type=1, age=5)
 #Returns: 无
 ```  
-##  施工阶段联合截面
-### add_section_connection_stage
+###  施工阶段联合截面
+#### add_section_connection_stage
 添加施工阶段联合截面
 > 参数:  
 > name:名称  
@@ -2557,7 +2557,7 @@ from qtmodel import *
 mdb.add_section_connection_stage(name="联合阶段",sec_id=1,element_id=[2,3,4,5],stage_name="施工阶段1")
 #Returns:无
 ```  
-### add_element_to_connection_stage
+#### add_element_to_connection_stage
 添加单元到施工阶段联合截面
 > 参数:  
 > element_id:单元号，支持整型和整型列表且支持XtoYbyN形式字符串  
@@ -2568,7 +2568,7 @@ from qtmodel import *
 mdb.add_element_to_connection_stage([1,2,3,4],"联合阶段")
 #Returns:无
 ```  
-### remove_section_connection_stage
+#### remove_section_connection_stage
 删除施工阶段联合截面
 > 参数:  
 > name:名称  
@@ -2578,8 +2578,8 @@ from qtmodel import *
 mdb.remove_section_connection_stage(name="联合阶段")
 #Returns:无
 ```  
-##  分析设置
-### update_project_setting
+###  分析设置
+#### update_project_setting
 更新总体设置
 > 参数:  
 > project: 项目名  
@@ -2596,7 +2596,7 @@ from qtmodel import *
 mdb.update_project_setting(project="项目名",gravity=9.8,temperature=20)
 #Returns: 无
 ```  
-### update_global_setting
+#### update_global_setting
 更新整体设置
 > 参数:  
 > solver_type:求解器类型 0-稀疏矩阵求解器  1-变带宽求解器  
@@ -2608,7 +2608,7 @@ from qtmodel import *
 mdb.update_global_setting(solver_type=0,calculation_type=2,thread_count=12)
 #Returns: 无
 ```  
-### update_construction_stage_setting
+#### update_construction_stage_setting
 更新施工阶段设置
 > 参数:  
 > do_analysis: 是否进行分析  
@@ -2628,7 +2628,7 @@ mdb.update_construction_stage_setting(do_analysis=True, to_end_stage=False, othe
 do_creep_analysis=True, cable_tension_position=0, consider_completion_stage=True,shrink_creep_type=2)
 #Returns: 无
 ```  
-### update_live_load_setting
+#### update_live_load_setting
 更新移动荷载分析设置
 > 参数:  
 > lateral_spacing: 横向加密间距  
@@ -2659,7 +2659,7 @@ mdb.update_live_load_setting(lateral_spacing=0.1, vertical_spacing=1, displaceme
 displacement_groups=["结构组1","结构组2"])
 #Returns: 无
 ```  
-### update_non_linear_setting
+#### update_non_linear_setting
 更新非线性设置
 > 参数:  
 > non_linear_type: 非线性类型 0-部分非线性 1-非线性  
@@ -2675,7 +2675,7 @@ mdb.update_non_linear_setting(non_linear_type=-1, non_linear_method=1, max_loadi
 accuracy_of_displacement=0.0001, accuracy_of_force=0.0001)
 #Returns: 无
 ```  
-### update_operation_stage_setting
+#### update_operation_stage_setting
 更新运营阶段分析设置
 > 参数:  
 > do_analysis: 是否进行运营阶段分析  
@@ -2689,7 +2689,7 @@ from qtmodel import *
 mdb.update_operation_stage_setting(do_analysis=True, final_stage="上二恒",static_load_cases=None)
 #Returns: 无
 ```  
-### update_self_vibration_setting
+#### update_self_vibration_setting
 更新自振分析设置
 > 参数:  
 > do_analysis: 是否进行运营阶段分析  
@@ -2702,7 +2702,7 @@ from qtmodel import *
 mdb.update_self_vibration_setting(do_analysis=True,method=1,matrix_type=0,mode_num=3)
 #Returns: 无
 ```  
-### update_response_spectrum_setting
+#### update_response_spectrum_setting
 更新反应谱设置
 > 参数:  
 > do_analysis:是否进行反应谱分析  
@@ -2715,7 +2715,7 @@ from qtmodel import *
 mdb.update_response_spectrum_setting(do_analysis=True,kind=1,damping_ratio=0.05)
 #Returns: 无
 ```  
-### update_time_history_setting
+#### update_time_history_setting
 更新时程分析设置
 > 参数:  
 > do_analysis:是否进行反应谱分析  
@@ -2727,7 +2727,7 @@ from qtmodel import *
 mdb.update_time_history_setting(do_analysis=True,output_all=True)
 #Returns: 无
 ```  
-### update_bulking_setting
+#### update_bulking_setting
 更新屈曲分析设置
 > 参数:  
 > do_analysis:是否进行反应谱分析  
@@ -2743,9 +2743,9 @@ from qtmodel import *
 mdb.update_bulking_setting(do_analysis=True,mode_count=3,variable_cases=["工况1","工况2"])
 #Returns: 无
 ```  
-# 视图与结果提取 
-##  获取材料
-### get_material_data
+## 视图与结果提取 
+###  获取材料
+#### get_material_data
 获取材料信息
 > 参数:  
 ```Python
@@ -2754,7 +2754,7 @@ from qtmodel import *
 odb.get_material_data() # 获取所有材料信息
 #Returns: 包含信息为list[dict]
 ```  
-### get_thickness_data
+#### get_thickness_data
 获取所有板厚信息
 > 参数:  
 ```Python
@@ -2763,8 +2763,8 @@ from qtmodel import *
 odb.get_thickness_data()
 #Returns: 包含信息为list[dict]
 ```  
-##  获取节点信息
-### get_overlap_nodes
+###  获取节点信息
+#### get_overlap_nodes
 获取重合节点
 > 参数:  
 > round_num: 判断精度，默认小数点后四位  
@@ -2774,7 +2774,7 @@ from qtmodel import *
 odb.get_overlap_nodes()
 #Returns: 包含信息为list[list[int]]
 ```  
-### get_node_id
+#### get_node_id
 获取节点编号,结果为-1时则表示未找到该坐标节点
 > 参数:  
 > x: 目标点X轴坐标  
@@ -2787,7 +2787,7 @@ from qtmodel import *
 odb.get_node_id(x=1,y=1,z=1)
 #Returns: int
 ```  
-### get_group_nodes
+#### get_group_nodes
 获取结构组节点编号
 > 参数:  
 > group_name: 结构组名  
@@ -2797,7 +2797,7 @@ from qtmodel import *
 odb.get_group_nodes(group_name="默认结构组")
 #Returns: list[int]
 ```  
-### get_node_data
+#### get_node_data
 获取节点信息 默认获取所有节点信息
 > 参数:  
 > ids:节点号集合支持XtoYbyN形式字符串  
@@ -2809,8 +2809,8 @@ odb.get_node_data(ids=1)    # 获取单个节点信息
 odb.get_node_data(ids=[1,2])    # 获取多个节点信息
 #Returns:  包含信息为list[dict] or dict
 ```  
-##  获取单元信息
-### get_elements_by_point
+###  获取单元信息
+#### get_elements_by_point
 获取某一点指定范围内单元集合,单元中心点为节点平均值
 > 参数:  
 > x: 坐标x  
@@ -2823,7 +2823,7 @@ from qtmodel import *
 odb.get_elements_by_point(0.5,0.5,0.5,tolerance=1)
 #Returns: 包含信息为list[int]
 ```  
-### get_elements_by_material
+#### get_elements_by_material
 获取某一材料相应的单元
 > 参数:  
 > name:材料名称  
@@ -2833,7 +2833,7 @@ from qtmodel import *
 odb.get_elements_by_material("材料1")
 #Returns: 包含信息为list[int]
 ```  
-### get_elements_by_section
+#### get_elements_by_section
 获取某一截面相应的单元
 > 参数:  
 > index:截面编号  
@@ -2843,7 +2843,7 @@ from qtmodel import *
 odb.get_elements_by_section(index=1)
 #Returns: 包含信息为list[int]
 ```  
-### get_overlap_elements
+#### get_overlap_elements
 获取重合节点
 > 参数:  
 ```Python
@@ -2852,7 +2852,7 @@ from qtmodel import *
 odb.get_overlap_elements()
 #Returns:  包含信息为list[list[int]]
 ```  
-### get_structure_group_names
+#### get_structure_group_names
 获取结构组名称
 > 参数:  
 ```Python
@@ -2861,7 +2861,7 @@ from qtmodel import *
 odb.get_structure_group_names()
 #Returns: 包含信息为list[str]
 ```  
-### get_element_data
+#### get_element_data
 获取单元信息
 > 参数:  
 > ids:单元号,支持整数或整数型列表且支持XtoYbyN形式字符串,默认为None时获取所有单元信息  
@@ -2872,7 +2872,7 @@ odb.get_element_data() # 获取所有单元结果
 odb.get_element_data(ids=1) # 获取指定编号单元信息
 #Returns:  包含信息为list[dict] or dict
 ```  
-### get_element_type
+#### get_element_type
 获取单元类型
 > 参数:  
 > element_id: 单元号  
@@ -2882,7 +2882,7 @@ from qtmodel import *
 odb.get_element_type(element_id=1) # 获取1号单元类型
 #Returns: str
 ```  
-### get_group_elements
+#### get_group_elements
 获取结构组单元编号
 > 参数:  
 > group_name: 结构组名  
@@ -2892,7 +2892,7 @@ from qtmodel import *
 odb.get_group_elements(group_name="默认结构组")
 #Returns: list[int]
 ```  
-### get_element_weight
+#### get_element_weight
 根据单元编号获取单元重量
 > 参数:  
 > ids: 单元编号支持整数或整数列表且支持XtoYbyN形式字符串，默认获取所有单元重量  
@@ -2902,8 +2902,8 @@ from qtmodel import *
 odb.get_element_weight(ids=1)
 #Returns: dict<int,double>类型的json格式字符串
 ```  
-##  跨度信息
-### get_span_supports
+###  跨度信息
+#### get_span_supports
 获取跨度信息的支承节点号
 > 参数:  
 > span_info_name: 跨度信息名  
@@ -2913,7 +2913,7 @@ from qtmodel import *
 odb.get_span_supports(span_info_name="跨度")
 #Returns: list[int]
 ```  
-### get_span_elements
+#### get_span_elements
 获取跨度信息的支承节点号
 > 参数:  
 > span_info_name: 跨度信息名  
@@ -2923,8 +2923,8 @@ from qtmodel import *
 odb.get_span_elements(span_info_name="跨度")
 #Returns: list[int]
 ```  
-##  获取截面信息
-### get_section_shape
+###  获取截面信息
+#### get_section_shape
 获取截面形状信息
 > 参数:  
 > sec_id: 目标截面编号  
@@ -2934,7 +2934,7 @@ from qtmodel import *
 odb.get_section_shape(1)
 #Returns:
 ```  
-### get_section_data
+#### get_section_data
 获取截面详细信息,截面特性详见UI自定义特性截面
 > 参数:  
 > sec_id: 目标截面编号  
@@ -2945,7 +2945,7 @@ from qtmodel import *
 odb.get_section_data(1)
 #Returns: 包含信息为dict
 ```  
-### get_section_property
+#### get_section_property
 获取指定截面特性
 > 参数:  
 > index:截面号  
@@ -2955,7 +2955,7 @@ from qtmodel import *
 odb.get_section_property(1)
 #Returns: dict
 ```  
-### get_section_names
+#### get_section_names
 获取模型所有截面号
 > 参数:  
 ```Python
@@ -2964,7 +2964,7 @@ from qtmodel import *
 odb.get_section_names()
 #Returns: list[int]
 ```  
-### get_section_property_by_loops
+#### get_section_property_by_loops
 通过多组线圈获取截面特性
 > 参数:  
 ```Python
@@ -2977,7 +2977,7 @@ dict_item1 = {"main": [[9.25, 0.0], [18.4, 0.0], [18.5, 0.0], [18.5, 2.5], [9.25
 odb.get_section_property_by_loops([dict_item1])
 #Returns: dict
 ```  
-### get_section_property_by_lines
+#### get_section_property_by_lines
 通过线宽数据获取截面特性
 > 参数:  
 ```Python
@@ -2989,8 +2989,8 @@ sec_lines = [[0.0, 2.284, 5.51093, 2.284, 0.016], [0.152479, 2.284, 0.200597, 2.
 odb.get_section_property_by_lines(sec_lines)
 #Returns: dict
 ```  
-##  获取模型边界信息
-### get_boundary_group_names
+###  获取模型边界信息
+#### get_boundary_group_names
 获取自边界组名称
 > 参数:  
 ```Python
@@ -2999,7 +2999,7 @@ from qtmodel import *
 odb.get_boundary_group_names()
 #Returns: 包含信息为list[str]
 ```  
-### get_general_support_data
+#### get_general_support_data
 获取一般支承信息
 > 参数:  
 ```Python
@@ -3008,7 +3008,7 @@ from qtmodel import *
 odb.get_general_support_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_elastic_link_data
+#### get_elastic_link_data
 获取弹性连接信息
 > 参数:  
 ```Python
@@ -3017,7 +3017,7 @@ from qtmodel import *
 odb.get_elastic_link_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_elastic_support_data
+#### get_elastic_support_data
 获取弹性支承信息
 > 参数:  
 ```Python
@@ -3026,7 +3026,7 @@ from qtmodel import *
 odb.get_elastic_support_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_master_slave_link_data
+#### get_master_slave_link_data
 获取主从连接信息
 > 参数:  
 ```Python
@@ -3035,7 +3035,7 @@ from qtmodel import *
 odb.get_master_slave_link_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_node_local_axis_data
+#### get_node_local_axis_data
 获取节点坐标信息
 > 参数:  
 ```Python
@@ -3044,7 +3044,7 @@ from qtmodel import *
 odb.get_node_local_axis_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_beam_constraint_data
+#### get_beam_constraint_data
 获取节点坐标信息
 > 参数:  
 ```Python
@@ -3053,7 +3053,7 @@ from qtmodel import *
 odb.get_beam_constraint_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_constraint_equation_data
+#### get_constraint_equation_data
 获取约束方程信息
 > 参数:  
 ```Python
@@ -3062,7 +3062,7 @@ from qtmodel import *
 odb.get_constraint_equation_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_effective_width_data
+#### get_effective_width_data
 获取有效宽度数据
 > 参数:  
 ```Python
@@ -3071,8 +3071,8 @@ from qtmodel import *
 odb.get_effective_width_data()
 #Returns:  list[dict]
 ```  
-##  钢束信息
-### get_tendon_property_data
+###  钢束信息
+#### get_tendon_property_data
 获取所有钢束特性信息
 > 参数:  
 ```Python
@@ -3081,7 +3081,7 @@ from qtmodel import *
 odb.get_tendon_property_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_tendon_data
+#### get_tendon_data
 获取所有钢塑和信息
 > 参数:  
 ```Python
@@ -3090,8 +3090,8 @@ from qtmodel import *
 odb.get_tendon_data()
 #Returns: 包含信息为list[dict]
 ```  
-##  荷载信息
-### get_load_case_names
+###  荷载信息
+#### get_load_case_names
 获取荷载工况名
 > 参数:  
 ```Python
@@ -3100,7 +3100,7 @@ from qtmodel import *
 odb.get_load_case_names()
 #Returns: 包含信息为list[str]
 ```  
-### get_pre_stress_load_data
+#### get_pre_stress_load_data
 获取预应力荷载
 > 参数:  
 ```Python
@@ -3109,7 +3109,7 @@ from qtmodel import *
 odb.get_pre_stress_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_node_mass_data
+#### get_node_mass_data
 获取节点质量
 > 参数:  
 ```Python
@@ -3118,7 +3118,7 @@ from qtmodel import *
 odb.get_node_mass_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_nodal_force_load_data
+#### get_nodal_force_load_data
 获取节点力荷载
 > 参数:  
 ```Python
@@ -3127,7 +3127,7 @@ from qtmodel import *
 odb.get_nodal_force_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_nodal_displacement_load_data
+#### get_nodal_displacement_load_data
 获取节点位移荷载
 > 参数:  
 ```Python
@@ -3136,7 +3136,7 @@ from qtmodel import *
 odb.get_nodal_displacement_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_beam_element_load_data
+#### get_beam_element_load_data
 获取梁单元荷载
 > 参数:  
 ```Python
@@ -3145,7 +3145,7 @@ from qtmodel import *
 odb.get_beam_element_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_plate_element_load_data
+#### get_plate_element_load_data
 获取梁单元荷载
 > 参数:  
 ```Python
@@ -3154,7 +3154,7 @@ from qtmodel import *
 odb.get_plate_element_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_initial_tension_load_data
+#### get_initial_tension_load_data
 获取初拉力荷载数据
 > 参数:  
 ```Python
@@ -3163,7 +3163,7 @@ from qtmodel import *
 odb.get_initial_tension_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_cable_length_load_data
+#### get_cable_length_load_data
 获取指定荷载工况的初拉力荷载数据
 > 参数:  
 ```Python
@@ -3172,7 +3172,7 @@ from qtmodel import *
 odb.get_cable_length_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-### get_deviation_parameters
+#### get_deviation_parameters
 获取制造偏差参数
 > 参数:  
 ```Python
@@ -3181,7 +3181,7 @@ from qtmodel import *
 odb.get_deviation_parameters()
 #Returns: 包含信息为list[dict]
 ```  
-### get_deviation_load_data
+#### get_deviation_load_data
 获取指定荷载工况的制造偏差荷载
 > 参数:  
 ```Python
@@ -3190,8 +3190,8 @@ from qtmodel import *
 odb.get_deviation_load_data()
 #Returns: 包含信息为list[dict]
 ```  
-##  获取施工阶段信息
-### get_stage_names
+###  获取施工阶段信息
+#### get_stage_names
 获取所有施工阶段名称
 > 参数:  
 ```Python
@@ -3200,7 +3200,7 @@ from qtmodel import *
 odb.get_stage_names()
 #Returns: 包含信息为list[int]
 ```  
-### get_elements_of_stage
+#### get_elements_of_stage
 获取指定施工阶段单元编号信息
 > 参数:  
 > stage_id: 施工阶段编号  
@@ -3210,7 +3210,7 @@ from qtmodel import *
 odb.get_elements_of_stage(stage_id=1)
 #Returns: 包含信息为list[int]
 ```  
-### get_nodes_of_stage
+#### get_nodes_of_stage
 获取指定施工阶段节点编号信息
 > 参数:  
 > stage_id: 施工阶段编号  
@@ -3220,7 +3220,7 @@ from qtmodel import *
 odb.get_nodes_of_stage(stage_id=1)
 #Returns: 包含信息为list[int]
 ```  
-### get_groups_of_stage
+#### get_groups_of_stage
 获取施工阶段结构组、边界组、荷载组名集合
 > 参数:  
 > stage_id: 施工阶段编号  
@@ -3230,8 +3230,8 @@ from qtmodel import *
 odb.get_groups_of_stage(stage_id=1)
 #Returns: 包含信息为dict
 ```  
-##  结果表格
-### get_reaction
+###  结果表格
+#### get_reaction
 获取制作反力
 > 参数:  
 > ids: 节点编号,支持整数或整数型列表支持XtoYbyN形式字符串  
@@ -3250,7 +3250,7 @@ odb.get_reaction(ids="1to3",stage_id=1)
 odb.get_reaction(ids=1,stage_id=-1,case_name="工况名")
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_deformation
+#### get_deformation
 获取节点变形结果,支持单个节点和节点列表
 > 参数:  
 > ids: 查询结果的节点号支持XtoYbyN形式字符串  
@@ -3270,7 +3270,7 @@ odb.get_deformation(ids="1to3",stage_id=1)
 odb.get_deformation(ids=1,stage_id=-1,case_name="工况名")
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_element_stress
+#### get_element_stress
 获取单元应力,支持单个单元和单元列表
 > 参数:  
 > ids: 单元编号,支持整数或整数型列表  
@@ -3287,7 +3287,7 @@ odb.get_element_stress(ids=[1,2,3],stage_id=1)
 odb.get_element_stress(ids=1,stage_id=-1,case_name="工况名")
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_element_force
+#### get_element_force
 获取单元内力,支持单个单元和单元列表
 > 参数:  
 > ids: 单元编号支持整数或整数列表且支持XtoYbyN形式字符串  
@@ -3306,7 +3306,7 @@ odb.get_element_force(ids=[1,2,3],stage_id=1)
 odb.get_element_force(ids=1,stage_id=-1,case_name="工况名")
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_self_concurrent_reaction
+#### get_self_concurrent_reaction
 获取自并发反力
 > 参数:  
 > node_id:单个节点号  
@@ -3317,7 +3317,7 @@ from qtmodel import *
 odb.get_self_concurrent_reaction(node_id=1,case_name="工况1_Fx最大")
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_all_concurrent_reaction
+#### get_all_concurrent_reaction
 获取完全并发反力
 > 参数:  
 > node_id:单个节点号  
@@ -3328,7 +3328,7 @@ from qtmodel import *
 odb.get_all_concurrent_reaction(node_id=1,case_name="工况1_Fx最大")
 #Returns: 返回json字符串， 包含信息为list[dict]
 ```  
-### get_concurrent_force
+#### get_concurrent_force
 获取单元并发内力
 > 参数:  
 > ids:单元号支持XtoYbyN形式字符串  
@@ -3340,7 +3340,7 @@ odb.get_concurrent_force(ids=1,case_name="工况1_Fx最大")
 odb.get_concurrent_force(ids="1to19",case_name="工况1_Fx最大")
 #Returns: 返回json字符串， 包含信息为list[dict]
 ```  
-### get_elastic_link_force
+#### get_elastic_link_force
 获取弹性连接内力
 > 参数:  
 > ids: 弹性连接ID集合,支持整数和整数列表且支持XtoYbyN字符串  
@@ -3355,7 +3355,7 @@ from qtmodel import *
 odb.get_elastic_link_force(ids=[1,2,3], result_kind=1, stage_id=1)
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_constrain_equation_force
+#### get_constrain_equation_force
 查询约束方程内力
 > 参数:  
 > ids: 约束方程ID列表支持整数和整数列表且支持XtoYbyN字符串  
@@ -3370,7 +3370,7 @@ from qtmodel import *
 odb.get_constrain_equation_force(ids=[1,2,3], result_kind=1, stage_id=1)
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_cable_element_length
+#### get_cable_element_length
 查询无应力索长
 > 参数:  
 > ids: 索单元ID集合，支持整数和整数列表且支持XtoYbyN字符串  
@@ -3382,7 +3382,7 @@ from qtmodel import *
 odb.get_cable_element_length(ids=[1,2,3], stage_id=1)
 #Returns: 返回json字符串， 内部为list[dict]
 ```  
-### get_period_and_vibration_results
+#### get_period_and_vibration_results
 获取自振分析角频率和振型参与质量等结果
 > 参数:  
 ```Python
@@ -3391,7 +3391,7 @@ from qtmodel import *
 odb.get_period_and_vibration_results()
 #Returns: 返回json字符串，list[dict]包含各模态周期和频率的列表
 ```  
-### get_vibration_modal_results
+#### get_vibration_modal_results
 获取自振分析振型向量
 > 参数:  
 > mode: 模态号. 默认为1  
@@ -3401,7 +3401,7 @@ from qtmodel import *
 odb.get_vibration_modal_results(mode=1)
 #Returns: 返回json字符串，list[dict]包含该模态下节点位移向量列表
 ```  
-### get_buckling_eigenvalue
+#### get_buckling_eigenvalue
 获取屈曲分析特征值结果
 > 参数:  
 ```Python
@@ -3410,7 +3410,7 @@ from qtmodel import *
 odb.get_buckling_eigenvalue()
 #Returns: 返回json字符串， list[dict]包含各模态下特征值
 ```  
-### get_buckling_modal_results
+#### get_buckling_modal_results
 获取屈曲模态向量
 > 参数:  
 > mode:模态号. 默认为1  
@@ -3420,7 +3420,7 @@ from qtmodel import *
 odb.get_buckling_modal_results(mode=1)
 #Returns: 返回json字符串，list[dict]包含该模态下屈曲模态向量列表
 ```  
-### get_tendon_loss_results
+#### get_tendon_loss_results
 获取预应力钢束损失
 > 参数:  
 > name: 钢束名称  
@@ -3431,7 +3431,7 @@ from qtmodel import *
 odb.get_tendon_loss_results(name="T1", stage_id=2)
 #Returns:
 ```  
-### get_tendon_position_result
+#### get_tendon_position_result
 获取预应力钢束坐标
 > 参数:  
 > name: 钢束名称  
@@ -3441,7 +3441,7 @@ from qtmodel import *
 odb.get_tendon_position_result(name="T1")
 #Returns:
 ```  
-### get_tendon_length_result
+#### get_tendon_length_result
 获取预应力伸长量
 > 参数:  
 ```Python
@@ -3450,8 +3450,8 @@ from qtmodel import *
 odb.get_tendon_length_result()
 #Returns:
 ```  
-##  绘制模型结果
-### plot_reaction_result
+###  绘制模型结果
+#### plot_reaction_result
 保存结果图片到指定文件甲
 > 参数:  
 > file_path: 保存路径名  
@@ -3476,7 +3476,7 @@ from qtmodel import *
 odb.plot_reaction_result(file_path=r"D:\\图片\\反力图.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_displacement_result
+#### plot_displacement_result
 保存结果图片到指定文件甲
 > 参数:  
 > file_path: 保存路径名  
@@ -3505,7 +3505,7 @@ from qtmodel import *
 odb.plot_displacement_result(file_path=r"D:\\图片\\变形图.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_beam_element_force
+#### plot_beam_element_force
 绘制梁单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3537,7 +3537,7 @@ from qtmodel import *
 odb.plot_beam_element_force(file_path=r"D:\\图片\\梁内力.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_truss_element_force
+#### plot_truss_element_force
 绘制杆单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3569,7 +3569,7 @@ from qtmodel import *
 odb.plot_truss_element_force(file_path=r"D:\\图片\\杆内力.png",case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_plate_element_force
+#### plot_plate_element_force
 绘制板单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3598,7 +3598,7 @@ from qtmodel import *
 odb.plot_plate_element_force(file_path=r"D:\\图片\\板内力.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_composite_beam_force
+#### plot_composite_beam_force
 绘制组合梁单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3628,7 +3628,7 @@ from qtmodel import *
 odb.plot_composite_beam_force(file_path=r"D:\\图片\\组合梁内力.png",mat_type=0,component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_beam_element_stress
+#### plot_beam_element_stress
 绘制梁单元应力结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3657,7 +3657,7 @@ from qtmodel import *
 odb.plot_beam_element_stress(file_path=r"D:\\图片\\梁应力.png",show_line_chart=False,component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_truss_element_stress
+#### plot_truss_element_stress
 绘制杆单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3685,7 +3685,7 @@ from qtmodel import *
 odb.plot_truss_element_stress(file_path=r"D:\\图片\\杆应力.png",case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_composite_beam_stress
+#### plot_composite_beam_stress
 绘制组合梁单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3715,7 +3715,7 @@ from qtmodel import *
 odb.plot_composite_beam_stress(file_path=r"D:\\图片\\组合梁应力.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_plate_element_stress
+#### plot_plate_element_stress
 绘制板单元结果图并保存到指定文件
 > 参数:  
 > file_path: 保存路径名  
@@ -3742,7 +3742,7 @@ from qtmodel import *
 odb.plot_plate_element_stress(file_path=r"D:\\图片\\板应力.png",component=1,case_name="CQ:成桥(合计)",stage_id=-1)
 #Returns: Base64字符串
 ```  
-### plot_modal_result
+#### plot_modal_result
 绘制模态结果，可选择自振模态和屈曲模态结果
 > 参数:  
 > file_path: 保存路径名  
@@ -3762,8 +3762,8 @@ odb.plot_modal_result(file_path=r"D:\\图片\\自振模态.png",mode=1)
 odb.plot_modal_result(file_path=r"D:\\图片\\屈曲模态.png",mode=1,mode_kind=2)
 #Returns: Base64字符串
 ```  
-##  视图控制
-### display_node_id
+###  视图控制
+#### display_node_id
 设置节点号显示
 > 参数:  
 > show_id:是否打开节点号显示  
@@ -3774,7 +3774,7 @@ odb.display_node_id()
 odb.display_node_id(False)
 #Returns: 无
 ```  
-### display_element_id
+#### display_element_id
 设置单元号显示
 > 参数:  
 > show_id:是否打开单元号显示  
@@ -3785,7 +3785,7 @@ odb.display_element_id()
 odb.display_element_id(False)
 #Returns: 无
 ```  
-### set_view_camera
+#### set_view_camera
 更改三维显示相机设置
 > 参数:  
 > camera_point: 相机坐标点  
@@ -3798,7 +3798,7 @@ from qtmodel import *
 odb.set_view_camera(camera_point=(-100,-100,100),focus_point=(0,0,0))
 #Returns: 无
 ```  
-### set_view_direction
+#### set_view_direction
 更改三维显示默认视图
 > 参数:  
 > direction: 1-空间视图1 2-前视图 3-三维视图2 4-左视图  5-顶视图 6-右视图 7-空间视图3 8-后视图 9-空间视图4 10-底视图  
@@ -3811,7 +3811,7 @@ from qtmodel import *
 odb.set_view_direction(direction=1,scale=1.2)
 #Returns: 无
 ```  
-### activate_structure
+#### activate_structure
 激活指定阶段和单元,默认激活所有
 > 参数:  
 > node_ids: 节点集合支持XtoYbyN形式字符串  
@@ -3822,7 +3822,7 @@ from qtmodel import *
 odb.activate_structure(node_ids=[1,2,3],element_ids=[1,2,3])
 #Returns: 无
 ```  
-### set_unit
+#### set_unit
 修改视图显示时单位制,不影响建模
 > 参数:  
 > unit_force: 支持 N KN TONF KIPS LBF  
@@ -3833,7 +3833,7 @@ from qtmodel import *
 odb.set_unit(unit_force="N",unit_length="M")
 #Returns: 无
 ```  
-### reset_display
+#### reset_display
 删除当前所有显示,包括边界荷载钢束等全部显示
 > 参数:  
 ```Python
@@ -3842,7 +3842,7 @@ from qtmodel import *
 odb.reset_display()
 #Returns: 无
 ```  
-### save_png
+#### save_png
 保存当前模型窗口图形信息，文件夹为空时返回Base64字符串
 > 参数:  
 > file_path: 文件全路径  
@@ -3852,7 +3852,7 @@ from qtmodel import *
 odb.save_png(file_path="D:\\QT\\aa.png")
 #Returns: 无
 ```  
-### set_render
+#### set_render
 消隐设置开关
 > 参数:  
 > flag: 默认设置打开消隐  
@@ -3862,7 +3862,7 @@ from qtmodel import *
 odb.set_render(flag=True)
 #Returns: 无
 ```  
-### change_construct_stage
+#### change_construct_stage
 消隐设置开关
 > 参数:  
 > stage: 施工阶段名称或施工阶段号  0-基本  
@@ -3873,7 +3873,7 @@ odb.change_construct_stage(0)
 odb.change_construct_stage(stage=1)
 #Returns: 无
 ```  
-### get_current_png
+#### get_current_png
 获取当前窗口Base64格式(图形)字符串
 > 参数:  
 ```Python
@@ -3882,8 +3882,8 @@ from qtmodel import *
 odb.get_current_png()
 #Returns: Base64格式(图形)字符串
 ```  
-# 构件检算检算 
-### add_check_load_combine
+## 构件检算检算 
+#### add_check_load_combine
 添加混凝土检算荷载组合
 > 参数:  
 > index: 荷载组合索引，-1表示在最后添加  
@@ -3903,7 +3903,7 @@ from qtmodel import *
 cdb.add_check_load_combine(name="P1+P2",standard=1,kind=1,combine_info=[("P1 (ST)",1,1),("P2 (ST)",1,1)])
 #Returns: 无
 ```  
-### remove_check_load_combine
+#### remove_check_load_combine
 删除混凝土检算荷载组合
 > 参数:  
 > index: 荷载组合索引，-1表示删除所有  
@@ -3915,7 +3915,7 @@ cdb.remove_check_load_combine(index=1)
 cdb.remove_check_load_combine(name="P1+P2")
 #Returns: 无
 ```  
-### add_concrete_check_case
+#### add_concrete_check_case
 添加混凝土检算工况
 > 参数:  
 > name: 检算名称  
@@ -3928,7 +3928,7 @@ from qtmodel import *
 cdb.add_concrete_check_case(name="混凝土检算",standard=1,structure_type=1,group_name="默认结构组")
 #Returns: 无
 ```  
-### remove_concrete_check_case
+#### remove_concrete_check_case
 删除混凝土检算工况
 > 参数:  
 > name: 检算名称  
@@ -3938,7 +3938,7 @@ from qtmodel import *
 cdb.remove_concrete_check_case(name="混凝土检算")
 #Returns: 无
 ```  
-### solve_concret_check
+#### solve_concret_check
 混凝土检算分析
 > 参数:  
 > name: 检算名称  
@@ -3948,7 +3948,7 @@ from qtmodel import *
 cdb.solve_concrete_check(name="混凝土检算")
 #Returns: 无
 ```  
-### add_check_material
+#### add_check_material
 添加混凝土检算材料,需要修改检算材料信息才添加检算材料
 > 参数:  
 > name: 材料名称  
@@ -3970,7 +3970,7 @@ from qtmodel import *
 cdb.add_check_material(name="混凝土",properties=[3.45e10,5e7,3.24e7,2.65e6,1.83e6],model=1)
 #Returns: 无
 ```  
-### add_parameter_reinforcement
+#### add_parameter_reinforcement
 添加参数化配筋
 > 参数:  
 > sec_id: 截面ID  
@@ -3988,7 +3988,7 @@ cdb.add_parameter_reinforcement(sec_id=1,has_outer=True,has_inner=True,outer_typ
 outer_info=[[20,1,50,150,1]],inner_info=[[20,1,50,150,1]])
 #Returns: 无
 ```  
-### add_part_parameter_reinforcement
+#### add_part_parameter_reinforcement
 添加局部参数化配筋
 > 参数:  
 > sec_id: 截面ID  
@@ -4002,7 +4002,7 @@ from qtmodel import *
 cdb.add_part_parameter_reinforcement(sec_id=1,position=0,data_info=[[11,0,0,20,4,50,150,1,0,0]])
 #Returns: 无
 ```  
-### add_reinforcement_by_point
+#### add_reinforcement_by_point
 添加自定义截面纵向钢筋数据
 > 参数:  
 > sec_id: 截面ID  
@@ -4014,7 +4014,7 @@ from qtmodel import *
 cdb.add_reinforcement_by_point(sec_id=1,position=0,bar_data=[(0.1,0.5,20,1),(0.3,0.6,22,1)])
 #Returns: 无
 ```  
-### add_steel_hoop
+#### add_steel_hoop
 添加箍筋数据
 > 参数:  
 > index: 箍筋编号  
@@ -4031,7 +4031,7 @@ from qtmodel import *
 cdb.add_steel_hoop(index=1,name="箍筋1",hoop_type=1,material_id=10,nums=2,diameter=20,gap=0.5,core_diameter=15)
 #Returns: 无
 ```  
-### update_element_steel_hoop
+#### update_element_steel_hoop
 更新单元箍筋数据
 > 参数:  
 > sec_id: 单元ID  
@@ -4042,7 +4042,7 @@ from qtmodel import *
 cdb.update_element_steel_hoop(sec_id=1,bar_data=[(0.1,0.5,20,10),(0.3,0.6,22,10)])
 #Returns: 无
 ```  
-### update_vertical_steel_hoop
+#### update_vertical_steel_hoop
 更新竖向箍筋数据
 > 参数:  
 > nums: 箍筋肢数或环数  
@@ -4056,7 +4056,7 @@ from qtmodel import *
 cdb.update_vertical_steel_hoop(nums=4,area=0.000314,gap=0.15)
 #Returns: 无
 ```  
-### add_concrete_load_combination
+#### add_concrete_load_combination
 添加混凝土构件荷载组合
 > 参数:  
 > name: 荷载组合名称  
