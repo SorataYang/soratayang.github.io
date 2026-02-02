@@ -260,8 +260,8 @@ public class JavaPostExample {
 
 # 开发环境配置
 
-[VScode+Python环境搭建（保姆级教程）](VScode+Python环境搭建（保姆级教程）/VScode+Python环境搭建（保姆级教程）.md "VScode+Python环境搭建（保姆级教程）")
+[Python环境配置](Python环境配置/Python环境配置.md "Python环境配置")
 
-[VS Code 中 Jupyter Notebook 使用方法](<VS Code 中 Jupyter Notebook 使用方/VS Code 中 Jupyter Notebook 使用方法.md> "VS Code 中 Jupyter Notebook 使用方法")
+[Jupyter Notebook使用指南](Jupyter-Notebook使用指南/Jupyter-Notebook使用指南.md "Jupyter Notebook使用指南")
 
-[Git+VSCode安装教程+Gitee进行代码管理](Git+VSCode安装教程+Gitee进行代码管理/Git+VSCode安装教程+Gitee进行代码管理.md "Git+VSCode安装教程+Gitee进行代码管理")
+[Git与Gitee代码管理](Git与Gitee代码管理/Git与Gitee代码管理.md "Git与Gitee代码管理")
