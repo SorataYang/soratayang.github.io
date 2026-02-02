@@ -254,7 +254,7 @@ public class JavaPostExample {
 
 # Python脚本详解
 
-[API帮助文档](API帮助文档/API帮助文档.md "API帮助文档")
+[API参考手册](/ch21_api_manual "API参考手册")
 
 # 开发环境配置
 
