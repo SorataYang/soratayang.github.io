@@ -248,7 +248,9 @@ public class JavaPostExample {
 
    IP地址查询方法
 
-   按照桥通的设备 运行后 cmd  ipconfig
+   - 右键Windows, 选择"运行", 输入cmd, 回车打开命令窗口
+   - 输入ipconfig：查看网络配置
+   - 输入ipconfig /all：查看本机网络配置的详细信息
 
    ![](image/image_5xG1YJZ-A8.png)
 
