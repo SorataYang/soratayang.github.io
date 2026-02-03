@@ -254,12 +254,12 @@ After extracting, configure listening port and local Qiaotong server address, ru
 
 # Python Script Details
 
-[API Help Document](API帮助文档/API帮助文档.md "API Help Document")
+[API Reference Manual](/ch21_api_manual "API Reference Manual")
 
 # Development Environment Configuration
 
-[VScode+Python Environment Setup (Nurse-level Tutorial)](VScode+Python环境搭建（保姆级教程）/VScode+Python环境搭建（保姆级教程）.md "VScode+Python Environment Setup (Nurse-level Tutorial)")
+[Python Environment Configuration](Python-Environment-Configuration/Python-Environment-Configuration.md "Python Environment Configuration")
 
-[VS Code Jupyter Notebook Usage Method](<VS Code 中 Jupyter Notebook 使用方/VS Code 中 Jupyter Notebook 使用方法.md> "VS Code Jupyter Notebook Usage Method")
+[Jupyter Notebook Usage Guide](Jupyter-Notebook-Usage-Guide/Jupyter-Notebook-Usage-Guide.md "Jupyter Notebook Usage Guide")
 
-[Git+VSCode Installation Tutorial+Gitee Code Management](Git+VSCode安装教程+Gitee进行代码管理/Git+VSCode安装教程+Gitee进行代码管理.md "Git+VSCode Installation Tutorial+Gitee Code Management")
+[Git and Gitee Code Management](Git-and-Gitee-Code-Management/Git-and-Gitee-Code-Management.md "Git and Gitee Code Management")
