@@ -1,0 +1,28 @@
+# Git attributes for license clarity
+
+# Code files - MIT License
+*.js                text
+*.ts                text
+*.tsx               text
+*.jsx               text
+*.css               text
+*.scss              text
+*.json              text linguist-language=JSON
+docusaurus.config.* text
+sidebars.*          text
+
+# Documentation files - Proprietary License
+docs/**             text
+i18n/**             text
+*.md                text
+*.mdx               text
+
+# Images and media
+*.png               binary
+*.jpg               binary
+*.jpeg              binary
+*.gif               binary
+*.svg               text
+*.mp4               binary
+*.webm              binary
+*.webp              binary

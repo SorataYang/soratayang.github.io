@@ -2,6 +2,22 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## License
+
+This project uses a dual license approach:
+
+- **Code License (MIT)**: The Docusaurus configuration, theme customizations, and build scripts are licensed under the [MIT License](./LICENSE).
+- **Documentation License (CC BY 4.0)**: All documentation content in the `docs/` and `i18n/` directories is licensed under the [Creative Commons Attribution 4.0 International License](./LICENSE-DOCS). This means you're free to use, modify, and share it (even for commercial purposes and AI training) as long as you provide attribution.
+
+### Contributing
+
+We welcome contributions! Feel free to:
+- Report issues or typos
+- Suggest improvements
+- Submit pull requests
+
+Your contributions help improve this documentation for everyone.
+
 ## Installation
 
 ```bash
