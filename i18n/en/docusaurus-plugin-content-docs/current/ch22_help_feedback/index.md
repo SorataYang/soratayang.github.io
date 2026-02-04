@@ -16,4 +16,5 @@ slug: /ch22_help_feedback
 
 ![](image/问题反馈 1_pYRsbDAW-4.jpg)
 
-[Problem Feedback - Correct Questioning Manual](问题反馈之正确提问手册/问题反馈之正确提问手册.md "Problem Feedback Correct Questioning Manual")
+
+&gt; 📌 **Note**: The detailed questioning manual is available in the Chinese version. English translation coming soon.

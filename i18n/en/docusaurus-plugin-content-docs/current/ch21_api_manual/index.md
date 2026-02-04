@@ -19,8 +19,8 @@ The Qiaotong API provides comprehensive interfaces for:
 
 ## Quick Links
 
-- [API Introduction](/ch20_api) - Getting started with Qiaotong API
-- [Python Environment Setup](/ch20_api/Python-Environment-Configuration/Python-Environment-Configuration) - Configure your development environment
+- [API Introduction](/manual/en/docs/ch20_api) - Getting started with Qiaotong API
+- [Python Environment Setup](/manual/en/docs/ch20_api/Python-Environment-Configuration/Python-Environment-Configuration) - Configure your development environment
 
 ## Coming Soon
 

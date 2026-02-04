@@ -254,12 +254,12 @@ After extracting, configure listening port and local Qiaotong server address, ru
 
 # Python Script Details
 
-[API Reference Manual](/ch21_api_manual "API Reference Manual")
+[API Reference Manual](/manual/en/docs/ch21_api_manual "API Reference Manual")
 
 # Development Environment Configuration
 
-[Python Environment Configuration](Python-Environment-Configuration/Python-Environment-Configuration.md "Python Environment Configuration")
+[Python Environment Configuration](/manual/en/docs/ch20_api/Python-Environment-Configuration/Python-Environment-Configuration "Python Environment Configuration")
 
-[Jupyter Notebook Usage Guide](Jupyter-Notebook-Usage-Guide/Jupyter-Notebook-Usage-Guide.md "Jupyter Notebook Usage Guide")
+[Jupyter Notebook Usage Guide](/manual/en/docs/ch20_api/Jupyter-Notebook-Usage-Guide/Jupyter-Notebook-Usage-Guide "Jupyter Notebook Usage Guide")
 
-[Git and Gitee Code Management](Git-and-Gitee-Code-Management/Git-and-Gitee-Code-Management.md "Git and Gitee Code Management")
+[Git and Gitee Code Management](/manual/en/docs/ch20_api/Git-and-Gitee-Code-Management/Git-and-Gitee-Code-Management "Git and Gitee Code Management")

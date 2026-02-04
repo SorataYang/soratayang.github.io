@@ -1,3 +1,5 @@
+---
+
 # Git + VSCode + Gitee Code Management Guide
 
 This article introduces how to configure Git and use VSCode with Gitee for code management.
