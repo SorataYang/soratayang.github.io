@@ -191,7 +191,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong Software, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong Software. Built with Docusaurus. <br/> Documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.`,
       },
       prism: {
         theme: prismThemes.github,
