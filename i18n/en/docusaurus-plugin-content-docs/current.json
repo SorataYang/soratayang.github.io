@@ -163,21 +163,45 @@
     "message": "20. QiaoTong API",
     "description": "The label for item '20. 桥通API' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.21. 帮助和问题反馈": {
-    "message": "21. Help & Feedback",
-    "description": "The label for category '21. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.21. API参考手册": {
+    "message": "21. API Reference Manual",
+    "description": "The label for category '21. API参考手册' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.item.label.21. 帮助和问题反馈": {
-    "message": "21. Help & Feedback",
-    "description": "The label for item '21. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.item.label.21. API参考手册": {
+    "message": "21. API Reference Manual",
+    "description": "The label for item '21. API参考手册' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.VS Code 中 Jupyter Notebook 使用方": {
-    "message": "Jupyter Notebook usage",
-    "description": "The label for category 'VS Code 中 Jupyter Notebook 使用方' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.category.22. 帮助和问题反馈": {
+    "message": "22. Help & Feedback",
+    "description": "The label for category '22. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.item.label.VS Code 中 Jupyter Notebook 使用方": {
-    "message": "Jupyter Notebook usage",
-    "description": "The label for item 'VS Code 中 Jupyter Notebook 使用方' in sidebar 'tutorialSidebar'"
+  "sidebar.tutorialSidebar.item.label.22. 帮助和问题反馈": {
+    "message": "22. Help & Feedback",
+    "description": "The label for item '22. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Jupyter-Notebook使用指南": {
+    "message": "Jupyter Notebook Usage Guide",
+    "description": "The label for category 'Jupyter-Notebook使用指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VS Code 中使用 Jupyter Notebook": {
+    "message": "Using Jupyter Notebook in VS Code",
+    "description": "The label for item 'VS Code 中使用 Jupyter Notebook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Python环境配置": {
+    "message": "Python Environment Configuration",
+    "description": "The label for category 'Python环境配置' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VSCode + Python 开发环境配置指南": {
+    "message": "VSCode + Python Development Environment Configuration Guide",
+    "description": "The label for item 'VSCode + Python 开发环境配置指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Git与Gitee代码管理": {
+    "message": "Git & Gitee Code Management",
+    "description": "The label for category 'Git与Gitee代码管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.Git + VSCode + Gitee 代码管理指南": {
+    "message": "Git + VSCode + Gitee Code Management Guide",
+    "description": "The label for item 'Git + VSCode + Gitee 代码管理指南' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.17. 斜拉索智能调索": {
     "message": "17. Cable Tensioning",

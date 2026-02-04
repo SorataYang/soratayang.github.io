@@ -1,9 +1,10 @@
 ---
-title: 21. 帮助和问题反馈
-slug: /ch21_help_feedback
+title: 22. 帮助和问题反馈
+sidebar_label: 22. 帮助和问题反馈
+slug: /ch22_help_feedback
 ---
 
-## 21.1 **帮助文件**
+## 22.1 **帮助文件**
 
 - chm帮助文件：“主菜单”>“关于”>“帮助文件”
 - 线上帮助文件：“主菜单”>“关于”>“在线文档”
@@ -11,7 +12,7 @@ slug: /ch21_help_feedback
 
   ![](image/1713337329279_AVy4DYRaB3.png)
 
-## 21.2 **问题反馈**
+## 22.2 **问题反馈**
 
 ![](<image/问题反馈 1_pYRsbDAW-4.jpg>)
 

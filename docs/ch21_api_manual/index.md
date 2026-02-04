@@ -1,5 +1,6 @@
 ---
 title: 21. API参考手册
+sidebar_label: 21. API参考手册
 slug: /ch21_api_manual
 ---
 
