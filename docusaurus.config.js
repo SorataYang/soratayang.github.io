@@ -67,6 +67,9 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarCount: 'ALL', // 显示所有
+          //blogSidebarCount: 10, // 指定数量
+          blogSidebarTitle: '历史版本更新',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
