@@ -121,6 +121,11 @@ const config = {
             label: '用户手册',
           },
           {
+            to: '/blog',
+            label: '更新日志',
+            position: 'left',
+          },
+          {
             to: '/faq',
             label: '常见问题',
             position: 'left',
@@ -134,11 +139,6 @@ const config = {
             to: '/contact',
             label: '联系我们',
             position: 'left',
-          },
-          {
-            href: 'https://github.com/SorataYang/manual',
-            label: 'GitHub',
-            position: 'right',
           },
           {
             type: 'search',
