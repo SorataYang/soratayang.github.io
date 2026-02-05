@@ -6,7 +6,7 @@ import Translate from '@docusaurus/Translate';
 const FeatureList = [
   {
     title: <Translate id="homepage.features.analysis.title">全过程通用分析</Translate>,
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/feature_bridge_analysis.svg').default,
     description: (
       <Translate id="homepage.features.analysis.description">
         适用于任何桥型从设计、施工到运维的全过程受力分析。
@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: <Translate id="homepage.features.easy.title">零成本快速上手</Translate>,
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/feature_easy_interface.svg').default,
     description: (
       <Translate id="homepage.features.easy.description">
         由一线工程师打造，操作界面与主流商业软件无缝衔接，不改变用户习惯。
@@ -26,7 +26,7 @@ const FeatureList = [
   },
   {
     title: <Translate id="homepage.features.proven.title">数十年实战检验</Translate>,
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/feature_proven_tech.svg').default,
     description: (
       <Translate id="homepage.features.proven.description">
         继承中铁大桥院核心技术，计算内核经过数十年、数百座桥梁工程的实战检验，
