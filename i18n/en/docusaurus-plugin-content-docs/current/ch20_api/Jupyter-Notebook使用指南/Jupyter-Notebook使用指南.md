@@ -1,5 +1,3 @@
----
-
 # Using Jupyter Notebook in VS Code
 
 Jupyter Notebook is an open-source interactive computing environment that allows you to combine Markdown documents and executable code. VS Code natively supports Jupyter Notebook.
