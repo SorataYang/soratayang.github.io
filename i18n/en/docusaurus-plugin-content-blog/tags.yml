@@ -1,0 +1,27 @@
+# Version update tags
+version-update:
+  label: Version Update
+  permalink: /version-update
+  description: Software version update logs
+
+# Update content categories
+new-features:
+  label: New Features
+  permalink: /new-features
+  description: New functions and features
+
+optimization:
+  label: Optimizations
+  permalink: /optimization
+  description: Performance optimization and improvements
+
+bug-fix:
+  label: Bug Fixes
+  permalink: /bug-fix
+  description: Bug fixes and issue resolution
+
+# Important update markers
+major-release:
+  label: Major Update
+  permalink: /major-release
+  description: Major version updates with important features
