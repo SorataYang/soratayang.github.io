@@ -11,6 +11,10 @@
     "message": "User Manual",
     "description": "Navbar item with label 用户手册"
   },
+  "item.label.更新日志": {
+    "message": "Changelog",
+    "description": "Navbar item with label 更新日志"
+  },
   "item.label.常见问题": {
     "message": "FAQ",
     "description": "Navbar item with label 常见问题"
