@@ -18,15 +18,15 @@ slug: /ch20_api
 
 桥通API的接口文档详细介绍了桥通API的函数、参数、返回值等信息。用户可以根据接口文档，在外部程序中调用桥通API的函数，实现对桥通软件的控制。
 
-# 软件内部调用
+## 软件内部调用
 
-## 文件导入导出
+### 文件导入导出
 
 桥通支持python模型文件导入与导出，用户可点击文件→导入\导出→python文件，选择需要导入或导出的文件即可完成导入导出。
 
 > 📌**注意**：目前python文件导入仅支持模型文件导入，暂不支持运行分析命令
 
-## 内部运行演示
+### 内部运行演示
 
 目前已默认配置好Python 环境，默认无需配置，可直接打开工具→命令窗口→输入代码→点击运行即可，在运行时默认运行按钮为灰显状态，运行完成后自动恢复为可点击状态。
 
@@ -34,7 +34,7 @@ slug: /ch20_api
 
 > 📌**注意**：内部运行时（导入文件同理）等同于导入模块运行，请勿使用语句if **name** == "**main**":
 
-## 自定义python解释器
+### 自定义python解释器
 
 可点击工具→API设置→python安装路径右侧编辑按钮，更改python解释器，默认开启服务器如下所示，调用时可以通过mdb.set\_url函数设置调用服务器（默认调用为如下地址）。
 
@@ -59,21 +59,21 @@ python -m pip install --upgrade qtmodel==1.1.13 -i https://pypi.tuna.tsinghua.ed
 
 > 📌**注意**：如已下载第三方库，请及时更新至最新版本
 
-## Python基础教程
+### Python基础教程
 
 [Python3 教程 | 菜鸟教程 Python 3 教程     Python 的 3.0 版本，常被称为 Python 3000，或简称 Py3k。相对于 Python 的早期版本，这是一个较大的升级。为了不带入过多的累赘，Python 3.0 在设计的时候没有考虑向下兼容。 Python 介绍及安装教程我们在Python 2.X 版本的教程中已有介绍，这里就不再赘述。 你也可以点击  Python2.x与3​​.x版本区别 来 https://www.runoob.com/python3/python3-tutorial.html](https://www.runoob.com/python3/python3-tutorial.html "Python3 教程 | 菜鸟教程 Python 3 教程     Python 的 3.0 版本，常被称为 Python 3000，或简称 Py3k。相对于 Python 的早期版本，这是一个较大的升级。为了不带入过多的累赘，Python 3.0 在设计的时候没有考虑向下兼容。 Python 介绍及安装教程我们在Python 2.X 版本的教程中已有介绍，这里就不再赘述。 你也可以点击  Python2.x与3​​.x版本区别 来 https://www.runoob.com/python3/python3-tutorial.html")
 
-# 外部软件调用&#x20;
+## 外部软件调用
 
 支持外部运行和调试，可使用文件→导出→导出py功能，将导出后文件可直接在VSCode等IDE中运行，IDE环境可使用桥通下载目录下python39(已内置好当前版本qtmodel库)，用户可使用update\_model函数刷新界面实时数据显示。
 
-## Pycharm调用演示
+### Pycharm调用演示
 
 查看当前桥通本地服务路径，使用set\_url函数可链接桥通软件(默认55125端口时可省略)，存在多桥通运行时设置地址参考工具→API设置→本地服务器地址
 
 ![](image/image_KW500u7Pz1.png)
 
-## VSCode解释器配置
+### VSCode解释器配置
 
 外部IDE调用时可选择桥通安装目录下PyFile中python.exe（已内置qtmodel包）
 
@@ -83,19 +83,19 @@ python -m pip install --upgrade qtmodel==1.1.13 -i https://pypi.tuna.tsinghua.ed
 
 [基于AI代码助手的代码优化.mp4](video/基于AI代码助手的代码优化_Djxf5yJYTC.mp4)
 
-## Autolisp调用桥通
+### Autolisp调用桥通
 
 [AutoLisp运行桥通.lsp](file/AutoLisp运行桥通_iFtDlPlPX-.lsp "AutoLisp运行桥通.lsp")
 
 [LISP\_20250818\_14075502.mp4](video/LISP_20250818_14075502_JPqoxlhA-d.mp4)
 
-## VBA调用桥通
+### VBA调用桥通
 
 [桥通API例子.xlsm](file/桥通API例子_vLUPOn_6zm.xlsm "桥通API例子.xlsm")
 
 [Video\_2025-08-18\_00039\_20250818\_13535729.mp4](video/Video_2025-08-18_00039_20250818_13535729_zgP7Xkyu6.mp4)
 
-## Java程序调用
+### Java程序调用
 
 ```java
 import java.io.BufferedReader;
@@ -188,7 +188,7 @@ public class JavaPostExample {
 
 [Java运行.mp4](video/Java运行_QcnkEXErtB.mp4)
 
-## BimBase调用
+### BimBase调用
 
 [qt\_importer.py](file/qt_importer_p7iR9yd3qT.py "qt_importer.py")
 
@@ -196,7 +196,7 @@ public class JavaPostExample {
 
 [bimbase导入桥通模型.mp4](video/bimbase导入桥通模型_6ItX_ea9Up.mp4)
 
-## 局域网内跨主机调用
+### 局域网内跨主机调用
 
 [nginx-1.25.1.zip](file/nginx-1.25.1_o6WCgNvpQR.zip "nginx-1.25.1.zip")
 
@@ -253,11 +253,11 @@ public class JavaPostExample {
 
    ![](image/image_5xG1YJZ-A8.png)
 
-# Python脚本详解
+## Python脚本详解
 
 [API参考手册](../ch21_api_manual/index.md "API参考手册")
 
-# 开发环境配置
+## 开发环境配置
 
 [Python环境配置](Python环境配置/Python环境配置.md "Python环境配置")
 

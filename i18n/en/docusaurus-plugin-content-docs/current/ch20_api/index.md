@@ -19,15 +19,15 @@ There are two main calling methods for Qiaotong API:
 
 The interface documentation of Qiaotong API details the functions, parameters, return values, and other information of Qiaotong API. Users can call Qiaotong API functions in external programs according to the interface documentation to control Qiaotong software.
 
-# Internal Software Calling
+## Internal Software Calling
 
-## File Import and Export
+### File Import and Export
 
 Qiaotong supports Python model file import and export. Users can click File > Import/Export > Python File, and select the file to import or export to complete import/export.
 
 > 📌**Note**: Currently Python file import only supports model file import, temporarily does not support running analysis commands
 
-## Internal Running Demo
+### Internal Running Demo
 
 Currently Python environment has been configured by default, no configuration required by default, can directly open Tools > Command Window > Enter Code > Click Run. During running, the default run button is in grayed-out state, automatically restores to clickable state after completion.
 
@@ -35,7 +35,7 @@ Currently Python environment has been configured by default, no configuration re
 
 > 📌**Note**: Internal running (same for file import) is equivalent to running imported module, please do not use statement if **name** == "**main**":
 
-## Custom Python Interpreter
+### Custom Python Interpreter
 
 Can click Tools > API Settings > Edit button on the right of Python installation path to change Python interpreter. Server is enabled by default as shown below. When calling, can set calling server through mdb.set_url function (default calling is the following address).
 
@@ -60,21 +60,21 @@ Latest version download link: [Pypi Official Website](https://pypi.org/search/?q
 
 > 📌**Note**: If third-party library has been downloaded, please update to the latest version in time
 
-## Python Basic Tutorial
+### Python Basic Tutorial
 
-[Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html](<https://www.runoob.com/python3/python3-tutorial.html> "Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to <https://www.runoob.com/python3/python3-tutorial.html>)
+[Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html](https://www.runoob.com/python3/python3-tutorial.html "Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html")
 
-# External Software Calling
+## External Software Calling
 
 Supports external running and debugging. Can use File > Export > Export Py function. The exported file can be directly run in IDEs such as VSCode. IDE environment can use python39 under Qiaotong download directory (qtmodel library for current version has been built-in). Users can use update_model function to refresh interface real-time data display.
 
-## Pycharm Calling Demo
+### Pycharm Calling Demo
 
 View current Qiaotong local service path. Use set_url function to link Qiaotong software (can omit when default 55125 port), when multiple Qiaotong are running, set address reference Tools > API Settings > Local Server Address
 
 ![](image/image_KW500u7Pz1.png)
 
-## VSCode Interpreter Configuration
+### VSCode Interpreter Configuration
 
 When calling from external IDE, can select python.exe in PyFile under Qiaotong installation directory (qtmodel package has been built-in)
 
@@ -84,19 +84,19 @@ When calling from external IDE, can select python.exe in PyFile under Qiaotong i
 
 [Code Optimization Based on AI Code Assistant.mp4](video/基于AI代码助手的代码优化_Djxf5yJYTC.mp4)
 
-## Autolisp Calling Qiaotong
+### Autolisp Calling Qiaotong
 
 [AutoLisp Run Qiaotong.lsp](file/AutoLisp运行桥通_iFtDlPlPX-.lsp "AutoLisp Run Qiaotong.lsp")
 
 [LISP_20250818_14075502.mp4](video/LISP_20250818_14075502_JPqoxlhA-d.mp4)
 
-## VBA Calling Qiaotong
+### VBA Calling Qiaotong
 
 [Qiaotong API Example.xlsm](file/桥通API例子_vLUPOn_6zm.xlsm "Qiaotong API Example.xlsm")
 
 [Video_2025-08-18_00039_20250818_13535729.mp4](video/Video_2025-08-18_00039_20250818_13535729_zgP7Xkyu6.mp4)
 
-## Java Program Calling
+### Java Program Calling
 
 ```java
 import java.io.BufferedReader;
@@ -189,7 +189,7 @@ public class JavaPostExample {
 
 [Java Running.mp4](video/Java运行_QcnkEXErtB.mp4)
 
-## BimBase Calling
+### BimBase Calling
 
 [qt_importer.py](file/qt_importer_p7iR9yd3qT.py "qt_importer.py")
 
@@ -197,7 +197,7 @@ Configure the above file into BIMBase custom plugin, or directly run after confi
 
 [bimbase Import Qiaotong Model.mp4](video/bimbase导入桥通模型_6ItX_ea9Up.mp4)
 
-## Cross-Host Calling in LAN
+### Cross-Host Calling in LAN
 
 [nginx-1.25.1.zip](file/nginx-1.25.1_o6WCgNvpQR.zip "nginx-1.25.1.zip")
 
@@ -252,11 +252,11 @@ After extracting, configure listening port and local Qiaotong server address, ru
 
    ![](image/image_5xG1YJZ-A8.png)
 
-# Python Script Details
+## Python Script Details
 
 [API Reference Manual](../ch21_api_manual/index.md "API Reference Manual")
 
-# Development Environment Configuration
+## Development Environment Configuration
 
 [Python Environment Configuration](Python环境配置/Python环境配置.md "Python Environment Configuration")
 
