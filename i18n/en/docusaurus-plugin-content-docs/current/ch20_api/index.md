@@ -62,7 +62,7 @@ Latest version download link: [Pypi Official Website](https://pypi.org/search/?q
 
 ## Python Basic Tutorial
 
-[Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html](https://www.runoob.com/python3/python3-tutorial.html "Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html)
+[Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to https://www.runoob.com/python3/python3-tutorial.html](<https://www.runoob.com/python3/python3-tutorial.html> "Python3 Tutorial | Rookie Tutorial Python 3 Tutorial Python's 3.0 version is often called Python 3000, or Py3k for short. Compared to earlier versions of Python, this is a larger upgrade. To not bring in too much baggage, Python 3.0 was designed without considering backward compatibility. Python introduction and installation tutorial has been introduced in Python 2.X version tutorial, so it will not be repeated here. You can also click Python2.x and 3.x version differences to <https://www.runoob.com/python3/python3-tutorial.html>)
 
 # External Software Calling
 
@@ -78,7 +78,7 @@ View current Qiaotong local service path. Use set_url function to link Qiaotong 
 
 When calling from external IDE, can select python.exe in PyFile under Qiaotong installation directory (qtmodel package has been built-in)
 
-[ Python VScode Configuration | Rookie Tutorial Python VScode Configuration In the previous chapter we have installed Python environment, this chapter we will introduce Python VScode configuration. Preparation work: Install VS Code Install VS Code Python extension Install Python 3 Install VS Code VSCode (full name: Visual Studio Code) is a free source code editor developed by Microsoft and cross-platform, VSCode development environment is very simple and easy https://www.runoob.com/python3/python-vscode-setup.html](https://www.runoob.com/python3/python-vscode-setup.html " Python VScode Configuration | Rookie Tutorial Python VScode Configuration In the previous chapter we have installed Python environment, this chapter we will introduce Python VScode configuration. Preparation work: Install VS Code Install VS Code Python extension Install Python 3 Install VS Code VSCode (full name: Visual Studio Code) is a free source code editor developed by Microsoft and cross-platform, VSCode development environment is very simple and easy https://www.runoob.com/python3/python-vscode-setup.html")
+[Python VScode Configuration | Rookie Tutorial Python VScode Configuration In the previous chapter we have installed Python environment, this chapter we will introduce Python VScode configuration. Preparation work: Install VS Code Install VS Code Python extension Install Python 3 Install VS Code VSCode (full name: Visual Studio Code) is a free source code editor developed by Microsoft and cross-platform, VSCode development environment is very simple and easy https://www.runoob.com/python3/python-vscode-setup.html](https://www.runoob.com/python3/python-vscode-setup.html " Python VScode Configuration | Rookie Tutorial Python VScode Configuration In the previous chapter we have installed Python environment, this chapter we will introduce Python VScode configuration. Preparation work: Install VS Code Install VS Code Python extension Install Python 3 Install VS Code VSCode (full name: Visual Studio Code) is a free source code editor developed by Microsoft and cross-platform, VSCode development environment is very simple and easy https://www.runoob.com/python3/python-vscode-setup.html")
 
 ![](image/image_ujd1_Yn-aQ.png)
 
@@ -98,7 +98,7 @@ When calling from external IDE, can select python.exe in PyFile under Qiaotong i
 
 ## Java Program Calling
 
-```java 
+```java
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -187,7 +187,6 @@ public class JavaPostExample {
 }
 ```
 
-
 [Java Running.mp4](video/Java运行_QcnkEXErtB.mp4)
 
 ## BimBase Calling
@@ -205,6 +204,7 @@ Configure the above file into BIMBase custom plugin, or directly run after confi
 After extracting, configure listening port and local Qiaotong server address, run nginx.exe file
 
 1. Configure conf file
+
    ```apl title="conf configuration"
    events {
        worker_connections 1024;
@@ -254,12 +254,12 @@ After extracting, configure listening port and local Qiaotong server address, ru
 
 # Python Script Details
 
-[API Reference Manual](/manual/en/docs/ch21_api_manual "API Reference Manual")
+[API Reference Manual](../ch21_api_manual/index.md "API Reference Manual")
 
 # Development Environment Configuration
 
-[Python Environment Configuration](/manual/en/docs/ch20_api/Python-Environment-Configuration/Python-Environment-Configuration "Python Environment Configuration")
+[Python Environment Configuration](Python环境配置/Python环境配置.md "Python Environment Configuration")
 
-[Jupyter Notebook Usage Guide](/manual/en/docs/ch20_api/Jupyter-Notebook-Usage-Guide/Jupyter-Notebook-Usage-Guide "Jupyter Notebook Usage Guide")
+[Jupyter Notebook Usage Guide](Jupyter-Notebook使用指南/Jupyter-Notebook使用指南.md "Jupyter Notebook Usage Guide")
 
-[Git and Gitee Code Management](/manual/en/docs/ch20_api/Git-and-Gitee-Code-Management/Git-and-Gitee-Code-Management "Git and Gitee Code Management")
+[Git and Gitee Code Management](Git与Gitee代码管理/Git与Gitee代码管理.md "Git and Gitee Code Management")

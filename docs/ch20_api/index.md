@@ -40,7 +40,7 @@ slug: /ch20_api
 
 <!-- ![](image/image_bPuIcZfT4i.png.mark.png) -->
 
-注意：使用自定义python时请使用` pip install qtmodel` 安装第三方库并注意匹配当前桥通版本所支持的qtmodel版本号，可在API设置中查看当前版本桥通对应的版本号，第三方库安装与更新相关cmd命令如下(如未添加环境变量或环境变量中存在多个python请切换到对应python安装路径运行)：
+注意：使用自定义python时请使用`pip install qtmodel` 安装第三方库并注意匹配当前桥通版本所支持的qtmodel版本号，可在API设置中查看当前版本桥通对应的版本号，第三方库安装与更新相关cmd命令如下(如未添加环境变量或环境变量中存在多个python请切换到对应python安装路径运行)：
 
 ```bash title="cmd命令（请在python目录下运行）"
 # 安装第三方库
@@ -50,7 +50,6 @@ python -m pip install --upgrade qtmodel==1.1.13 -i https://pypi.tuna.tsinghua.ed
 
 
 ```
-
 
 最新版本下载链接：[Pypi官方网址](https://pypi.org/search/?q=qtmodel "Pypi官方网址")   最新版本：1.1.13
 
@@ -78,7 +77,7 @@ python -m pip install --upgrade qtmodel==1.1.13 -i https://pypi.tuna.tsinghua.ed
 
 外部IDE调用时可选择桥通安装目录下PyFile中python.exe（已内置qtmodel包）
 
-[ Python VScode 配置 | 菜鸟教程 Python VScode 配置 在上一章节中我们已经安装了 Python 的环境，本章节我们将介绍 Python VScode 的配置。 准备工作：  安装 VS Code 安装 VS Code Python 扩展 安装 Python 3  安装 VS Code VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器，VSCode 开发环境非常简单易 https://www.runoob.com/python3/python-vscode-setup.html](https://www.runoob.com/python3/python-vscode-setup.html " Python VScode 配置 | 菜鸟教程 Python VScode 配置 在上一章节中我们已经安装了 Python 的环境，本章节我们将介绍 Python VScode 的配置。 准备工作：  安装 VS Code 安装 VS Code Python 扩展 安装 Python 3  安装 VS Code VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器，VSCode 开发环境非常简单易 https://www.runoob.com/python3/python-vscode-setup.html")
+[Python VScode 配置 | 菜鸟教程 Python VScode 配置 在上一章节中我们已经安装了 Python 的环境，本章节我们将介绍 Python VScode 的配置。 准备工作：  安装 VS Code 安装 VS Code Python 扩展 安装 Python 3  安装 VS Code VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器，VSCode 开发环境非常简单易 https://www.runoob.com/python3/python-vscode-setup.html](https://www.runoob.com/python3/python-vscode-setup.html " Python VScode 配置 | 菜鸟教程 Python VScode 配置 在上一章节中我们已经安装了 Python 的环境，本章节我们将介绍 Python VScode 的配置。 准备工作：  安装 VS Code 安装 VS Code Python 扩展 安装 Python 3  安装 VS Code VSCode（全称：Visual Studio Code）是一款由微软开发且跨平台的免费源代码编辑器，VSCode 开发环境非常简单易 https://www.runoob.com/python3/python-vscode-setup.html")
 
 ![](image/image_ujd1_Yn-aQ.png)
 
@@ -98,7 +97,7 @@ python -m pip install --upgrade qtmodel==1.1.13 -i https://pypi.tuna.tsinghua.ed
 
 ## Java程序调用
 
-```java 
+```java
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -187,7 +186,6 @@ public class JavaPostExample {
 }
 ```
 
-
 [Java运行.mp4](video/Java运行_QcnkEXErtB.mp4)
 
 ## BimBase调用
@@ -205,6 +203,7 @@ public class JavaPostExample {
 解压后配置监听端口和本地桥通服务器地址，运行nginx.exe文件即可
 
 1. 配置conf文件
+
    ```apl title="conf配置"
    events {
        worker_connections 1024;
@@ -256,7 +255,7 @@ public class JavaPostExample {
 
 # Python脚本详解
 
-[API参考手册](/ch21_api_manual "API参考手册")
+[API参考手册](../ch21_api_manual/index.md "API参考手册")
 
 # 开发环境配置
 
