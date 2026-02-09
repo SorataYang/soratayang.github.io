@@ -139,6 +139,10 @@
     "message": "Cable Tensioning System",
     "description": "The label for item '17. 智能调索系统' in sidebar 'tutorialSidebar'"
   },
+  "sidebar.tutorialSidebar.category.17. 斜拉索智能调索": {
+    "message": "17. Cable Tensioning",
+    "description": "The label for category '17. 斜拉索智能调索' in sidebar 'tutorialSidebar'"
+  },
   "sidebar.tutorialSidebar.category.18. 空间缆索找形系统": {
     "message": "18. Spatial Cable Shape",
     "description": "The label for category '18. 空间缆索找形系统' in sidebar 'tutorialSidebar'"
@@ -146,6 +150,10 @@
   "sidebar.tutorialSidebar.item.label.18. 空间缆索找形系统": {
     "message": "18. Spatial Cable Shape",
     "description": "The label for item '18. 空间缆索找形系统' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.18. 空间缆索找形": {
+    "message": "18. Spatial Cable Shape",
+    "description": "The label for category '18. 空间缆索找形' in sidebar 'tutorialSidebar'"
   },
   "sidebar.tutorialSidebar.category.19. 附录": {
     "message": "19. Appendix",
@@ -179,38 +187,6 @@
     "message": "22. Help & Feedback",
     "description": "The label for item '22. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
   },
-  "sidebar.tutorialSidebar.category.Jupyter-Notebook使用指南": {
-    "message": "Jupyter Notebook Usage Guide",
-    "description": "The label for category 'Jupyter-Notebook使用指南' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.item.label.VS Code 中使用 Jupyter Notebook": {
-    "message": "Using Jupyter Notebook in VS Code",
-    "description": "The label for item 'VS Code 中使用 Jupyter Notebook' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Python环境配置": {
-    "message": "Python Environment Configuration",
-    "description": "The label for category 'Python环境配置' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.item.label.VSCode + Python 开发环境配置指南": {
-    "message": "VSCode + Python Development Environment Configuration Guide",
-    "description": "The label for item 'VSCode + Python 开发环境配置指南' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.Git与Gitee代码管理": {
-    "message": "Git & Gitee Code Management",
-    "description": "The label for category 'Git与Gitee代码管理' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.item.label.Git + VSCode + Gitee 代码管理指南": {
-    "message": "Git + VSCode + Gitee Code Management Guide",
-    "description": "The label for item 'Git + VSCode + Gitee 代码管理指南' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.17. 斜拉索智能调索": {
-    "message": "17. Cable Tensioning",
-    "description": "The label for category '17. 斜拉索智能调索' in sidebar 'tutorialSidebar'"
-  },
-  "sidebar.tutorialSidebar.category.18. 空间缆索找形": {
-    "message": "18. Spatial Cable Shape",
-    "description": "The label for category '18. 空间缆索找形' in sidebar 'tutorialSidebar'"
-  },
   "sidebar.tutorialSidebar.category.23. 施工大临建模助手": {
     "message": "23. Construction Temporary Modeling Assistant",
     "description": "The label for category '23. 施工大临建模助手' in sidebar 'tutorialSidebar'"
@@ -234,5 +210,29 @@
   "sidebar.tutorialSidebar.item.label.钢栈桥建模助手": {
     "message": "Steel Trestle Bridge Modeling Assistant",
     "description": "The label for item '钢栈桥建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Jupyter-Notebook使用指南": {
+    "message": "Jupyter Notebook Usage Guide",
+    "description": "The label for category 'Jupyter-Notebook使用指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VS Code 中使用 Jupyter Notebook": {
+    "message": "Using Jupyter Notebook in VS Code",
+    "description": "The label for item 'VS Code 中使用 Jupyter Notebook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Python环境配置": {
+    "message": "Python Environment Configuration",
+    "description": "The label for category 'Python环境配置' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VSCode + Python 开发环境配置指南": {
+    "message": "VSCode + Python Development Environment Configuration Guide",
+    "description": "The label for item 'VSCode + Python 开发环境配置指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Git与Gitee代码管理": {
+    "message": "Git & Gitee Code Management",
+    "description": "The label for category 'Git与Gitee代码管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.Git + VSCode + Gitee 代码管理指南": {
+    "message": "Git + VSCode + Gitee Code Management Guide",
+    "description": "The label for item 'Git + VSCode + Gitee 代码管理指南' in sidebar 'tutorialSidebar'"
   }
 }
