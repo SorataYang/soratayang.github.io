@@ -210,5 +210,29 @@
   "sidebar.tutorialSidebar.category.18. 空间缆索找形": {
     "message": "18. Spatial Cable Shape",
     "description": "The label for category '18. 空间缆索找形' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.23. 施工大临建模助手": {
+    "message": "23. Construction Temporary Modeling Assistant",
+    "description": "The label for category '23. 施工大临建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.23. 施工大临建模助手": {
+    "message": "23. Construction Temporary Modeling Assistant",
+    "description": "The label for item '23. 施工大临建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.贝雷支架建模助手": {
+    "message": "Bailey Frame Scaffold Modeling Assistant",
+    "description": "The label for category '贝雷支架建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.贝雷支架建模助手": {
+    "message": "Bailey Frame Scaffold Modeling Assistant",
+    "description": "The label for item '贝雷支架建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.钢栈桥建模助手": {
+    "message": "Steel Trestle Bridge Modeling Assistant",
+    "description": "The label for category '钢栈桥建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.钢栈桥建模助手": {
+    "message": "Steel Trestle Bridge Modeling Assistant",
+    "description": "The label for item '钢栈桥建模助手' in sidebar 'tutorialSidebar'"
   }
 }
