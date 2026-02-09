@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
@@ -11,6 +12,7 @@ import Translate, { translate } from '@docusaurus/Translate';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const docsUrl = useBaseUrl('/docs/ch01_intro/');
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -27,7 +29,7 @@ function HomepageHeader() {
           {/* 按钮 1: 用户手册 */}
           <Link
             className="button button--secondary button--lg"
-            to="docs/ch01_intro/">
+            to={docsUrl}>
             <Translate id="homepage.button.userManual">📚 用户手册</Translate>
           </Link>
 
