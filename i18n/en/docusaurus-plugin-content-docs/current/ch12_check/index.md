@@ -73,7 +73,7 @@ This module is used for strength verification of concrete beam elements.
 
 ### 12.2.1 **Longitudinal Reinforcement**
 
-### Reinforcement Section List
+#### Reinforcement Section List
 
 - Function: Display list of sections configured with longitudinal reinforcement.
 - Command: Select "Verification" > "Longitudinal Reinforcement" from the main menu;
@@ -86,7 +86,7 @@ This module is used for strength verification of concrete beam elements.
 - Import verification case file reinforcement information: If there is already a verification case and reinforcement has been configured in the case, this function can be used to export the reinforcement information in that verification case to the reinforcement section list.
 - Clear all reinforcement information: Delete reinforcement information of all sections in the list.
 
-### **Parametric Reinforcement**
+#### **Parametric Reinforcement**
 
 - Function: Use parametric method to configure longitudinal reinforcement for sections. Line width sections do not allow parametric input reinforcement method.
 - Command: "Main Menu" > "Verification" > "Longitudinal Reinforcement" > "Add" > "Parametric Reinforcement".
@@ -113,7 +113,7 @@ This module is used for strength verification of concrete beam elements.
 
     Can choose to arrange by spacing or by quantity.
 
-### Custom Reinforcement
+#### Custom Reinforcement
 
 - Function: Custom reinforcement for individual sections, supporting functions such as selecting section segment local parametric reinforcement, CAD frame selection reinforcement, editing section reinforcement points, etc.
 - Command: "Main Menu" > "Verification" > "Longitudinal Reinforcement" > "Add" > "Custom Reinforcement".
@@ -137,7 +137,7 @@ This module is used for strength verification of concrete beam elements.
 
     ![](image/c8daee615d4107e256ed3ba9d435d5b_ASkM5_tf3H.png)
 
-#### Local Parametric Reinforcement
+##### Local Parametric Reinforcement
 
 ![](image/9c5453519a5ff101aa2f63b866681de_ictdlhtnih.png)
 
@@ -165,7 +165,7 @@ This module is used for strength verification of concrete beam elements.
     > 🕵️Note: This copy copies the current local parametric reinforcement information, that is, if the copied section is set with local parametric reinforcement on the third reference line, then the copied section copies the third reference line local parametric reinforcement settings, not directly copying the reinforcement point coordinates of the copied section.
     > 🕵️Note: If the copied section numbers include tapered I-end or J-end sections of a tapered section group, the interpolation sections within that tapered section group will default to copying this local parametric setting.
 
-#### Custom Reinforcement
+##### Custom Reinforcement
 
 ![](image/1750398258688_KPaNk-mItu.png)
 
@@ -181,7 +181,7 @@ This module is used for strength verification of concrete beam elements.
     Copy current reinforcement points to other sections.
     > 🕵️Note: This copy copies the current reinforcement point list, that is, all reinforcement point coordinate information of the copied section.
 
-### **dxf Batch Import Reinforcement**
+#### **dxf Batch Import Reinforcement**
 
 - Function: Use dxf file to batch import section reinforcement.
 - Command: "Main Menu" > "Verification" > "Longitudinal Reinforcement" > "Add" > "dxf Batch Import Reinforcement".
@@ -249,7 +249,7 @@ This module is used for strength verification of concrete beam elements.
 
     Re-select the imported file.
 
-### **Edit Reinforcement Point List**
+#### **Edit Reinforcement Point List**
 
 - Function: Display reinforcement point list information of selected sections, editable.
 - Command: "Main Menu" > "Verification" > "Longitudinal Reinforcement" > "Add" > "View Reinforcement Point List".
@@ -271,7 +271,7 @@ This module is used for strength verification of concrete beam elements.
 
 ![](image/1a60057ddcd744c842c379393be83fb_ongMlbo1MR.png)
 
-### Stirrup Settings
+#### Stirrup Settings
 
 - Function: Set stirrup configuration.
 - Input
@@ -303,7 +303,7 @@ This module is used for strength verification of concrete beam elements.
 
     Required to set when stirrup type is spiral stirrup, core diameter of spiral stirrup.
 
-### Element Configuration Stirrup Information
+#### Element Configuration Stirrup Information
 
 - Function: Assign stirrup properties to elements.
 - Input
@@ -372,7 +372,7 @@ This module is used for strength verification of concrete beam elements.
 
 ### 12.3.2 Verification Load Combinations
 
-### Verification Load Combinations
+#### Verification Load Combinations
 
 - Function: Input verification load combinations.
 - Command: Select "Verification" > "Verification Load Combinations" from the main menu;
@@ -431,7 +431,7 @@ This module is used for strength verification of concrete beam elements.
 
     Function to assist users in generating verification load combinations, see Auto Generate Verification Load Combinations.
 
-### Auto Generate Verification Load Combinations
+#### Auto Generate Verification Load Combinations
 
 - Function: Assist users in generating verification load combinations.
 - Command: Button in the lower left corner of "Verification Load Combinations" window;
@@ -547,7 +547,7 @@ This module is used for strength verification of concrete beam elements.
 
 ### 12.3.4 Concrete Verification Parameter Settings
 
-### 1 Concrete Verification Introduction
+#### 1 Concrete Verification Introduction
 
 - Function: Set verification information.
 - Command: Set concrete verification case, select set concrete verification case in concrete verification case window, click "Verification" (can also double-click to enter);
@@ -593,7 +593,7 @@ This module is used for strength verification of concrete beam elements.
 
     See 12.3.5 Verification Item Description.
 
-### 2 Basic Information
+#### 2 Basic Information
 
 - Function: Set concrete verification code process and structure type, set calculation items
 
@@ -641,7 +641,7 @@ This module is used for strength verification of concrete beam elements.
 
       Normal section flexural bearing capacity, oblique section shear bearing capacity, normal section stress, shear stress and principal stress, normal section crack resistance, prestress degree, moment-curvature curve analysis, PM bearing capacity curve analysis, MyMz bearing capacity curve analysis;
 
-### 3 Section and Longitudinal Reinforcement
+#### 3 Section and Longitudinal Reinforcement
 
 - Function: Set sections and longitudinal reinforcement under this verification case.
 - Command: Select "Verification" > "Verification Load Combinations" from main menu > select verification case click "Verification" > "Concrete Verification" > "Reinforcement" > "Section and Longitudinal Reinforcement";
@@ -677,7 +677,7 @@ This module is used for strength verification of concrete beam elements.
 
   Double-click section list to enter section window of that section, click CAD frame selection, select drawn section reinforcement in CAD, can import relevant information to reinforcement list, click "Edit" to complete reinforcement setting. Represent reinforcement type by color number: 31, 32, 33, 34, 35 respectively represent reinforcement types: R235, HPB300, HRB335, HRB400, HRB500.
 
-### 4 View Section Reinforcement Situation
+#### 4 View Section Reinforcement Situation
 
 - Description: Display section reinforcement situation.
 - Command:
@@ -692,7 +692,7 @@ This module is used for strength verification of concrete beam elements.
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text
 
-### 5 Stirrups
+#### 5 Stirrups
 
 - Function: Set stirrups under this verification case.
 
@@ -724,7 +724,7 @@ This module is used for strength verification of concrete beam elements.
 
     Required to set when stirrup type is spiral stirrup, core diameter of spiral stirrup.
 
-### 6 Vertical Prestress
+#### 6 Vertical Prestress
 
 - Function: Set vertical prestress under this verification case.
 
@@ -747,7 +747,7 @@ This module is used for strength verification of concrete beam elements.
 
     Set strength design value $f_{pd}$ of vertical prestressing tendon.
 
-### 7 Element Information
+#### 7 Element Information
 
 - Function: View and modify element information participating in verification.
 
@@ -761,7 +761,7 @@ This module is used for strength verification of concrete beam elements.
 
     ILY, ILZ, JLY, JLZ respectively represent calculation lengths of I-end section about Y-axis, Z-axis and J-end section about Y-axis, Z-axis. Used to calculate eccentricity increase coefficient, axial compression stability coefficient, etc.
 
-### 8 Loads
+#### 8 Loads
 
 Function: View element load information participating in verification.
 
@@ -773,7 +773,7 @@ Combine element calculation results according to verification load combinations 
 
 ### 12.3.5 Verification Item Description
 
-### 1 Normal Section Flexural Bearing Capacity
+#### 1 Normal Section Flexural Bearing Capacity
 
 - **Description:**
   - Normal section flexural bearing capacity calculation description for railway code selection:
@@ -804,7 +804,7 @@ Combine element calculation results according to verification load combinations 
 
   ![Normal Section Flexural Bearing Capacity Calculation Result Detailed Table Normal Section Flexural Bearing Capacity Calculation Result Detailed Table ](<image/图片 344_Yp4v5hydCG.png> "Normal Section Flexural Bearing Capacity Calculation Result Detailed Table Normal Section Flexural Bearing Capacity Calculation Result Detailed Table ")
 
-### 2 Oblique Section Shear Bearing Capacity
+#### 2 Oblique Section Shear Bearing Capacity
 
 - **Description:**
 
@@ -834,7 +834,7 @@ Combine element calculation results according to verification load combinations 
 
   This calculation item supports viewing detailed table, click section "Detailed Table" button. Can view oblique section shear bearing capacity calculation results of element IJ end under different load actions.
 
-### 3 Normal Section Stress
+#### 3 Normal Section Stress
 
 - **Description:**
   - When selecting code "Code for Design of Highway Reinforced Concrete and Prestressed Concrete Bridges and Culverts" (JTG 3362—2018), and for prestressed concrete members, construction stage (transient condition) stress calculation, elastic calculation is adopted according to code.
@@ -847,7 +847,7 @@ Combine element calculation results according to verification load combinations 
 
   This calculation item supports viewing detailed table, click section "Detailed Table" button. Can view normal section stress calculation results of element IJ end under different load actions.
 
-### 4 **Shear Stress** and Principal Stress
+#### 4 **Shear Stress** and Principal Stress
 
 - **Description:**
 
@@ -890,7 +890,7 @@ Combine element calculation results according to verification load combinations 
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text.
 
-### 5 Crack Width
+#### 5 Crack Width
 
 - **Calculation Range:**
 
@@ -959,7 +959,7 @@ Combine element calculation results according to verification load combinations 
 
   This calculation item supports viewing detailed table, click section "Detailed Table" button. Can view crack width calculation results of element IJ end under different load actions.
 
-### 6 Normal Section Crack Resistance
+#### 6 Normal Section Crack Resistance
 
 - **Description:**
 
@@ -968,7 +968,7 @@ Combine element calculation results according to verification load combinations 
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text.
 
-### 7 Oblique Section Crack Resistance
+#### 7 Oblique Section Crack Resistance
 
 - **Calculation Range:**
 
@@ -979,7 +979,7 @@ Combine element calculation results according to verification load combinations 
 
   For "Code for Design of Highway Reinforced Concrete and Prestressed Concrete Bridges and Culverts" (JTG 3362—2018), prestressed concrete calculates principal compressive stress of frequent value combination.
 
-### 8 Prestress Degree
+#### 8 Prestress Degree
 
 - **Description:**
 
@@ -988,7 +988,7 @@ Combine element calculation results according to verification load combinations 
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text.
 
-### 9 Moment-Curvature Curve Analysis
+#### 9 Moment-Curvature Curve Analysis
 
 - **Description:**
 
@@ -1013,7 +1013,7 @@ Combine element calculation results according to verification load combinations 
 
   This calculation item supports viewing detailed table, click section "Detailed Table" button. Can view moment-curvature curve analysis calculation results of element IJ end under different load actions.
 
-### 10 PM Bearing Capacity Curve Analysis
+#### 10 PM Bearing Capacity Curve Analysis
 
 - **Description:**
 
@@ -1040,7 +1040,7 @@ Combine element calculation results according to verification load combinations 
 
   Table right-click supports functions: copy, copy with header, table style settings (can set column width, decimal point display precision), export table to Excel, export table as text.
 
-### 11 MyMz Bearing Capacity Curve Analysis
+#### 11 MyMz Bearing Capacity Curve Analysis
 
 - Description:
 
@@ -1264,7 +1264,7 @@ According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete an
 
 ### 12.5.2 Anti-Overturning Case Definition, Result Viewing and Export
 
-#### Anti-Overturning Case Definition
+##### Anti-Overturning Case Definition
 
 - Function: Define, edit anti-overturning cases; view anti-overturning case table results; export word format results.
 - Command:
@@ -1300,7 +1300,7 @@ According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete an
 
     Participate in basic combination coefficient: When performing characteristic state 1 verification using basic combination, variable action combination coefficient.
     **Anti-Overturning Coefficient**: Transverse anti-overturning stability coefficient, default 2.5.
-  #### View Results
+  ##### View Results
   After confirming all calculation parameters are filled correctly, click view results button to view anti-overturning verification table results in real time.
 
   ![](image/1731291715639_R1BrApg__U.png)
@@ -1333,7 +1333,7 @@ According to Article 4.1.8 in "Code for Design of Highway Reinforced Concrete an
     ki: Structural stability coefficient;
 
     Verification result: If Ki is less than or equal to [K], verification passes, otherwise verification fails.
-  #### Export Results
+  ##### Export Results
   Export word version of anti-overturning results.
 
   ![](image/1731294259676_4C-9SVs2CX.png)
@@ -1367,7 +1367,7 @@ Basic information catalog is as follows:
 
 ![Calculation Report Basic Information Catalog Calculation Report Basic Information Catalog ](<image/图片 352_V6s35b6evc.png> "Calculation Report Basic Information Catalog Calculation Report Basic Information Catalog ")
 
-### 1 Project Overview
+#### 1 Project Overview
 
 - Project Overview
 
@@ -1386,7 +1386,7 @@ Basic information catalog is as follows:
 
   Software lists various properties of concrete and prestressing materials used in overall calculation. When verification is performed, gives ordinary reinforcement material properties. If verification is not performed, supplemented by users.
 
-### 2 Calculation Model
+#### 2 Calculation Model
 
 - Model Overview: Software gives number of elements, number of nodes, number of boundary conditions, number of construction stages. Automatically inserts finite element model diagram.
 - Calculation Loads
@@ -1398,7 +1398,7 @@ Basic information catalog is as follows:
   - Load combinations: Software automatically lists combination names and contents read from verification combinations.
 - Construction Scheme: Software automatically lists construction stage names, duration and construction time.
 
-### 3 Calculation Results
+#### 3 Calculation Results
 
 - Direction Description: Gives internal force direction regulations in software.
 - Internal Force Diagrams: Gives N, Q, M diagrams of most unfavorable construction stage and completed bridge stage, N, Q, M envelope diagrams of construction stages. Output elements are defined by "Output Elements" item in "Other Definitions" in calculation report tool interface.
