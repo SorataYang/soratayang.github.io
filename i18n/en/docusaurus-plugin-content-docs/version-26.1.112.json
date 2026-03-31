@@ -1,0 +1,238 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.01. 桥通软件简介": {
+    "message": "01. Introduction",
+    "description": "The label for category '01. 桥通软件简介' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.01. 桥通软件简介": {
+    "message": "01. Introduction",
+    "description": "The label for item '01. 桥通软件简介' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.02. 软件组成和功能": {
+    "message": "02. Components & Functions",
+    "description": "The label for category '02. 软件组成和功能' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.02. 软件组成和功能": {
+    "message": "02. Components & Functions",
+    "description": "The label for item '02. 软件组成和功能' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.03. 项目、文件和数据管理": {
+    "message": "03. Data Management",
+    "description": "The label for category '03. 项目、文件和数据管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.03. 项目、文件和数据管理": {
+    "message": "03. Data Management",
+    "description": "The label for item '03. 项目、文件和数据管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.04. 视图": {
+    "message": "04. Views",
+    "description": "The label for category '04. 视图' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.04. 视图": {
+    "message": "04. Views",
+    "description": "The label for item '04. 视图' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.05. 结构": {
+    "message": "05. Structure",
+    "description": "The label for category '05. 结构' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.05. 结构": {
+    "message": "05. Structure",
+    "description": "The label for item '05. 结构' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.06. 节点、单元": {
+    "message": "06. Nodes & Elements",
+    "description": "The label for category '06. 节点、单元' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.06. 节点、单元": {
+    "message": "06. Nodes & Elements",
+    "description": "The label for item '06. 节点、单元' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.07. 特性": {
+    "message": "07. Properties",
+    "description": "The label for category '07. 特性' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.07. 特性": {
+    "message": "07. Properties",
+    "description": "The label for item '07. 特性' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.08. 边界": {
+    "message": "08. Boundaries",
+    "description": "The label for category '08. 边界' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.08. 边界": {
+    "message": "08. Boundaries",
+    "description": "The label for item '08. 边界' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.09. 荷载": {
+    "message": "09. Loads",
+    "description": "The label for category '09. 荷载' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.09. 荷载": {
+    "message": "09. Loads",
+    "description": "The label for item '09. 荷载' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.10. 分析": {
+    "message": "10. Analysis",
+    "description": "The label for category '10. 分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.10. 分析": {
+    "message": "10. Analysis",
+    "description": "The label for item '10. 分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.11. 结果": {
+    "message": "11. Results",
+    "description": "The label for category '11. 结果' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.11. 结果": {
+    "message": "11. Results",
+    "description": "The label for item '11. 结果' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.12. 检算": {
+    "message": "12. Checking",
+    "description": "The label for category '12. 检算' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.12. 检算": {
+    "message": "12. Checking",
+    "description": "The label for item '12. 检算' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.13. 查询": {
+    "message": "13. Query",
+    "description": "The label for category '13. 查询' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.13. 查询": {
+    "message": "13. Query",
+    "description": "The label for item '13. 查询' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.14. 工具": {
+    "message": "14. Tools",
+    "description": "The label for category '14. 工具' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.14. 工具": {
+    "message": "14. Tools",
+    "description": "The label for item '14. 工具' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.15. 结构静力分析": {
+    "message": "15. Static Analysis",
+    "description": "The label for category '15. 结构静力分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.15. 结构静力分析": {
+    "message": "15. Static Analysis",
+    "description": "The label for item '15. 结构静力分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.16. 结构动力分析": {
+    "message": "16. Dynamic Analysis",
+    "description": "The label for category '16. 结构动力分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.16. 结构动力分析": {
+    "message": "16. Dynamic Analysis",
+    "description": "The label for item '16. 结构动力分析' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.17. 智能调索系统": {
+    "message": "Cable Tensioning System",
+    "description": "The label for category '17. 智能调索系统' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.17. 智能调索系统": {
+    "message": "Cable Tensioning System",
+    "description": "The label for item '17. 智能调索系统' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.17. 斜拉索智能调索": {
+    "message": "17. Cable Tensioning",
+    "description": "The label for category '17. 斜拉索智能调索' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.18. 空间缆索找形系统": {
+    "message": "18. Spatial Cable Shape",
+    "description": "The label for category '18. 空间缆索找形系统' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.18. 空间缆索找形系统": {
+    "message": "18. Spatial Cable Shape",
+    "description": "The label for item '18. 空间缆索找形系统' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.18. 空间缆索找形": {
+    "message": "18. Spatial Cable Shape",
+    "description": "The label for category '18. 空间缆索找形' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.19. 附录": {
+    "message": "19. Appendix",
+    "description": "The label for category '19. 附录' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.19. 附录": {
+    "message": "19. Appendix",
+    "description": "The label for item '19. 附录' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.20. 桥通API": {
+    "message": "20. QiaoTong API",
+    "description": "The label for category '20. 桥通API' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.20. 桥通API": {
+    "message": "20. QiaoTong API",
+    "description": "The label for item '20. 桥通API' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.21. API参考手册": {
+    "message": "21. API Reference Manual",
+    "description": "The label for category '21. API参考手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.21. API参考手册": {
+    "message": "21. API Reference Manual",
+    "description": "The label for item '21. API参考手册' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.22. 帮助和问题反馈": {
+    "message": "22. Help & Feedback",
+    "description": "The label for category '22. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.22. 帮助和问题反馈": {
+    "message": "22. Help & Feedback",
+    "description": "The label for item '22. 帮助和问题反馈' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.23. 施工大临建模助手": {
+    "message": "23. Construction Temporary Modeling Assistant",
+    "description": "The label for category '23. 施工大临建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.23. 施工大临建模助手": {
+    "message": "23. Construction Temporary Modeling Assistant",
+    "description": "The label for item '23. 施工大临建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.贝雷支架建模助手": {
+    "message": "Bailey Frame Scaffold Modeling Assistant",
+    "description": "The label for category '贝雷支架建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.贝雷支架建模助手": {
+    "message": "Bailey Frame Scaffold Modeling Assistant",
+    "description": "The label for item '贝雷支架建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.钢栈桥建模助手": {
+    "message": "Steel Trestle Bridge Modeling Assistant",
+    "description": "The label for category '钢栈桥建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.钢栈桥建模助手": {
+    "message": "Steel Trestle Bridge Modeling Assistant",
+    "description": "The label for item '钢栈桥建模助手' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Jupyter-Notebook使用指南": {
+    "message": "Jupyter Notebook Usage Guide",
+    "description": "The label for category 'Jupyter-Notebook使用指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VS Code 中使用 Jupyter Notebook": {
+    "message": "Using Jupyter Notebook in VS Code",
+    "description": "The label for item 'VS Code 中使用 Jupyter Notebook' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Python环境配置": {
+    "message": "Python Environment Configuration",
+    "description": "The label for category 'Python环境配置' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.VSCode + Python 开发环境配置指南": {
+    "message": "VSCode + Python Development Environment Configuration Guide",
+    "description": "The label for item 'VSCode + Python 开发环境配置指南' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Git与Gitee代码管理": {
+    "message": "Git & Gitee Code Management",
+    "description": "The label for category 'Git与Gitee代码管理' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.item.label.Git + VSCode + Gitee 代码管理指南": {
+    "message": "Git + VSCode + Gitee Code Management Guide",
+    "description": "The label for item 'Git + VSCode + Gitee 代码管理指南' in sidebar 'tutorialSidebar'"
+  }
+}

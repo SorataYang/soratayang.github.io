@@ -57,6 +57,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
+          // 默认显示已发布版本，而不是 current
+          lastVersion: '26.1.112',
           // 公式
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
@@ -145,6 +147,10 @@ const config = {
           },
           {
             type: 'search',
+            position: 'right',
+          },
+          {
+            type: 'docsVersionDropdown',
             position: 'right',
           },
           {
