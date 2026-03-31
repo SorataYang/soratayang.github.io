@@ -115,61 +115,64 @@ export default function FaqPage() {
     });
   }, [activeTag, keyword]);
 
+  const hasFilter = activeTag !== '全部' || keyword.trim().length > 0;
+
   return (
     <Layout title="常见问题" description="桥通软件常见问题与解答">
       <main className={styles.page}>
         <section className={styles.hero}>
-          <div className={styles.heroText}>
-            <p className={styles.eyebrow}>QIAOTONG QA CENTER</p>
-            <Heading as="h1" className={styles.title}>
-              常见问题 Q&A
-            </Heading>
-          </div>
-          <div className={styles.heroStats}>
-            <div className={styles.statCard}>
-              <span>问题总数</span>
-              <strong>{qaItems.length}</strong>
-            </div>
-            <div className={styles.statCard}>
-              <span>分类数量</span>
-              <strong>{allTags.length - 1}</strong>
-            </div>
-          </div>
+          <p className={styles.eyebrow}>QIAOTONG QA CENTER</p>
+          <Heading as="h1" className={styles.title}>
+            常见问题
+          </Heading>
+          <p className={styles.subtitle}>使用桥通软件过程中的常见问题列表</p>
+          <Link to="/contact" className={styles.addQuestionBtn}>
+            添加你的问题
+          </Link>
         </section>
 
         <section className={styles.controls}>
-          <label className={styles.searchBox} htmlFor="faq-search">
-            <span>搜索问题</span>
-            <input
-              id="faq-search"
-              type="search"
-              value={keyword}
-              onChange={(event) => setKeyword(event.target.value)}
-              placeholder="输入关键词，例如：收敛、授权、索形"
-            />
-          </label>
-
-          <div className={styles.tags} role="tablist" aria-label="问题分类筛选">
-            {allTags.map((tag) => (
-              <button
-                key={tag}
-                type="button"
-                className={tag === activeTag ? styles.tagActive : styles.tag}
-                onClick={() => setActiveTag(tag)}
-              >
-                {tag}
-              </button>
-            ))}
+          <div className={styles.controlsHeader}>
+            <Heading as="h2" className={styles.controlsTitle}>
+              标签 <span>{filteredItems.length} 个问题</span>
+            </Heading>
+            <button
+              type="button"
+              className={styles.clearBtn}
+              onClick={() => {
+                setActiveTag('全部');
+                setKeyword('');
+              }}
+              disabled={!hasFilter}
+            >
+              Clear All
+            </button>
           </div>
-        </section>
 
-        <section className={styles.resultMeta}>
-          <span>
-            当前显示 <strong>{filteredItems.length}</strong> / {qaItems.length} 条
-          </span>
-          <Link to="/contact" className={styles.feedbackLink}>
-            没找到答案？提交你的问题
-          </Link>
+          <div className={styles.filterRow}>
+            <div className={styles.tags} role="tablist" aria-label="问题分类筛选">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  type="button"
+                  className={tag === activeTag ? styles.tagActive : styles.tag}
+                  onClick={() => setActiveTag(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+
+            <label className={styles.searchBox} htmlFor="faq-search">
+              <input
+                id="faq-search"
+                type="search"
+                value={keyword}
+                onChange={(event) => setKeyword(event.target.value)}
+                placeholder="搜索问题名称..."
+              />
+            </label>
+          </div>
         </section>
 
         <section className={styles.grid}>
