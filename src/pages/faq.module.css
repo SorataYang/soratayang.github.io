@@ -1,0 +1,269 @@
+.page {
+  --qa-bg: linear-gradient(140deg, #f6f8fd 0%, #eef6f3 45%, #ffffff 100%);
+  --qa-ink: #14202b;
+  --qa-muted: #566474;
+  --qa-brand: #146c5e;
+  --qa-brand-soft: #d9f0ea;
+  --qa-border: #dbe6e2;
+  --qa-card: #ffffff;
+  --qa-shadow: 0 16px 40px -30px rgba(25, 53, 81, 0.45);
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+  color: var(--qa-ink);
+  background: var(--qa-bg);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.heroText,
+.heroStats {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--qa-border);
+  border-radius: 20px;
+  box-shadow: var(--qa-shadow);
+}
+
+.heroText {
+  padding: 2rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--qa-brand);
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+.title {
+  margin: 0.4rem 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 56ch;
+  color: var(--qa-muted);
+  font-size: 1.03rem;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+
+.statCard {
+  border-radius: 14px;
+  border: 1px solid var(--qa-border);
+  background: var(--qa-card);
+  padding: 1rem 1.1rem;
+}
+
+.statCard span {
+  display: block;
+  color: var(--qa-muted);
+  font-size: 0.9rem;
+}
+
+.statCard strong {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 1.7rem;
+  color: var(--qa-ink);
+}
+
+.controls {
+  margin-top: 1.25rem;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--qa-border);
+  border-radius: 20px;
+  box-shadow: var(--qa-shadow);
+  padding: 1rem;
+}
+
+.searchBox {
+  display: block;
+}
+
+.searchBox span {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--qa-muted);
+  font-weight: 600;
+}
+
+.searchBox input {
+  width: 100%;
+  border: 1px solid #c8d9d4;
+  border-radius: 12px;
+  padding: 0.72rem 0.9rem;
+  font-size: 0.96rem;
+  background: #fff;
+}
+
+.searchBox input:focus {
+  outline: 2px solid rgba(20, 108, 94, 0.35);
+  border-color: var(--qa-brand);
+}
+
+.tags {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag,
+.tagActive {
+  border-radius: 999px;
+  border: 1px solid #c5d8d2;
+  background: #fff;
+  color: #2f3f4a;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.tag:hover,
+.tagActive:hover {
+  transform: translateY(-1px);
+}
+
+.tagActive {
+  color: #0f4b41;
+  border-color: #9fcac0;
+  background: var(--qa-brand-soft);
+}
+
+.resultMeta {
+  margin-top: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--qa-muted);
+}
+
+.feedbackLink {
+  color: var(--qa-brand);
+  font-weight: 700;
+}
+
+.grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  border: 1px solid var(--qa-border);
+  background: var(--qa-card);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--qa-shadow);
+}
+
+.cardTop {
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  display: inline-flex;
+  background: #ecf8f4;
+  color: #0d5448;
+  border: 1px solid #c2e6dd;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.22rem 0.6rem;
+}
+
+.question {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.answer {
+  margin: 0.6rem 0 0;
+  color: var(--qa-muted);
+  line-height: 1.62;
+}
+
+.cardLinks {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.cardLink {
+  color: var(--qa-brand);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.emptyState {
+  margin-top: 1.2rem;
+  text-align: center;
+  border-radius: 16px;
+  border: 1px dashed #bfd5ce;
+  background: #fbfefd;
+  padding: 2rem 1rem;
+}
+
+.emptyState h3 {
+  margin-top: 0;
+}
+
+.emptyAction {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-weight: 700;
+  color: var(--qa-brand);
+}
+
+@media (max-width: 996px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .resultMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.5rem 0.8rem 3rem;
+  }
+
+  .heroText {
+    padding: 1.35rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

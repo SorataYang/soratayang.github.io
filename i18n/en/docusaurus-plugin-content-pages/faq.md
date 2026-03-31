@@ -1,4 +1,9 @@
-# Frequently Asked Questions (FAQ)
+---
+slug: /faq-legacy
+title: Frequently Asked Questions (Legacy)
+---
+
+# Frequently Asked Questions (Legacy)
 
 Here are some common questions and answers.
 
