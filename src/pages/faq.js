@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
 import styles from './faq.module.css';
-import { qaItems } from '../data/faqItems';
+import { qaItems } from '../data/qa/faqItems';
 
 const allTags = ['全部', ...Array.from(new Set(qaItems.map((item) => item.tag)))];
 
@@ -89,6 +89,16 @@ export default function FaqPage() {
         <section className={styles.grid}>
           {filteredItems.map((item) => (
             <article key={item.id} className={styles.card}>
+              {item.image && (
+                <div className={styles.cardImageWrap}>
+                  <img
+                    src={item.image}
+                    alt={item.imageAlt || item.question}
+                    className={styles.cardImage}
+                    loading="lazy"
+                  />
+                </div>
+              )}
               <div className={styles.cardTop}>
                 <span className={styles.badge}>{item.tag}</span>
               </div>
