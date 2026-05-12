@@ -56,7 +56,10 @@ const config = {
   organizationName: 'SorataYang', // Usually your GitHub org/user name.
   projectName: 'soratayang.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages', // build产物推送到这个分支
-  trailingSlash: false,
+  // 本地内嵌模式需要 trailingSlash:true 适配 Tauri 资源协议:
+  // 协议默认不自动补 .html 后缀,/docs/foo/ 才能命中 docs/foo/index.html。
+  // 在线模式保持 false,与 GitHub Pages 既有行为一致。
+  trailingSlash: isLocalBuild,
 
   onBrokenLinks: 'warn',    //  'throw' -> 'warn'，这样链接断了也能构建成功
   onBrokenAnchors: 'warn',
