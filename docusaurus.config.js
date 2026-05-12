@@ -104,6 +104,18 @@ const config = {
     ],
   ],
 
+  // stylesheets 属于根级配置(不是 themeConfig),放在 themeConfig 下会被忽略,
+  // 数学公式 CDN 样式表此前未真正加载。
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -206,17 +218,6 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-
-      // 添加 stylesheets 配置
-      stylesheets: [
-        {
-          href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-          type: 'text/css',
-          integrity:
-            'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-          crossorigin: 'anonymous',
-        },
-      ],
     }),
 };
 
