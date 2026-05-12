@@ -8,8 +8,31 @@ import { themes as prismThemes } from 'prism-react-renderer';
 // 公式
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import remarkStripVideo from './scripts/remark-strip-video.mjs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+// 本地构建模式:由 Tauri 打包流程注入 LOCAL_BUILD=true 与 DOCUSAURUS_LOCAL_LOCALE=zh|en
+// 仅影响 build 行为,不影响在线 GitHub Pages 发布。
+const isLocalBuild = process.env.LOCAL_BUILD === 'true';
+const localLocale = process.env.DOCUSAURUS_LOCAL_LOCALE === 'en' ? 'en' : 'zh';
+
+const onlineI18n = {
+  defaultLocale: 'zh',
+  locales: ['zh', 'en'],
+  localeConfigs: {
+    en: { label: 'English' },
+    zh: { label: '简体中文' },
+  },
+};
+
+const localI18n = {
+  defaultLocale: localLocale,
+  locales: [localLocale],
+  localeConfigs: {
+    [localLocale]: { label: localLocale === 'en' ? 'English' : '简体中文' },
+  },
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -41,14 +64,7 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh', 'en'],
-    localeConfigs: {
-      en: { label: 'English' },
-      zh: { label: '简体中文' }
-    }
-  },
+  i18n: isLocalBuild ? localI18n : onlineI18n,
 
   presets: [
     [
@@ -59,13 +75,18 @@ const config = {
           sidebarPath: './sidebars.js',
           // 默认显示已发布版本，而不是 current
           lastVersion: '26.1.112',
-          // 公式
-          remarkPlugins: [remarkMath],
+          // 公式 + 本地模式下剥离视频引用
+          remarkPlugins: [
+            remarkMath,
+            ...(isLocalBuild ? [[remarkStripVideo, { locale: localLocale }]] : []),
+          ],
           rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/SorataYang/soratayang.github.io/tree/main/docs/',
+          // 本地内嵌版无网络环境,关掉"编辑此页"链接
+          editUrl: isLocalBuild
+            ? undefined
+            : 'https://github.com/SorataYang/soratayang.github.io/tree/main/docs/',
         },
         blog: {
           showReadingTime: true,
@@ -78,8 +99,9 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/SorataYang/soratayang.github.io/tree/main/blog/',
+          editUrl: isLocalBuild
+            ? undefined
+            : 'https://github.com/SorataYang/soratayang.github.io/tree/main/blog/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -98,7 +120,7 @@ const config = {
       /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
       {
         hashed: true,
-        language: ["en", "zh"],
+        language: isLocalBuild ? [localLocale] : ["en", "zh"],
         searchBarShortcutKeymap: "ctrl+k",
       },
     ],
@@ -106,7 +128,8 @@ const config = {
 
   // stylesheets 属于根级配置(不是 themeConfig),放在 themeConfig 下会被忽略,
   // 数学公式 CDN 样式表此前未真正加载。
-  stylesheets: [
+  // 在线模式下使用 CDN;本地模式留空,改由下面的 clientModules 把 katex CSS 内联打包。
+  stylesheets: isLocalBuild ? [] : [
     {
       href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
       type: 'text/css',
@@ -115,6 +138,9 @@ const config = {
       crossorigin: 'anonymous',
     },
   ],
+
+  // 本地构建模式下,通过 clientModule 把 katex CSS 内联打包,避免离线时数学公式 CDN 失效
+  clientModules: isLocalBuild ? ['./scripts/local-katex.mjs'] : [],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -165,10 +191,11 @@ const config = {
             type: 'docsVersionDropdown',
             position: 'right',
           },
-          {
+          // 单语种本地构建时隐藏语言切换(切换无意义)
+          ...(isLocalBuild ? [] : [{
             type: 'localeDropdown', // 多语言下拉选择
             position: 'right',
-          },
+          }]),
 
         ],
       },
