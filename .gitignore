@@ -3,6 +3,7 @@
 
 # Production
 /build
+/build-local
 public/
 
 # cache
@@ -11,6 +12,10 @@ public/
 # Generated files
 .docusaurus
 .cache-loader
+
+# Tauri (local manual packaging)
+/src-tauri/target
+/src-tauri/gen
 
 # Misc
 .DS_Store
