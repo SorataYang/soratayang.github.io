@@ -12,6 +12,10 @@
     "build:local:en": "cross-env LOCAL_BUILD=true DOCUSAURUS_LOCAL_LOCALE=en docusaurus build --out-dir build-local/en && node scripts/strip-videos-postbuild.mjs build-local/en en",
     "serve:local:zh": "docusaurus serve --dir build-local/zh --no-open",
     "serve:local:en": "docusaurus serve --dir build-local/en --no-open",
+    "tauri": "tauri",
+    "tauri:dev": "npm run build:local:zh && tauri dev",
+    "tauri:build:zh": "npm run build:local:zh && tauri build",
+    "tauri:build:en": "npm run build:local:en && tauri build --config src-tauri/tauri.en.conf.json",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
@@ -34,6 +38,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/types": "3.9.2",
+    "@tauri-apps/cli": "^2.11.1",
     "cross-env": "^7.0.3"
   },
   "browserslist": {
