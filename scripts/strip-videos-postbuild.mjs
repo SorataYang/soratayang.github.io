@@ -35,10 +35,11 @@ async function main() {
   }
   const absOut = path.resolve(outDir);
   const stub = locale === 'en' ? STUB_EN : STUB_ZH;
-  // HTML 替换正则:匹配 <a ...href="<任意路径>.<视频扩展>"...>label</a>
-  const htmlAnchorRe = /<a\b[^>]*\bhref="[^"]*?\.(?:mp4|webm|mov|m4v|ogv)"[^>]*>[\s\S]*?<\/a>/gi;
+  // HTML 替换正则:匹配 <a ...href="<任意路径>.<视频扩展>[/]"...>label</a>
+  // 注意:trailingSlash:true 模式下 Docusaurus 会给资源 URL 也加尾斜杠,故扩展名后可选 /
+  const htmlAnchorRe = /<a\b[^>]*\bhref="[^"]*?\.(?:mp4|webm|mov|m4v|ogv)\/?"[^>]*>[\s\S]*?<\/a>/gi;
   // JSON 字符串替换:把含视频扩展名的 URL 字段值置空,避免搜索索引仍然指向 404
-  const jsonUrlRe = /"url"\s*:\s*"[^"]*?\.(?:mp4|webm|mov|m4v|ogv)"/gi;
+  const jsonUrlRe = /"url"\s*:\s*"[^"]*?\.(?:mp4|webm|mov|m4v|ogv)\/?"/gi;
 
   let videosDeleted = 0;
   let videoBytesFreed = 0;
