@@ -9,6 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import remarkStripVideo from './scripts/remark-strip-video.mjs';
+import fs from 'node:fs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -16,6 +17,21 @@ import remarkStripVideo from './scripts/remark-strip-video.mjs';
 // 仅影响 build 行为,不影响在线 GitHub Pages 发布。
 const isLocalBuild = process.env.LOCAL_BUILD === 'true';
 const localLocale = process.env.DOCUSAURUS_LOCAL_LOCALE === 'en' ? 'en' : 'zh';
+
+// 本地构建只内嵌"软件当前版本"对应的那一份 docs 快照,避免 current(/docs/next/)
+// 与已发布版双份内容冗余。优先级:LOCAL_VERSION env > versions.json[0] > undefined(fallback)。
+const allReleasedVersions = (() => {
+  try {
+    const v = JSON.parse(fs.readFileSync('./versions.json', 'utf-8'));
+    return Array.isArray(v) ? v : [];
+  } catch {
+    return [];
+  }
+})();
+const localTargetVersion = process.env.LOCAL_VERSION || allReleasedVersions[0];
+const localSingleVersionEnabled = isLocalBuild
+  && typeof localTargetVersion === 'string'
+  && allReleasedVersions.includes(localTargetVersion);
 
 const onlineI18n = {
   defaultLocale: 'zh',
@@ -78,6 +94,11 @@ const config = {
           sidebarPath: './sidebars.js',
           // 默认显示已发布版本，而不是 current
           lastVersion: '26.1.112',
+          // 本地内嵌模式:只保留单个已发布版本,关掉 current,产物去掉 /docs/next/
+          ...(localSingleVersionEnabled ? {
+            includeCurrentVersion: false,
+            onlyIncludeVersions: [localTargetVersion],
+          } : {}),
           // 公式 + 本地模式下剥离视频引用
           remarkPlugins: [
             remarkMath,
@@ -190,10 +211,11 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          {
+          // 单版本本地构建时隐藏版本下拉(下拉里只有一项,意义不大)
+          ...(localSingleVersionEnabled ? [] : [{
             type: 'docsVersionDropdown',
             position: 'right',
-          },
+          }]),
           // 单语种本地构建时隐藏语言切换(切换无意义)
           ...(isLocalBuild ? [] : [{
             type: 'localeDropdown', // 多语言下拉选择
