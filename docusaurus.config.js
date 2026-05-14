@@ -94,6 +94,9 @@ const config = {
           sidebarPath: './sidebars.js',
           // 默认显示已发布版本，而不是 current
           lastVersion: '26.1.112',
+          // 本地内嵌模式:让 docs 接管根路径,打开 exe 直接进手册首页,无中转
+          // (配合 scripts/generate-local-root-index.mjs 生成 / → 第一章 的兜底跳转)
+          ...(isLocalBuild ? { routeBasePath: '/' } : {}),
           // 本地内嵌模式:只保留单个已发布版本,关掉 current,产物去掉 /docs/next/
           ...(localSingleVersionEnabled ? {
             includeCurrentVersion: false,
@@ -180,6 +183,9 @@ const config = {
         logo: {
           alt: '桥通软件',
           src: 'img/logo.svg',
+          // 本地模式下点击 logo 回到手册首页(/ 由 postbuild 生成的 redirect 兜底,
+          // 但编译期 Docusaurus 不知道 /,会报 broken link;指向真实页面消除警告)
+          ...(isLocalBuild ? { href: '/ch01_intro/' } : {}),
         },
         items: isLocalBuild ? [
           // 本地内嵌模式只剩用户手册:用品牌区 + 搜索即可
