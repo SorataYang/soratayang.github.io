@@ -112,7 +112,8 @@ const config = {
             ? undefined
             : 'https://github.com/SorataYang/soratayang.github.io/tree/main/docs/',
         },
-        blog: {
+        // 本地内嵌模式只发用户手册:更新日志(blog)整体禁用
+        blog: isLocalBuild ? false : {
           showReadingTime: true,
           blogSidebarCount: 'ALL', // 显示所有
           //blogSidebarCount: 10, // 指定数量
@@ -123,14 +124,14 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: isLocalBuild
-            ? undefined
-            : 'https://github.com/SorataYang/soratayang.github.io/tree/main/blog/',
+          editUrl: 'https://github.com/SorataYang/soratayang.github.io/tree/main/blog/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
+        // 本地内嵌模式不要首页 / FAQ / 下载 / 联系等独立页面
+        pages: isLocalBuild ? false : undefined,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -180,7 +181,13 @@ const config = {
           alt: '桥通软件',
           src: 'img/logo.svg',
         },
-        items: [
+        items: isLocalBuild ? [
+          // 本地内嵌模式只剩用户手册:用品牌区 + 搜索即可
+          {
+            type: 'search',
+            position: 'right',
+          },
+        ] : [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -211,21 +218,22 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          // 单版本本地构建时隐藏版本下拉(下拉里只有一项,意义不大)
-          ...(localSingleVersionEnabled ? [] : [{
+          {
             type: 'docsVersionDropdown',
             position: 'right',
-          }]),
-          // 单语种本地构建时隐藏语言切换(切换无意义)
-          ...(isLocalBuild ? [] : [{
+          },
+          {
             type: 'localeDropdown', // 多语言下拉选择
             position: 'right',
-          }]),
-
+          },
         ],
       },
 
-      footer: {
+      // 本地内嵌模式 footer 极简:只剩版权与许可信息,无外链
+      footer: isLocalBuild ? {
+        style: 'dark',
+        copyright: `Copyright © ${new Date().getFullYear()} Qiaotong Software. <br/> Documentation licensed under CC BY 4.0.`,
+      } : {
         style: 'dark',
         links: [
           {
