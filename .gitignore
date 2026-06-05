@@ -16,6 +16,7 @@ public/
 # Tauri (local manual packaging)
 /src-tauri/target
 /src-tauri/gen
+/release-local
 
 # Misc
 .DS_Store
