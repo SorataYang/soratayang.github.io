@@ -32,6 +32,14 @@ const localTargetVersion = process.env.LOCAL_VERSION || allReleasedVersions[0];
 const localSingleVersionEnabled = isLocalBuild
   && typeof localTargetVersion === 'string'
   && allReleasedVersions.includes(localTargetVersion);
+const localSearchDocsDir = localSingleVersionEnabled
+  ? [
+      `versioned_docs/version-${localTargetVersion}`,
+      ...(localLocale === 'en'
+        ? [`i18n/en/docusaurus-plugin-content-docs/version-${localTargetVersion}`]
+        : []),
+    ]
+  : 'docs';
 
 const onlineI18n = {
   defaultLocale: 'zh',
@@ -147,9 +155,13 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
       {
-        hashed: true,
+        hashed: isLocalBuild ? 'filename' : true,
+        docsRouteBasePath: isLocalBuild ? '/' : 'docs',
+        docsDir: localSearchDocsDir,
+        indexBlog: !isLocalBuild,
         language: isLocalBuild ? [localLocale] : ["en", "zh"],
         searchBarShortcutKeymap: "ctrl+k",
+        fuzzyMatchingDistance: isLocalBuild ? 0 : 1,
       },
     ],
   ],

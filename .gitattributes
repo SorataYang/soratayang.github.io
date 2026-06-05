@@ -26,3 +26,4 @@ i18n/**             text
 *.mp4               binary
 *.webm              binary
 *.webp              binary
+*.zip               binary
