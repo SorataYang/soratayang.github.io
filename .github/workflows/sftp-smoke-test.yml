@@ -2,9 +2,9 @@ name: SFTP smoke test
 
 on:
   workflow_dispatch:
-    push:
-      branches:
-        - feat/aliyun
+  push:
+    branches:
+      - feat/aliyun
 
 concurrency:
   group: sftp-smoke-test
