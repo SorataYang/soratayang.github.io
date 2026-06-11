@@ -1,0 +1,20 @@
+[package]
+name = "qiaotong-manual"
+version = "26.1.112"
+description = "Offline user manual for Qiaotong bridge analysis software"
+authors = ["Qiaotong Software"]
+edition = "2021"
+rust-version = "1.77"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

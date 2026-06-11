@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Qiaotong Manual",
+  "version": "26.1.112",
+  "identifier": "com.qiaotong.manual",
+  "build": {
+    "frontendDist": "../build-local/zh",
+    "beforeBuildCommand": "",
+    "beforeDevCommand": ""
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "桥通用户手册",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "center": true,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null,
+      "freezePrototype": false
+    }
+  },
+  "bundle": {
+    "active": false,
+    "icon": ["icons/icon.ico"],
+    "category": "Utility",
+    "shortDescription": "桥通软件离线用户手册",
+    "longDescription": "Qiaotong bridge analysis software offline user manual — embedded Docusaurus site served via Tauri."
+  }
+}

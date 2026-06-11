@@ -3,6 +3,7 @@
 
 # Production
 /build
+/build-local
 public/
 
 # cache
@@ -11,6 +12,11 @@ public/
 # Generated files
 .docusaurus
 .cache-loader
+
+# Tauri (local manual packaging)
+/src-tauri/target
+/src-tauri/gen
+/release-local
 
 # Misc
 .DS_Store
@@ -22,3 +28,5 @@ public/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.claude

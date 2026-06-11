@@ -1,0 +1,15 @@
+{
+  "productName": "Qiaotong Manual (English)",
+  "identifier": "com.qiaotong.manual.en",
+  "build": {
+    "frontendDist": "../build-local/en"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Qiaotong User Manual"
+      }
+    ]
+  }
+}
