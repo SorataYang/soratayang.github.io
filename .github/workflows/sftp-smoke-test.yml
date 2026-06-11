@@ -1,0 +1,86 @@
+name: SFTP smoke test
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: sftp-smoke-test
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    name: Upload test HTML to Aliyun SFTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      SFTP_HOST: ${{ secrets.ALIYUN_SFTP_HOST }}
+      SFTP_PORT: ${{ secrets.ALIYUN_SFTP_PORT }}
+      SFTP_USERNAME: ${{ secrets.ALIYUN_SFTP_USERNAME }}
+      SFTP_PASSWORD: ${{ secrets.ALIYUN_SFTP_PASSWORD }}
+      SFTP_KNOWN_HOSTS: ${{ secrets.ALIYUN_SFTP_KNOWN_HOSTS }}
+      REMOTE_DIR: wwwroot/qiaotong_manual
+      LOCAL_FILE: deploy/sftp-smoke-test/index.html
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          missing=()
+          for name in SFTP_HOST SFTP_PORT SFTP_USERNAME SFTP_PASSWORD; do
+            if [ -z "${!name}" ]; then
+              missing+=("$name")
+            fi
+          done
+
+          if [ "${#missing[@]}" -gt 0 ]; then
+            printf 'Missing required GitHub secrets: %s\n' "${missing[*]}" >&2
+            exit 1
+          fi
+
+      - name: Install sshpass
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+
+      - name: Upload smoke-test page
+        shell: bash
+        env:
+          SSHPASS: ${{ secrets.ALIYUN_SFTP_PASSWORD }}
+        run: |
+          set -euo pipefail
+
+          sftp_opts=(
+            -o BatchMode=no
+            -o PreferredAuthentications=password
+            -o PubkeyAuthentication=no
+            -P "${SFTP_PORT}"
+          )
+
+          if [ -n "${SFTP_KNOWN_HOSTS}" ]; then
+            mkdir -p "${HOME}/.ssh"
+            chmod 700 "${HOME}/.ssh"
+            printf '%s\n' "${SFTP_KNOWN_HOSTS}" > "${HOME}/.ssh/known_hosts"
+            chmod 600 "${HOME}/.ssh/known_hosts"
+            sftp_opts+=(
+              -o StrictHostKeyChecking=yes
+              -o UserKnownHostsFile="${HOME}/.ssh/known_hosts"
+            )
+          else
+            sftp_opts+=(-o StrictHostKeyChecking=accept-new)
+          fi
+
+          sshpass -e sftp "${sftp_opts[@]}" "${SFTP_USERNAME}@${SFTP_HOST}" <<SFTP
+          -mkdir wwwroot
+          -mkdir ${REMOTE_DIR}
+          put ${LOCAL_FILE} ${REMOTE_DIR}/index.html
+          ls ${REMOTE_DIR}
+          bye
+          SFTP
