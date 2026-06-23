@@ -33,7 +33,7 @@ Currently Python environment has been configured by default, no configuration re
 
 ![](image/image_Cqzg8Vl5wu.png)
 
-> 📌**Note**: Internal running (same for file import) is equivalent to running imported module, please do not use statement if **name** == "**main**":
+> 📌**Note**: Internal running (same for file import) is equivalent to running imported module, please do not use statement `if __name__ == "__main__"`:
 
 ### Custom Python Interpreter
 

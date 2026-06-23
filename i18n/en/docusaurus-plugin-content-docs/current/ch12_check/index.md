@@ -897,7 +897,7 @@ Combine element calculation results according to verification load combinations 
   "Code for Design of Highway Reinforced Concrete and Prestressed Concrete Bridges and Culverts" (JTG 3362-2018): Member types are: reinforced concrete, Class B members;
 
   "Code for Design of Concrete Structures of Railway Bridges and Culverts" (TB 10092-2017 J462-2017): Member types are: reinforced concrete, Class B members;
-- **Description: ​**
+- **Description:**
 
   Software takes maximum reinforcement strain to calculate crack width. Equivalent diameter is taken according to code.
 
@@ -1128,7 +1128,7 @@ Software section table lists all section information of selected members, includ
 
 > 📌Note 2: When element coordinate system beta angle is 90 or 270°, moment of inertia about y-axis and moment of inertia about z-axis will automatically swap.
 
-> 📌Note 3: Considering Ixy is in the following formula for calculating section modulus (where xy are section horizontal axis and section vertical axis) ​
+> 📌Note 3: Considering Ixy is in the following formula for calculating section modulus (where xy are section horizontal axis and section vertical axis) 
 >
 > $$
 > W_{x}=\frac{I_{x} I_{y}-I_{x y}^{2}}{I_{y} y-I_{x y} \cdot x}

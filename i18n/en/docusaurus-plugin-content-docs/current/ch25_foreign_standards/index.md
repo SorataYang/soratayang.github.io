@@ -857,7 +857,7 @@ Standard highway loading consists of HA loading and HB loading. Both loadings in
       | $s\_v$        | Spacing of shear reinforcement                 | -                                                                                                                                                                          |
       | $f _{sv}$       | Characteristic strength of shear reinforcement               | $f _{yv} \leq 460 \text{MPa}$                                                                                                                                                |
       | $b$           | Web Thickness                 | -                                                                                                                                                                          |
-      | $d$           | Effective Depth (Distance from centroid of tension reinforcement to compression face) | *Software calculates centroid of reinforcement not considering bent-up bars (this point is not specified in norms)* ​                                                                                                                                              |
+      | $d$           | Effective Depth (Distance from centroid of tension reinforcement to compression face) | *Software calculates centroid of reinforcement not considering bent-up bars (this point is not specified in norms)*                                                                                                                                               |
 
     - Axial Load Members &#x20;
       - Shear Capacity: &#x20;
@@ -928,7 +928,7 @@ Standard highway loading consists of HA loading and HB loading. Both loadings in
 
         | Key Parameter      | Definition                 | Note                                |
         | --------- | ------------------ | --------------------------------- |
-        | $d$     | Distance from compression face to centroid of tendons      | *Calculate* centroid of tendons *not considering bent-up bars and tendons (norm not specified)* ​ |
+        | $d$     | Distance from compression face to centroid of tendons      | *Calculate centroid of tendons not considering bent-up bars and tendons (norm not specified)*  |
         | $f _{pt}$ | Stress due to prestress at the point of maximum tensile strain y | Multiplied by $γ _{fl}=0.87$                  |
         | $I$     | Moment of Inertia              | -                               |
         | $M _{cr}$ | Cracking Moment               | Positive value                               |
@@ -1066,7 +1066,7 @@ Standard highway loading consists of HA loading and HB loading. Both loadings in
       | Symbol          | Physical Meaning                  | Remarks                                                                                     |
       | ------------- | --------------------- | --------------------------------------------------------------------------------------- |
       | $a\_cr$       | Distance from point of cracking (max tensile strain point) to surface of nearest reinforcement | -                                                                                     |
-      | $c\_nom$      | Net Cover Thickness to outermost reinforcement           | **User sets "Net Cover Thickness" in Analysis Settings** ​                                                                 |
+      | $c\_nom$      | Net Cover Thickness to outermost reinforcement           | **User sets "Net Cover Thickness" in Analysis Settings**                                                                  |
       | $d\_c$        | Depth of concrete in compression               | When $d_c=0$, use calculation formula for crack width under full section tension below                                                        |
       | $h$           | Total depth of section                 | -                                                                                     |
       | $\varepsilon\_m$ | Calculated strain considering cracking level           | $0 \leq \varepsilon_m \leq \varepsilon_1$                                           |
