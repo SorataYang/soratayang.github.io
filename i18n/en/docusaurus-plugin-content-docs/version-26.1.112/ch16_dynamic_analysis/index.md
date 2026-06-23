@@ -19,13 +19,13 @@ slug: /ch16_dynamic_analysis
 
 The steps for performing response spectrum analysis using Qiaotong software are as follows:
 
-- Perform response spectrum analysis settings in "Analysis > Response Spectrum Analysis", see \*\*. Note that the prerequisite for performing response spectrum analysis is that free vibration analysis must be performed, therefore **ensure free vibration analysis is executed**.
+- Perform response spectrum analysis settings in "Analysis > Response Spectrum Analysis". Note that the prerequisite for performing response spectrum analysis is that free vibration analysis must be performed, therefore **ensure free vibration analysis is executed**.
 
-- Add, modify, or delete response spectrum functions in "Loads > Dynamic Loads Response Spectrum Functions", see \*\*.
+- Add, modify, or delete response spectrum functions in "Loads > Dynamic Loads Response Spectrum Functions".
 
-- Add, modify, or delete response spectrum cases in "Loads > Dynamic Loads Response Spectrum Cases", see \*\*.
+- Add, modify, or delete response spectrum cases in "Loads > Dynamic Loads Response Spectrum Cases".
 
-- Click calculate, after completion can view table and graphic results of reactions, deformations, beam/truss/cable and composite beam element internal forces and stresses, plate element internal forces and stresses, etc. in "Results > Response Spectrum Analysis", see \*\*.
+- Click calculate, after completion can view table and graphic results of reactions, deformations, beam/truss/cable and composite beam element internal forces and stresses, plate element internal forces and stresses, etc. in "Results > Response Spectrum Analysis".
 
 ## 16.3 **Dynamic Time History Analysis**
 
